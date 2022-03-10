@@ -4,8 +4,16 @@
   "description": "Final Project Made By Oshri,Lior and Matan",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install && cd client && npm install",
+    "start": "node server/server.js",
+    "server": "nodemon node server/server.js",
+    "client": "cd client && npm run dev",
+    "dev":"concurrently --kill others-on-fail \"npm run server\" \"npm run client\"",
+    "start-dev": "nodemon node ./server/server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
+
   "author": "OLM",
   "license": "ISC",
   "dependencies": {
