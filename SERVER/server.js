@@ -9,6 +9,8 @@ const cors = require('cors');
 require('./DB/');
 const app = express();
 const userRouter = require('./Routes/user-route')
+const VolPostsRouter = require('./Routes/vol-post-route');
+const NeedVolPostsRouter = require('./Routes/needVol-route');
 app.use(cors());
 
 const port = process.env.PORT || 8000;
@@ -21,6 +23,8 @@ app.get('/',(req,res)=>{
 ///!----------USES-------------->
 app.use(express.json());
 app.use('/users',userRouter);
+app.use('/posts',VolPostsRouter);
+app.use('/volneed',NeedVolPostsRouter);
 ///!----------USES-------------->
 
 
