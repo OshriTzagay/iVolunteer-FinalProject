@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { AppRouter } from "./AppRouter";
+import { getPostsData } from "./Services/volPosts-service";
 function App() {
+  const [posts, setPosts] = useState([]);
+  const getDataTest = () => {
+    getPostsData()
+      .then((data) => setPosts(data))
+      .catch((err) => console.log(err));
+      console.log(posts);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppRouter/>
+      <h1>Test!</h1>
+      <button onClick={getDataTest}>Click</button>
+      {posts.map((post) => (
+        <h1>{post.Description}</h1>
+      ))}
     </div>
   );
 }
