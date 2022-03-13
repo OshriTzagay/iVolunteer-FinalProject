@@ -2,23 +2,19 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { AppRouter } from "./AppRouter";
+import UserContextProvider from "./Contexts/user-context";
+
 import { getPostsData } from "./Services/volPosts-service";
+import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
+
 function App() {
-  const [posts, setPosts] = useState([]);
-  const getDataTest = () => {
-    getPostsData()
-      .then((data) => setPosts(data))
-      .catch((err) => console.log(err));
-      console.log(posts);
-  };
   return (
     <div className="App">
-      <AppRouter/>
+      <UserContextProvider>
+        <AppRouter />
+        <UserRegister />
+      </UserContextProvider>
       <h1>Test!</h1>
-      <button onClick={getDataTest}>Click</button>
-      {posts.map((post) => (
-        <h1>{post.Description}</h1>
-      ))}
     </div>
   );
 }
