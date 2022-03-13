@@ -9,11 +9,10 @@
     "start": "node server/server.js",
     "server": "nodemon node server/server.js",
     "client": "cd client && npm run start",
-    "dev":"concurrently --kill others-on-fail \"npm run server\" \"npm run client\"",
+    "dev": "concurrently --kill others-on-fail \"npm run server\" \"npm run client\"",
     "start-dev": "nodemon node ./server/server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-
   "author": "OLM",
   "license": "ISC",
   "dependencies": {
@@ -26,6 +25,7 @@
     "mongoose": "^6.2.5",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7"
   }
 }
