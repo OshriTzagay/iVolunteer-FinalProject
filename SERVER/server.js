@@ -6,26 +6,33 @@ dotenv.config();
 
 const express = require("express");
 const cors = require('cors');
+const path = require("path");
+
 require('./DB/');
 const app = express();
 const userRouter = require('./Routes/user-route')
 const VolPostsRouter = require('./Routes/vol-post-route');
 const NeedVolPostsRouter = require('./Routes/needVol-route');
+const passport = require("passport");
+require("./config/passport")(passport);
 app.use(cors());
+app.use(express.json());
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 ///!----------Requires------------------>
 
 
-app.get('/',(req,res)=>{
-    res.send("Welcome to iVolunteer !");
-})
+// app.get('/',(req,res)=>{
+//     res.send("Welcome to iVolunteer !");
+// })
+
 ///!----------USES-------------->
-app.use(express.json());
+app.use(passport.initialize());
 app.use('/users',userRouter);
 app.use('/posts',VolPostsRouter);
-app.use('/volneed',NeedVolPostsRouter);
+app.use('/volneed',passport.authenticate('jwt',{session:false}),NeedVolPostsRouter);
 ///!----------USES-------------->
+
 
 
 app.listen(port, () => {
@@ -33,3 +40,9 @@ app.listen(port, () => {
 });
 
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  });
+}
