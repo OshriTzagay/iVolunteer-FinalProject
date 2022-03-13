@@ -17,9 +17,9 @@ const port = process.env.PORT || 8000;
 ///!----------Requires------------------>
 
 
-app.get('/',(req,res)=>{
-    res.send("Welcome to iVolunteer !");
-})
+// app.get('/',(req,res)=>{
+//     res.send("Welcome to iVolunteer !");
+// })
 ///!----------USES-------------->
 app.use(express.json());
 app.use('/users',userRouter);
