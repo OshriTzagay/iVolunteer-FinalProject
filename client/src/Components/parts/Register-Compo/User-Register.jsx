@@ -1,31 +1,64 @@
-import { useState } from "react"
+import { useContext, useState } from "react";
 import { userContext } from "../../../Contexts/user-context";
 import { registerUser } from "../../../Services/user-service";
 
-export const UserRegister = ()=>{
-let ojb={FirstName:"matan",LastName:"ysayas",Email:"sasas@asa",Password:"123455"}
-    const [User,setUser] = useState({})
+export const UserRegister = () => {
+  const { user, setUser } = useContext(userContext);
 
-    const AddUser = ()=>{
-        registerUser(ojb);
-    }
-    return(
-        <div>
-            <form>
-                <button onClick={AddUser}>click</button> <br /> 
+  const changingTheValue = (e) => {
+    user[e.target.name] = e.target.value;
+  };
 
-                <label>First Name: </label>
-                <input type="text" name="FirstName" id="" />
-                
-                <label>Last Name: </label>
-                <input type="text" name="LastName" id="" />
+  const AddUser = (e) => {
+    e.preventDefault();
+    setUser({ ...user });
+    console.log(user);
+    registerUser(user);
+  };
+  return (
+    <div>
+      <form>
+        <label>First Name: </label>
+        <input
+          type="text"
+          name="FirstName"
+          placeholder="First Name"
+          onChange={changingTheValue}
+        />
+        <label>Last Name: </label>
+        <input
+          type="text"
+          name="LastName"
+          placeholder="Last Name"
+          onChange={changingTheValue}
+        />
+        <label>Email: </label>
+        <input
+          type="text"
+          name="Email"
+          placeholder="Email"
+          onChange={changingTheValue}
+        />
+        <label>Password </label>
+        <input
+          type="password"
+          name="Password"
+          placeholder="Password"
+          onChange={changingTheValue}
+        />
+        <label>Age </label>
+        <input
+          type="number"
+          name="Age"
+          placeholder="Age"
+          maxLength={10}
+          onChange={changingTheValue}
+        />
 
-                <label>Mail: </label>
-                <input type="text" name="Mail" id="" />
-                
-                <label>Password </label>
-                <input type="text" name="Password" id="" />
-            </form>
-        </div>
-    )
-}
+        <button type="submit" onClick={AddUser}>
+          Confirm
+        </button>
+      </form>
+    </div>
+  );
+};
