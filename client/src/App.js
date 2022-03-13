@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { AppRouter } from "./AppRouter";
 import { getPostsData } from "./Services/volPosts-service";
+import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 function App() {
   const [posts, setPosts] = useState([]);
   const getDataTest = () => {
@@ -19,6 +20,7 @@ function App() {
       {posts.map((post) => (
         <h1>{post.Description}</h1>
       ))}
+    <Welcome/>
     </div>
   );
 }
