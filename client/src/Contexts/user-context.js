@@ -1,7 +1,7 @@
 import {createContext, useState} from 'react';
 export const userContext=createContext();
 
- const userContextProvider =({children})=>{
+ const UserContextProvider =({children})=>{
     const [user,setUser]=useState({});
 
     return(
@@ -12,4 +12,4 @@ export const userContext=createContext();
 
 }
 
-export default userContextProvider;
+export default UserContextProvider;
