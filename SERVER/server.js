@@ -22,9 +22,9 @@ const port = process.env.PORT;
 ///!----------Requires------------------>
 
 
-// app.get('/',(req,res)=>{
-//     res.send("Welcome to iVolunteer !");
-// })
+app.get('/',(req,res)=>{
+    res.send("Welcome to iVolunteer !");
+})
 
 ///!----------USES-------------->
 app.use(passport.initialize());
