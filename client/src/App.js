@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { AppRouter } from "./AppRouter";
 import { getPostsData } from "./Services/volPosts-service";
+import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 function App() {
   const [posts, setPosts] = useState([]);
   const getDataTest = () => {
@@ -15,10 +16,8 @@ function App() {
     <div className="App">
       <AppRouter/>
       <h1>Test!</h1>
-      <button onClick={getDataTest}>Click</button>
-      {posts.map((post) => (
-        <h1>{post.Description}</h1>
-      ))}
+      <UserRegister/>
+
     </div>
   );
 }
