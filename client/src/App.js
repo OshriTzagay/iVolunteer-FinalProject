@@ -4,7 +4,6 @@ import "./App.css";
 import { AppRouter } from "./AppRouter";
 import UserContextProvider from "./Contexts/user-context";
 import Welcome from "./Components/pages/Welcome-Comp/Welcome";
-import { getPostsData } from "./Services/volPosts-service";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 
 function App() {
@@ -12,10 +11,7 @@ function App() {
     <div className="App">
       <UserContextProvider>
         <AppRouter />
-        <UserRegister />
       </UserContextProvider>
-      
-    <Welcome/>
     </div>
   );
 }
