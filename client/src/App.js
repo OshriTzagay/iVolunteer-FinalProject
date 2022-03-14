@@ -8,7 +8,7 @@ import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 
 function App() {
   return (
-    <div className="App">
+    <div className="someDiv">
       <UserContextProvider>
         <AppRouter />
       </UserContextProvider>
