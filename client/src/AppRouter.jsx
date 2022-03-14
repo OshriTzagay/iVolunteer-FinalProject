@@ -8,6 +8,7 @@ import { VolPosts } from "./Components/pages/Vol-Posts-Compo/VolPosts";
 import { NeedVolPosts } from "./Components/pages/NeedVol-Posts-Compo/NeedVolPosts";
 import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
+import { Login } from "./Components/parts/Login-Compo/Login";
 
 export const AppRouter = () => {
   return (
@@ -23,6 +24,8 @@ export const AppRouter = () => {
           <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
           <Route exact path="volposts" element={<VolPosts />}></Route>
           <Route exact path="/register" element={<UserRegister />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+
         </Routes>
       </div>
 
