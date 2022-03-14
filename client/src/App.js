@@ -15,6 +15,11 @@ function App() {
         <UserRegister />
       </UserContextProvider>
       <h1>Test!</h1>
+      <button onClick={getDataTest}>Click</button>
+      {posts.map((post) => (
+        <h1>{post.Description}</h1>
+      ))}
+    <Welcome/>
     </div>
   );
 }

@@ -7,21 +7,8 @@ import { VolPosts } from "./Components/pages/Vol-Posts-Compo/VolPosts";
 import { NeedVolPosts } from "./Components/pages/NeedVol-Posts-Compo/NeedVolPosts";
 
 export const AppRouter = () => {
-  return (
-    <BrowserRouter>
-      <Header />
-
-      <SideBar />
-      
-      <div className="main-content">
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/volposts" element={<VolPosts />}></Route>
-          <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
-        </Routes>
-      </div>
-
-      <Footer />
-    </BrowserRouter>
-  );
+  return <BrowserRouter>
+  
+  </BrowserRouter>;
+  
 };
