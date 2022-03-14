@@ -1,5 +1,9 @@
+.lioe{
+    align-items: center;
+}
 .welcome{
     height: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,5 +12,4 @@
     background-size: cover;
     position: relative; 
     padding: 0%;
-    
     }
