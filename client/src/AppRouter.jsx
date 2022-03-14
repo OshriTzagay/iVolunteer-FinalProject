@@ -1,3 +1,4 @@
+import "./App.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { SideBar } from "./Components/parts/Side-Bar-Compo/SideBar";
 import { Home } from "./Components/pages/Home-Compo/Home";
@@ -10,14 +11,15 @@ import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <div className="App">
+        <BrowserRouter>
       <Header />
       <SideBar />
       <div className="main-content">
         <Routes>
-          <Route exact path="/welcome" element={<Welcome />}></Route>
+          <Route exact path="/home" element={<Home />}></Route>
 
-          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/" element={<Welcome />}></Route>
           <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
           <Route exact path="volposts" element={<VolPosts />}></Route>
           <Route exact path="/register" element={<UserRegister />}></Route>
@@ -26,5 +28,8 @@ export const AppRouter = () => {
 
       <Footer />
     </BrowserRouter>
+    </div>
+  
   );
 };
+ 

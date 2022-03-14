@@ -1,12 +1,12 @@
 .welcome{
-    height: 500px;
+    /* height: 500px; */
+    /* width: 2000px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url();
+    background-image: url(https://d20umu42aunjpx.cloudfront.net/landingpages/volunteer-header.png);
     background-position: center;
     background-size: cover;
     position: relative; 
-    padding: 0%;
-    
+    padding: 0.5%;
     }
