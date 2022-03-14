@@ -20,6 +20,7 @@ export const Login = () => {
         const token = localStorage.getItem('token');
         const decoded = jwt_decode(token);
         setUser({...decoded.user});
+        alert('login successfully')
         Navigate("/");
 
     });
@@ -29,20 +30,7 @@ export const Login = () => {
       <h1>LOGIN</h1>
 
       <form>
-        {/* <label>First Name: </label>
-        <input
-          type="text"
-          name="FirstName"
-          placeholder="First Name"
-          onChange={changingTheValue}
-        /> */}
-        {/* <label>Last Name: </label>
-        <input
-          type="text"
-          name="LastName"
-          placeholder="Last Name"
-          onChange={changingTheValue}
-        /> */}
+
         <label>Email: </label>
         <input
           type="text"
