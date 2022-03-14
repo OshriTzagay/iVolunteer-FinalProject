@@ -14,8 +14,7 @@ function App() {
         <AppRouter />
         <UserRegister />
       </UserContextProvider>
-      
-    <Welcome/>
+      <Welcome />
     </div>
   );
 }
