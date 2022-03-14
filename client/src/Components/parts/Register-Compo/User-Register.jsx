@@ -13,6 +13,7 @@ export const UserRegister = () => {
     setUser({ ...user });
     console.log(user);
     registerUser(user);
+    alert("register completed successfully");
   };
   return (
     <div className="register-compo">
