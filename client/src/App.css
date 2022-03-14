@@ -11,6 +11,7 @@
   height: 100vh;
   grid-template-columns: 10% 30% 30%;
   grid-template-rows: 30% 30% 10%;
+  overflow-x: hidden;
 }
 body {
   background: rgba(255, 217, 0, 0.377);
@@ -21,6 +22,8 @@ body {
   justify-content: center;
   grid-area: main;
   border: 1px solid black;
+  min-height: 100vh;
+  overflow: auto;
 }
 .the-header {
   grid-area: hd;

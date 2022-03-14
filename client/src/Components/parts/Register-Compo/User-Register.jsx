@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { userContext } from "../../../Contexts/user-context";
 import { registerUser } from "../../../Services/user-service";
-
+import "./Register-Compo.css";
 export const UserRegister = () => {
   const { user, setUser } = useContext(userContext);
   const changingTheValue = (e) => {
@@ -15,7 +15,7 @@ export const UserRegister = () => {
     registerUser(user);
   };
   return (
-    <div>
+    <div className="register-compo">
       <form>
         <label>First Name: </label>
         <input
