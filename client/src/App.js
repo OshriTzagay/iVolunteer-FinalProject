@@ -9,10 +9,10 @@ import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 function App() {
   return (
     <div className="App">
-      {/* <UserContextProvider>
+      <UserContextProvider>
         <AppRouter />
-      </UserContextProvider> */}
-      <Welcome/>
+      </UserContextProvider>
+      
     </div>
   );
 }
