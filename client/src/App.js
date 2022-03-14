@@ -12,6 +12,7 @@ function App() {
       <UserContextProvider>
         <AppRouter />
       </UserContextProvider>
+      
     </div>
   );
 }
