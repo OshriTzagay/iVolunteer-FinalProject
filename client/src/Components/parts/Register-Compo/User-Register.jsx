@@ -4,7 +4,6 @@ import { registerUser } from "../../../Services/user-service";
 import "./Register-Compo.css";
 export const UserRegister = () => {
   const { user, setUser } = useContext(userContext);
-
   const changingTheValue = (e) => {
     user[e.target.name] = e.target.value;
   };
