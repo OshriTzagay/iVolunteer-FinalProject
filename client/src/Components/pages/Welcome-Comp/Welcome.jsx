@@ -21,8 +21,6 @@ function Welcome () {
         Id eligendi consequatur dignissimos illo? Voluptatem rerum minima possimus, unde sit aliquam. Enim est ratione sunt eum perferendis. Veniam blanditiis repellendus assumenda. Vel beatae corporis tenetur? Officia eaque alias consectetur.
         Harum, error officia placeat nisi nostrum repudiandae eligendi ipsam, id inventore nesciunt omnis repellat aliquid expedita porro, distinctio sint iure blanditiis nulla sunt? Veniam facilis consectetur eligendi maxime inventore illum?
         </p>
-
-
         </div>
     </div>
     )
