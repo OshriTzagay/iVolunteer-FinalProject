@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { AppRouter } from "./AppRouter";
 import UserContextProvider from "./Contexts/user-context";
-
+import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 import { getPostsData } from "./Services/volPosts-service";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 
@@ -14,7 +14,8 @@ function App() {
         <AppRouter />
         <UserRegister />
       </UserContextProvider>
-      <h1>Test!</h1>
+      
+    <Welcome/>
     </div>
   );
 }
