@@ -5,10 +5,26 @@ import { Footer } from "./Components/parts/Footer-Compo/Footer";
 import { Header } from "./Components/parts/Header-Compo/Header";
 import { VolPosts } from "./Components/pages/Vol-Posts-Compo/VolPosts";
 import { NeedVolPosts } from "./Components/pages/NeedVol-Posts-Compo/NeedVolPosts";
+import Welcome from "./Components/pages/Welcome-Comp/Welcome";
+import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 
 export const AppRouter = () => {
-  return <BrowserRouter>
-  
-  </BrowserRouter>;
-  
+  return (
+    <BrowserRouter>
+      <Header />
+      <SideBar />
+      <div className="main-content">
+        <Routes>
+          <Route exact path="/welcome" element={<Welcome />}></Route>
+
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
+          <Route exact path="volposts" element={<VolPosts />}></Route>
+          <Route exact path="/register" element={<UserRegister />}></Route>
+        </Routes>
+      </div>
+
+      <Footer />
+    </BrowserRouter>
+  );
 };
