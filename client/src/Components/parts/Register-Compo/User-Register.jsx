@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { userContext } from "../../../Contexts/user-context";
 import { registerUser } from "../../../Services/user-service";
 import "./Register-Compo.css";
@@ -10,20 +11,25 @@ export const UserRegister = () => {
 
   const AddUser = (e) => {
     e.preventDefault();
-    setUser({ ...user });
-    console.log(user);
-    registerUser(user);
-    alert("register completed successfully");
+
+      setUser({ ...user });
+      // console.log(user);
+      registerUser(user);
+      alert("GOOD")
+  
+  
   };
   return (
     <div className="register-compo">
-      <form>
+      <form onSubmit={AddUser}>
         <label>First Name: </label>
         <input
           type="text"
           name="FirstName"
           placeholder="First Name"
           onChange={changingTheValue}
+          required
+          
         />
         <label>Last Name: </label>
         <input
@@ -31,6 +37,7 @@ export const UserRegister = () => {
           name="LastName"
           placeholder="Last Name"
           onChange={changingTheValue}
+          required
         />
         <label>Email: </label>
         <input
@@ -55,7 +62,7 @@ export const UserRegister = () => {
           onChange={changingTheValue}
         />
 
-        <button type="submit" onClick={AddUser}>
+        <button type="submit">
           Confirm
         </button>
       </form>
