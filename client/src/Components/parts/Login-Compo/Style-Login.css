@@ -1,0 +1,12 @@
+.continerUser{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newUser{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

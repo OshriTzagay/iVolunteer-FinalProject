@@ -1,16 +1,8 @@
 import React from "react";
 import "./Style-Welcome.css";
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import Fab from '@mui/material/Fab';
 
 
 function Welcome() {
-    
-        function Myname() {
-            console.log("lior");
-        }
     
     return (<>
         <div className="welcome">
@@ -45,24 +37,7 @@ function Welcome() {
             </section>
         </div>
 
-        <div className="continerUser">
-            <div className="login">
-                <h1>Login to Your Account</h1>
-                <TextField label="Email" type="email" /> <br/>
-                <TextField label="Password" type="password" autoComplete="current-password"/>
-                <br/>
-                <Fab variant="extended" color="success" aria-label="add"> Log In </Fab>
-            </div>
-           
-            <section className="Register">
-                <div className="newUser">
-                    <h1>New Here?</h1>
-                    <p>Sing up and discover the iVolunteer world</p>
-                    <Fab variant="extended" color="primary" aria-label="add"> Register </Fab>
-                </div>
-
-            </section>
-        </div>
+        
     </>
     )
 }
