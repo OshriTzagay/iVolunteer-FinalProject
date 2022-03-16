@@ -10,10 +10,13 @@ function App() {
   return (
     <div className="someDiv">
       <Welcome/>
-      <UserContextProvider>
+       <UserContextProvider>
         <AppRouter />
-      </UserContextProvider>
-      <AddVolPost/>
+
+      </UserContextProvider> 
+      
+
+
     </div>
   );
 }
