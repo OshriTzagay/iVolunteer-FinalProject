@@ -1,9 +1,5 @@
 ///!Volunteer Posts Service -->
-
-const BASIC_API =
-  process.env.NODE_ENV === "production"
-    ? "https://my-office-mern-app.herokuapp.com/"
-    : "http://localhost:8000/";
+const BASIC_API ="http://localhost:8000";
 
 export const getPostsData = async () => {
   try {
@@ -11,4 +7,15 @@ export const getPostsData = async () => {
   } catch (er) {
     console.error(er);
   }
+};
+
+export const AddPost = async (post) => {
+  const options = {
+    method: "POST",
+    body: JSON.stringify({...post}),
+    headers: { "Content-Type": "application/json" },
+  };
+  return await fetch(`${BASIC_API}/posts`, options)
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
 };
