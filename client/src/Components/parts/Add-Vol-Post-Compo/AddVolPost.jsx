@@ -13,13 +13,11 @@ export const AddVolPost = () => {
     setPost({ ...post });
     console.log(post);
     AddPost(post);
-
-    };
-
+  };
 
   return (
     <div>
-        <h1>add post</h1>
+      <h1>add post</h1>
       <form>
         <label>First name </label>
         <input
@@ -30,11 +28,26 @@ export const AddVolPost = () => {
         />
 
         <label>Last name </label>
-        <input type="text" onChange={ChangingTheValue} name="LastName" placeholder="Enter your last name" />
+        <input
+          type="text"
+          onChange={ChangingTheValue}
+          name="LastName"
+          placeholder="Enter your last name"
+        />
         <label> Email </label>
-        <input type="text" onChange={ChangingTheValue} name="Email" placeholder="Enter your Email" />
+        <input
+          type="text"
+          onChange={ChangingTheValue}
+          name="Email"
+          placeholder="Enter your Email"
+        />
         <label> Age </label>
-        <input type="number" onChange={ChangingTheValue} name="Age" placeholder="Enter your Age" />
+        <input
+          type="number"
+          onChange={ChangingTheValue}
+          name="Age"
+          placeholder="Enter your Age"
+        />
         <label> Skills </label>
         <input
           type="text"
@@ -85,7 +98,12 @@ export const AddVolPost = () => {
           placeholder="write about yourself"
         />
         <label> Phone </label>
-        <input type="tel" onChange={ChangingTheValue} name="Phone" placeholder="enter your phone number" />
+        <input
+          type="tel"
+          onChange={ChangingTheValue}
+          name="Phone"
+          placeholder="enter your phone number"
+        />
 
         <button type="submit" onClick={SendThePost}>
           click
