@@ -23,3 +23,56 @@
     font-family: 'Fruktur', cursive;
     color:coral
 }
+
+.continer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.continer i {
+   margin: 10px;
+}
+.how{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+.how img{
+    width: 300px;
+    height: 200px;
+}
+
+.icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+.continerUser{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newUser{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
