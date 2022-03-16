@@ -16,7 +16,7 @@ export const loginUser = async (user) => {
   const options = {
     method: "POST",
     body: JSON.stringify({ ...user }),
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", },
   };
   return await fetch(`${BASE_URL}/login`, options)
     .then((res) => res.json())
