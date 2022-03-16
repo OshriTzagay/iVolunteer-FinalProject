@@ -1,7 +1,6 @@
 const VolPosts = require('../Models/vol-post-model');
 
 
-
 let GetPosts = async (req, res) => {
   await VolPosts.find()
     .then((result) => res.send(result))
@@ -16,7 +15,7 @@ let GetPostById = async (req, res) => {
 
 let AddPost = async (req, res) => {
   await VolPosts.create(req.body)
-    .then((data) => res.send({AddedPost:data}))
+    .then((data) => res.send({data}))
     .catch((err) => res.send({ Error: err }));
 };
 
