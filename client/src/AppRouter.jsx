@@ -19,7 +19,6 @@ export const AppRouter = () => {
       <div className="main-content">
         <Routes>
           <Route exact path="/home" element={<Home />}></Route>
-
           <Route exact path="/" element={<Welcome />}></Route>
           <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
           <Route exact path="volposts" element={<VolPosts />}></Route>

@@ -14,7 +14,7 @@ export const Login = () => {
 
   const SendTheLoginUser = (e) => {
     e.preventDefault();
-    console.log(user);
+    console.log({user});
     
     loginUser(user).then((res)=>{
       if(res.token){
@@ -23,6 +23,7 @@ export const Login = () => {
         const decoded = jwt_decode(token);
         setUser({...decoded.user});
         alert(`welcome ${decoded.user.FirstName} `)
+        console.log(user);
         Navigate("/");}
 else{
       alert('Check your password or email')

@@ -8,15 +8,15 @@ import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 import { AddVolPost } from "./Components/parts/Add-Vol-Post-Compo/AddVolPost";
 function App() {
   return (
-    <div className="someDiv">
-      <Welcome/>
+    <>
+      {/* <Welcome/> */}
        <UserContextProvider>
         <AppRouter />
       </UserContextProvider> 
       
 
 
-    </div>
+    </>
   );
 }
 
