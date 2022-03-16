@@ -78,14 +78,14 @@ export  const AddVolPost = () => {
         />
         <label> StartHour </label>
         <input
-          type="time"
+          type="number"
           onChange={ChangingTheValue}
           name="StartHour"
           placeholder="Enter the hour you can start in "
         />
         <label> FinishHour </label>
         <input
-          type="time"
+          type="number"
           onChange={ChangingTheValue}
           name="FinishHour"
           placeholder="Enter the hour you want finish volunteer in "
