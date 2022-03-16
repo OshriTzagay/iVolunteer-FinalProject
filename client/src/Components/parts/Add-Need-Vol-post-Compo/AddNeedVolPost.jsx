@@ -1,7 +1,7 @@
-import { AddPost } from "../../../Services/volPosts-service";
 import { useState } from "react";
+import { AddPost } from "../../../Services/needVolPost-service";
 
-export  const AddVolPost = () => {
+export const AddNeedVolPost = () => {
   const [post, setPost] = useState({});
 
   const ChangingTheValue = (e) => {
@@ -17,7 +17,7 @@ export  const AddVolPost = () => {
 
   return (
     <div>
-      <h1>add post</h1>
+      <h1>add need vol post</h1>
       <form>
         <label>First name </label>
         <input
@@ -26,7 +26,6 @@ export  const AddVolPost = () => {
           name="FirstName"
           placeholder="Enter your first name"
         />
-
         <label>Last name </label>
         <input
           type="text"
@@ -41,20 +40,6 @@ export  const AddVolPost = () => {
           name="Email"
           placeholder="Enter your Email"
         />
-        <label> Age </label>
-        <input
-          type="number"
-          onChange={ChangingTheValue}
-          name="Age"
-          placeholder="Enter your Age"
-        />
-        <label> Skills </label>
-        <input
-          type="text"
-          onChange={ChangingTheValue}
-          name="Skills"
-          placeholder="Enter any spacial skills"
-        />
         <label> Language</label>
         <input
           type="text"
@@ -62,12 +47,12 @@ export  const AddVolPost = () => {
           name="Language"
           placeholder="Enter any Language you speak"
         />
-        <label> Skills </label>
+        <label> Age </label>
         <input
-          type="text"
+          type="number"
           onChange={ChangingTheValue}
-          name="Skills"
-          placeholder="Enter any spacial skills"
+          name="Age"
+          placeholder="Enter your Age"
         />
         <label> City </label>
         <input
@@ -76,19 +61,12 @@ export  const AddVolPost = () => {
           name="City"
           placeholder="Enter the city you want to volunteer in "
         />
-        <label> StartHour </label>
+        <label> Phone </label>
         <input
-          type="time"
+          type="tel"
           onChange={ChangingTheValue}
-          name="StartHour"
-          placeholder="Enter the hour you can start in "
-        />
-        <label> FinishHour </label>
-        <input
-          type="time"
-          onChange={ChangingTheValue}
-          name="FinishHour"
-          placeholder="Enter the hour you want finish volunteer in "
+          name="Phone"
+          placeholder="enter your phone number"
         />
         <label> Description </label>
         <input
@@ -97,18 +75,10 @@ export  const AddVolPost = () => {
           name="Description"
           placeholder="write about yourself"
         />
-        <label> Phone </label>
-        <input
-          type="tel"
-          onChange={ChangingTheValue}
-          name="Phone"
-          placeholder="enter your phone number"
-        />
-        <input  onChange={ChangingTheValue} name="ProfilePic" type="file" />
-
         <button type="submit" onClick={SendThePost}>
-          click
+          send
         </button>
+        
       </form>
     </div>
   );

@@ -29,11 +29,11 @@ const port = process.env.PORT;
 ///!----------USES-------------->
 app.use(passport.initialize());
 app.use('/users',userRouter);
-app.use('/posts',VolPostsRouter);
+app.use('/posts',passport.authenticate('jwt',{session:false}),VolPostsRouter);
 app.use('/volneed',passport.authenticate('jwt',{session:false}),NeedVolPostsRouter);
 ///!----------USES-------------->
 
-
+ 
 
 app.listen(port, () => {
   console.log(`SERVER IN UP On port ${port}`);
