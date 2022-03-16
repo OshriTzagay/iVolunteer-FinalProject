@@ -12,7 +12,7 @@ export const getPostsData = async () => {
 export const AddPost = async (post) => {
   const options = {
     method: "POST",
-    body: JSON.stringify({post}),
+    body: JSON.stringify({...post}),
     headers: { "Content-Type": "application/json" },
   };
   return await fetch(`${BASIC_API}/posts`, options)

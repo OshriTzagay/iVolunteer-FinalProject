@@ -12,7 +12,6 @@ function App() {
       <Welcome/>
        <UserContextProvider>
         <AppRouter />
-
       </UserContextProvider> 
       
 
