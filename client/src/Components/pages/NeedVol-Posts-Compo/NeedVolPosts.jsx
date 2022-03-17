@@ -1,7 +1,8 @@
-export const NeedVolPosts = ()=>{
-    return(
+export const NeedVolPosts = () => {
+    return (
         <div>
-           <h1> I'm Really Need Volunteer!</h1>
+            <h1> I'm Really Need Volunteer!</h1>
         </div>
+
     )
 }
