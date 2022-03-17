@@ -18,20 +18,24 @@ export const Login = () => {
 
   const SendTheLoginUser = (e) => {
     e.preventDefault();
+
     console.log(user);
 
     loginUser(user).then((res) => {
       if (res.token) {
         localStorage.setItem('token', res.token)
+
         const token = localStorage.getItem('token');
         const decoded = jwt_decode(token);
         setUser({ ...decoded.user });
         alert(`welcome ${decoded.user.FirstName} `)
+
         Navigate("/");
       }
       else {
         alert('Check your password or email')
       }
+
     });
   };
   return (
