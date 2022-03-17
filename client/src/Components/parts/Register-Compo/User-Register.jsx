@@ -21,6 +21,7 @@ export const UserRegister = () => {
   };
   return (
     <div className="register-compo">
+
       <form onSubmit={AddUser}>
         <label>First Name: </label>
         <input
