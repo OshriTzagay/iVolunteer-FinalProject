@@ -18,7 +18,7 @@ export const UserRegister = () => {
   return (
     <div className="register-compo">
       <form>
-        <label>First Namee: </label>
+        <label>First Name: </label>
         <input
           type="text"
           name="FirstName"
