@@ -48,6 +48,9 @@ export  const AddVolPost = () => {
           <TextField label="FinishHour" placeholder="example: 1900 " name="FinishHour" type="number" onChange={ChangingTheValue} multiline />
           <TextField label="Phone" placeholder="enter a phone number" name="Phone" type="tel" onChange={ChangingTheValue} multiline />
         </div>
+        <div>
+          <input label="ProfilePic" placeholder="add image" name="ProfilePic" type="file" onChange={ChangingTheValue} multiline />
+        </div>
 
 
 

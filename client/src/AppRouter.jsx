@@ -9,6 +9,7 @@ import { NeedVolPosts } from "./Components/pages/NeedVol-Posts-Compo/NeedVolPost
 import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 import { Login } from "./Components/parts/Login-Compo/Login";
+import Donaters from "./Components/pages/Donaters-Compo/Donaters";
 
 export const AppRouter = () => {
   return (
@@ -24,6 +25,8 @@ export const AppRouter = () => {
           <Route exact path="volposts" element={<VolPosts />}></Route>
           <Route exact path="/register" element={<UserRegister />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/donates" element={<Donaters />}></Route>
+
 
         </Routes>
       </div>

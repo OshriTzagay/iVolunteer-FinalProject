@@ -11,9 +11,8 @@ export const UserRegister = () => {
 
   const AddUser = (e) => {
     e.preventDefault();
-
     setUser({...user })
-    console.log(user);
+   console.log(user);
     registerUser(user);
     alert("GOOD");
   };
