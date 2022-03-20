@@ -12,12 +12,10 @@ export const UserRegister = () => {
   const AddUser = (e) => {
     e.preventDefault();
 
-      setUser({ ...user });
-      // console.log(user);
-      registerUser(user);
-      alert("GOOD")
-  
-  
+    setUser({...user })
+    console.log(user);
+    registerUser(user);
+    alert("GOOD");
   };
   return (
     <div className="register-compo">
@@ -29,7 +27,6 @@ export const UserRegister = () => {
           placeholder="First Name"
           onChange={changingTheValue}
           required
-          
         />
         <label>Last Name: </label>
         <input
@@ -61,10 +58,7 @@ export const UserRegister = () => {
           maxLength={10}
           onChange={changingTheValue}
         />
-
-        <button type="submit">
-          Confirm
-        </button>
+        <button type="submit">Confirm</button>
       </form>
     </div>
   );

@@ -1,6 +1,6 @@
 .register-compo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 
