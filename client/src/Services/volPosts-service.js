@@ -3,7 +3,7 @@ const BASIC_API = "http://localhost:8000";
 
 export const getPostsData = async () => {
   try {
-    return await fetch(`${BASIC_API}`).then((res) => res.json());
+    return await fetch(`${BASIC_API}/posts`).then((res) => res.json());
   } catch (er) {
     console.error(er);
   }
