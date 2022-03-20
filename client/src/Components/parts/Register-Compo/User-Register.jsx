@@ -3,7 +3,6 @@ import { Navigate } from "react-router-dom";
 import { userContext } from "../../../Contexts/user-context";
 import { registerUser } from "../../../Services/user-service";
 import "./Register-Compo.css";
-
 export const UserRegister = () => {
   const { user, setUser } = useContext(userContext);
   const changingTheValue = (e) => {
@@ -13,7 +12,7 @@ export const UserRegister = () => {
   const AddUser = (e) => {
     e.preventDefault();
 
-    setUser({ ...user });
+    setUser({...user })
     console.log(user);
     registerUser(user);
     alert("GOOD");
@@ -59,7 +58,6 @@ export const UserRegister = () => {
           maxLength={10}
           onChange={changingTheValue}
         />
-
         <button type="submit">Confirm</button>
       </form>
     </div>
