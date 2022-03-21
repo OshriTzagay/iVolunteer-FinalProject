@@ -1,13 +1,14 @@
-const BASIC_API ="http://localhost:8000/donates";
+const BASIC_API = process.env.NODE_ENV === 'production'? `https://ivolunteer-app.herokuapp.com`:'http://localhost:8000';
 
 
 export const getDonatersData = async () => {
     try {
-      return await fetch(`${BASIC_API}`).then((res) => res.json());
+      return await fetch(`${BASIC_API}/donates`).then((res) => res.json());
     } catch (er) {
       console.error(er);
     }
   };
+  
   
   export const AddDonater = async (donater) => {
     const options = {
@@ -16,7 +17,7 @@ export const getDonatersData = async () => {
       headers: { "Content-Type": "application/json",
       Authorization:`Bearer ${localStorage.getItem('token')}` },
     };
-    return await fetch(`${BASIC_API}`, options)
+    return await fetch(`${BASIC_API}/donates`, options)
       .then((res) => res.json())
       .catch((err) => console.log(err));
   };

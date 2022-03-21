@@ -15,11 +15,11 @@ const VolPostsRouter = require('./Routes/vol-post-route');
 const NeedVolPostsRouter = require('./Routes/needVol-route');
 const DonatersRouter = require('./Routes/donaters-route');
 const passport = require("passport");
-require("./config/passport")(passport);
+require("./Config/passport")(passport);
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 ///!----------Requires------------------>
 
 

@@ -1,8 +1,15 @@
-const BASIC_API ="http://localhost:8000";
+const BASIC_API = process.env.NODE_ENV === 'production'? `https://ivolunteer-app.herokuapp.com`:'http://localhost:8000';
 
-export const getPostsData = async () => {
+export const GetPostsData = async () => {
+  const options = {
+    method: "GET",
+    headers: { "Content-Type": "application/json",
+    Authorization:`Bearer ${localStorage.getItem('token')}` },
+  };
   try {
-    return await fetch(`${BASIC_API}/volneed`).then((res) => res.json());
+    return await fetch(`${BASIC_API}/volneed`,options)
+    .then((res) => res.json());
+    
   } catch (er) {
     console.error(er);
   }
