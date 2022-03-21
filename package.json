@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm install && cd client && npm install",
-    "start": "node SERVER/server.js",
-    "server": "nodemon node SERVER/server.js",
-    "client": "cd client && npm run start",
+    "start": "npm run dev",
+    "server": "nodemon SERVER/server.js",
+    "client": "cd client && npm start",
     "dev": "concurrently --kill others-on-fail \"npm run SERVER\" \"npm run client\"",
     "start-dev": "nodemon node SERVER/server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
