@@ -9,6 +9,7 @@ export const getDonatersData = async () => {
     }
   };
   
+  
   export const AddDonater = async (donater) => {
     const options = {
       method: "POST",
