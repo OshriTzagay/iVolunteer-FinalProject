@@ -1,4 +1,4 @@
-const BASIC_API ="http://localhost:8000/donates";
+const BASIC_API = process.env.NODE_ENV === 'production'? `https://ivolunteer-app.herokuapp.com/donates`:'http://localhost:8000/donates';
 
 
 export const getDonatersData = async () => {
