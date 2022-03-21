@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "server": "nodemon SERVER/server.js",
     "client": "cd client && npm start",
-    "dev": "concurrently --kill others-on-fail \"npm run SERVER\" \"npm run client\"",
+    "dev": "concurrently --kill others-on-fail \"npm run server\" \"npm run client\"",
     "start-dev": "nodemon node SERVER/server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },

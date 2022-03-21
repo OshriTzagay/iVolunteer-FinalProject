@@ -2,7 +2,7 @@ import { AddPost } from "../../../Services/volPosts-service";
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
+import InputLabel from '@mui/material/InputLabel';
 import "./Add-style.css";
 
 export  const AddVolPost = () => {

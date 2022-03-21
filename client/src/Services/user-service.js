@@ -1,4 +1,4 @@
-const BASIC_API = process.env.NODE_ENV === 'production'? `https://ivolunteer-app.herokuapp.com/users`:'http://localhost:8000/users';
+const BASIC_API = process.env.NODE_ENV === 'production'? 'https://ivolunteer-app.herokuapp.com/users':'http://localhost:8000/users';
 
 export const registerUser = async (user) => {
   console.log(user);
