@@ -5,13 +5,12 @@
   "main": "SERVER/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "npm install && cd client && npm install",
-    "start": "npm run dev",
-    "server-dev": "nodemon SERVER/server.js",
-    "server": "node SERVER/server.js",
+    "setup": "npm install &&  cd client && npm install && npm start",
     "client": "cd client && npm start",
-    "dev": "concurrently --kill others-on-fail \"npm run server\" \"npm run client\"",
-    "start-dev": "nodemon node SERVER/server.js",
+    "server": "node SERVER/server.js",
+    "start": "concurrently \"npm run setup\" \"npm run server\"",
+    "server-dev": "nodemon SERVER/server.js",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "OLM",
