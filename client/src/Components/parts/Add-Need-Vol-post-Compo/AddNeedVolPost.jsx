@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { AddPost } from "../../../Services/needVolPost-service";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export const AddNeedVolPost = () => {
   const [post, setPost] = useState({});
@@ -18,67 +20,95 @@ export const AddNeedVolPost = () => {
   return (
     <div>
       <h1>add need vol post</h1>
-      <form>
-        <label>First name </label>
-        <input
-          type="text"
-          onChange={ChangingTheValue}
-          name="FirstName"
+      <form className="form" onSubmit={SendThePost}>
+        <TextField
+          label=" First name"
           placeholder="Enter your first name"
-        />
-        <label>Last name </label>
-        <input
+          name="FirstName"
           type="text"
           onChange={ChangingTheValue}
+          multiline
+          required
+        />
+        <br />
+        <TextField
+          label="Last name"
+          placeholder="Enter your Last name"
           name="LastName"
-          placeholder="Enter your last name"
-        />
-        <label> Email </label>
-        <input
           type="text"
           onChange={ChangingTheValue}
-          name="Email"
+          multiline
+          required
+        />
+        <br />
+        <TextField
+          label="Email"
           placeholder="Enter your Email"
-        />
-        <label> Language</label>
-        <input
+          name="Email"
           type="text"
           onChange={ChangingTheValue}
-          name="Language"
-          placeholder="Enter any Language you speak"
+          multiline
+          required
         />
-        <label> Age </label>
-        <input
+        <br />
+        <TextField
+          label="Language"
+          placeholder="Enter your Language"
+          name="Language"
+          type="text"
+          onChange={ChangingTheValue}
+          multiline
+        />
+        <br />
+        <TextField
+          label="Age"
+          placeholder="Enter your Age"
+          name="Age"
           type="number"
           onChange={ChangingTheValue}
-          name="Age"
-          placeholder="Enter your Age"
+          multiline
         />
-        <label> City </label>
-        <input
-          type="text"
-          onChange={ChangingTheValue}
+        <br />
+        <select
+          style={{
+            width: "207px",
+            height: "60px",
+            fontSize: "1rem",
+            background: "none",
+            textAlign: "center",
+          }}
           name="City"
-          placeholder="Enter the city you want to volunteer in "
-        />
-        <label> Phone </label>
-        <input
+          onChange={ChangingTheValue}
+        >
+          <option value={"Haifa"}>Haifa</option>
+          <option value={"Tel Aviv"}>Tel-Aviv</option>
+          <option value={"Jerusalem"}>Jerusalem</option>
+          <option value={"Beer Sheva"}>Beer Sheva</option>
+          <option value={"Eilat"}>Eilat</option>
+          <option value={"Kiryat Shmona"}>Kiryat Shmona</option>
+          <option value={"Beer Sheva"}>Beer Sheva</option>
+        </select>
+        <br />
+
+        <TextField
+          label="Phone"
+          placeholder="enter a phone number"
+          name="Phone"
           type="tel"
           onChange={ChangingTheValue}
-          name="Phone"
-          placeholder="enter your phone number"
+          multiline
         />
-        <label> Description </label>
-        <input
+        <br />
+        <TextField
+          label="Description"
+          placeholder="write about yourself and your Skills"
+          name="Description"
           type="text"
           onChange={ChangingTheValue}
-          name="Description"
-          placeholder="write about yourself"
+          multiline
         />
-        <button type="submit" onClick={SendThePost}>
-          send
-        </button>
-        
+        <br />
+        <Button type="submit">click</Button>
       </form>
     </div>
   );
