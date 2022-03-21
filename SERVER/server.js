@@ -19,7 +19,7 @@ require("./Config/passport")(passport);
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 ///!----------Requires------------------>
 
 
