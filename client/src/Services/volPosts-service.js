@@ -1,9 +1,14 @@
 ///!Volunteer Posts Service -->
 const BASIC_API = "http://localhost:8000";
 
-export const getPostsData = async () => {
+export const GetPostsData = async () => {
+  const options = {
+    method: "GET",
+    headers: { "Content-Type": "application/json",
+    Authorization:`Bearer ${localStorage.getItem('token')}` },
+  };
   try {
-    return await fetch(`${BASIC_API}/posts`).then((res) => res.json());
+    return await fetch(`${BASIC_API}/posts`,options).then((res) => res.json());
   } catch (er) {
     console.error(er);
   }
