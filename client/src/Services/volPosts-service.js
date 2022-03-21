@@ -1,5 +1,5 @@
 ///!Volunteer Posts Service -->
-const BASIC_API = "http://localhost:8000";
+const BASIC_API = process.env.NODE_ENV === 'production'? 'https://ivolunteer-app.herokuapp.com':'http://localhost:8000';
 
 export const GetPostsData = async () => {
   const options = {
