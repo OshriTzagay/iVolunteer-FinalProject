@@ -8,7 +8,8 @@ export const GetPostsData = async () => {
     Authorization:`Bearer ${localStorage.getItem('token')}` },
   };
   try {
-    return await fetch(`${BASIC_API}/posts`,options).then((res) => res.json());
+    return await fetch(`${BASIC_API}/posts`,options)
+    .then((res) => res.json());
   } catch (er) {
     console.error(er);
   }

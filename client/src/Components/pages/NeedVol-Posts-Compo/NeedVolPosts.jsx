@@ -7,8 +7,8 @@ export const NeedVolPosts = () => {
     let [isLoading, setIsLoading] = useState(false);
     useEffect(()=>{
         GetPostsData()
-        // .then((result) => setArray(result))
-         .then((res) => console.log(Array))
+        .then((result) => setArray(result))
+        //  .then((res) => console.log(Array))
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false))
         
