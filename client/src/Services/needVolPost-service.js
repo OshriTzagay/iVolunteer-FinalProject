@@ -14,6 +14,7 @@ export const GetPostsData = async () => {
     console.error(er);
   }
 };
+ 
 
 export const AddPost = async (post) => {
   const options = {
