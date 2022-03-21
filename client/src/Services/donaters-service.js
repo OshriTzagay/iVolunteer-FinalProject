@@ -3,7 +3,7 @@ const BASIC_API = process.env.NODE_ENV === 'production'? `https://ivolunteer-app
 
 export const getDonatersData = async () => {
     try {
-      return await fetch(`${BASIC_API}`).then((res) => res.json());
+      return await fetch(`${BASIC_API}/donates`).then((res) => res.json());
     } catch (er) {
       console.error(er);
     }
