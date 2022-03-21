@@ -1,4 +1,7 @@
-const BASIC_API = process.env.NODE_ENV === 'production'? 'https://ivolunteer-app.herokuapp.com/users':'http://localhost:8000/users';
+const BASIC_API =
+  process.env.NODE_ENV === "production"
+    ? "https://ivolunteer-app.herokuapp.com/users"
+    : "http://localhost:8000/users";
 
 export const registerUser = async (user) => {
   console.log(user);
@@ -16,7 +19,7 @@ export const loginUser = async (user) => {
   const options = {
     method: "POST",
     body: JSON.stringify({ ...user }),
-    headers: { "Content-Type": "application/json", },
+    headers: { "Content-Type": "application/json" },
   };
   return await fetch(`${BASIC_API}/login`, options)
     .then((res) => res.json())
