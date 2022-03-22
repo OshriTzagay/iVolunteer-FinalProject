@@ -12,7 +12,7 @@ export const VolPosts = () => {
     GetPostsData()
       .then((result) => setArray(result))
       .catch((err) => console.log(err))
-      .finally(() => setIsLoading(false))
+      .finally(() => setIsLoading(false)) 
 
   }, [])
   return (
