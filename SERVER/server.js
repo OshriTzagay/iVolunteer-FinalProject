@@ -13,12 +13,13 @@ const app = express();
 const userRouter = require('./Routes/user-route')
 const VolPostsRouter = require('./Routes/vol-post-route');
 const NeedVolPostsRouter = require('./Routes/needVol-route');
+const DonatersRouter = require('./Routes/donaters-route');
 const passport = require("passport");
-require("./config/passport")(passport);
+require("./Config/passport")(passport);
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 ///!----------Requires------------------>
 
 
@@ -30,6 +31,7 @@ const port = process.env.PORT;
 app.use(passport.initialize());
 app.use('/users',userRouter);
 app.use('/posts',passport.authenticate('jwt',{session:false}),VolPostsRouter);
+app.use('/donates',DonatersRouter);
 app.use('/volneed',passport.authenticate('jwt',{session:false}),NeedVolPostsRouter);
 ///!----------USES-------------->
 

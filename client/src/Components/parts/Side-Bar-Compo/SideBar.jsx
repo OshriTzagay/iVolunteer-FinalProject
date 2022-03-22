@@ -16,7 +16,7 @@ export const SideBar = ()=>{
                 <VolunteerActivismRoundedIcon style={{fontSize:"4rem"}}></VolunteerActivismRoundedIcon>
             </Link>
             <Link className="sb-links" to="/needvol"style={{fontSize:"1rem"}}>Land-a-Hand</Link>
-            <Link className="sb-links" to="/donate" >Donate</Link>
+            <Link className="sb-links" to="/donates" >Donate</Link>
 
         </div>
     )
