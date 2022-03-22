@@ -1,16 +1,19 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import { useState,useEffect } from 'react';
-import {getDonatersData} from '../../../Services/donaters-service'
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { useState, useEffect } from "react";
+import { getDonatersData } from "../../../Services/donaters-service";
+import { AddDonater } from "../../../Services/donaters-service";
+import { DeleteDonater } from "../../../Services/donaters-service";
 import "./Donaters.css";
-
+import { Navigate } from "react-router-dom";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -23,71 +26,125 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
+  "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
   // hide last border
-  '&:last-child td, &:last-child th': {
+  "&:last-child td, &:last-child th": {
     border: 0,
   },
 }));
 
-
-
 export default function CustomizedTables() {
   const [donaters, setDonaters] = useState([]);
-  
+
   useEffect(() => {
-    getDonatersData().then(res=>setDonaters(res));  
-  }, []);
-  return (
-    <div className='donatersContainer'>
+    getDonatersData().then((res) => setDonaters(res));
+  }, [donaters]);
 
-    
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Name</StyledTableCell>
-            <StyledTableCell align="right">About</StyledTableCell>
-            <StyledTableCell align="right">DonateSince</StyledTableCell>
-            <StyledTableCell align="right">WhyDonate</StyledTableCell>
-            <StyledTableCell align="right">DonateSum</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {donaters.map((don) => (
-            <StyledTableRow key={don.Name}>
-              <StyledTableCell component="th" scope="row">
-                {don.Name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{don.About}</StyledTableCell>
-              <StyledTableCell align="right">{don.DonateSince}</StyledTableCell>
-              <StyledTableCell align="right">"{don.WhyDonate}"</StyledTableCell>
-              <StyledTableCell align="right" className='tableCell'>{don.DonateSum}$</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
 
-    <form action="AddDonaterForm" style={{border:"1px solid black",textAlign:"center",width:"400px"}}>
-      <h1>Add Donater</h1>
-     <label htmlFor="">Donater-Name</label><br></br>
-     <input type="text" /><br></br>
+  const [donaterToAdd, setDonaterToAdd] = useState({});
+  const [donaterToDelete, setDonaterToDelete] = useState({});
 
-     <label htmlFor=""></label><br></br>
-     <input type="text" />
-     <br></br>
-     <label htmlFor=""></label><br></br>
-     <input type="text" />
-     <br></br>
-     <button>ADD</button>
+  const changingTheValue = (e) => {
+    donaterToAdd[e.target.name] = e.target.value;
+  };
 
-    </form>
-    </div>
-  );
+const AddDonaterFunc = (e)=>{
+  e.preventDefault();
+  setDonaterToAdd({...donaterToAdd});
+  console.log(donaterToAdd);
+  AddDonater(donaterToAdd);
+  alert("Added Donater");
+  Navigate('/');
+}
+const DeleteDonaterFunc = (donaterId)=>{
+DeleteDonater(donaterId)
+alert("DELETED Donater!");
 }
 
 
-//!
+
+
+  return (
+    <div className="donatersContainer">
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Name</StyledTableCell>
+              <StyledTableCell align="right">About</StyledTableCell>
+              <StyledTableCell align="right">DonateSince</StyledTableCell>
+              <StyledTableCell align="right">WhyDonate</StyledTableCell>
+              <StyledTableCell align="right">DonateSum</StyledTableCell>
+              <StyledTableCell align="right">Delete</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {donaters.map((don) => (
+              <StyledTableRow key={don.Name}>
+                <StyledTableCell component="th" scope="row">
+                  {don.Name}
+                </StyledTableCell>
+                <StyledTableCell align="right">{don.About}</StyledTableCell>
+                <StyledTableCell align="right">
+                  {don.DonateSince}
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  "{don.WhyDonate}"
+                </StyledTableCell>
+                <StyledTableCell align="right" className="tableCell">
+                  {don.DonateSum}$
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  <DeleteIcon onClick={()=>{DeleteDonaterFunc(don._id)}} className="delete-btn"></DeleteIcon>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+
+      <div className="AddDonaterForm">
+          <form
+        onSubmit={AddDonaterFunc}
+        action="AddDonaterForm"
+        style={{
+          border: "1px solid black",
+          textAlign: "center",
+          width: "400px",
+        }}
+      >
+        <h1>Add Donater</h1>
+
+        <label htmlFor="DonaterName">Donater-Name</label>
+        <br />
+        <input type="text" name="Name" onChange={changingTheValue} />
+        <br />
+        <br></br>
+
+        <label htmlFor="About">About</label>
+        <br />
+        <input type="text" name="About" onChange={changingTheValue}/>
+        <br />
+        <label htmlFor="DonateSince">DonateSince</label>
+        <br></br>
+        <input type="text" name="DonateSince" onChange={changingTheValue} />
+        <br></br>
+        <label htmlFor="">Why Donate</label>
+        <br></br>
+        <input type="text" name="WhyDonate" onChange={changingTheValue} />
+        <br></br>
+
+        <label htmlFor="">How Much Would u like to Donate</label>
+        <br></br>
+        <input type="text" name="DonateSum" onChange={changingTheValue} />
+        <br></br>
+        <button type="submit">ADD</button>
+      </form>
+      </div>
+    
+    </div>
+  );
+}

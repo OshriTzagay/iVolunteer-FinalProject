@@ -24,3 +24,17 @@ export const AddDonater = async (donater) => {
     .then((res) => res.json())
     .catch((err) => console.log(err));
 };
+
+export const DeleteDonater = async (donaterId) => {
+  const options = {
+    method: "DELETE",
+    // body: JSON.stringify({ ...donater }),
+    headers: {
+      "Content-Type": "application/json",
+      // Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  };
+  return await fetch(`${BASIC_API}/donates/${donaterId}`, options)
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};

@@ -1,0 +1,33 @@
+.Popup{
+    position: fixed;
+    transition: 3s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.733);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Popup-inner{
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: brown;
+    transition: 3s;
+    overflow: scroll;
+
+}
+
+.Popup-inner .close-btn{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    transition: 3s;
+
+}
+
