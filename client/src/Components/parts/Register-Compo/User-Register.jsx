@@ -29,9 +29,9 @@ export const UserRegister = () => {
           name="FirstName"
           placeholder="First Name"
           onChange={changingTheValue}
-         
           required
         />
+        <br/>
 
         <TextField
           label="Last name"
@@ -39,20 +39,18 @@ export const UserRegister = () => {
           name="LastName"
           placeholder="Last Name"
           onChange={changingTheValue}
-         
           required
         />
-
+  <br/>
         <TextField
           label="Email"
           type="text"
           name="Email"
           placeholder="Email"
           onChange={changingTheValue}
-         
           required
         />
-
+  <br/>
         <TextField
           label="Password"
           placeholder="Enter your Password"
@@ -60,10 +58,9 @@ export const UserRegister = () => {
           name="Password"
           autoComplete="current-password"
           onChange={changingTheValue}
-          
           required
         />
-
+  <br/>
         <TextField
           label="Age"
           type="number"
@@ -71,7 +68,6 @@ export const UserRegister = () => {
           placeholder="Age"
           maxLength={10}
           onChange={changingTheValue}
-          
           required
         />
         <Button type="submit">Confirm</Button>
