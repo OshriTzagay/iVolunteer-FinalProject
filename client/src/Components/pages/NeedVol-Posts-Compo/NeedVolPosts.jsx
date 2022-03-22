@@ -6,9 +6,9 @@ export const NeedVolPosts = () => {
     let [Array,setArray] = useState([]);
     let [isLoading, setIsLoading] = useState(false);
     useEffect(()=>{
+        setIsLoading(true);
         GetPostsData()
         .then((result) => setArray(result))
-        //  .then((res) => console.log(Array))
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false))
         
