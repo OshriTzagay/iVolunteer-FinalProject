@@ -21,7 +21,7 @@ export const UserRegister = () => {
   };
   return (
     <div>
-      <h1>register compo</h1>
+      <h1 className="registerTitle" style={{margin:"10vh"}}>Register compo</h1>
       <form className="register-compo" onSubmit={AddUser}>
         <TextField
           label="First name"
@@ -32,7 +32,7 @@ export const UserRegister = () => {
          
           required
         />
-
+          <br></br>
         <TextField
           label="Last name"
           type="text"
@@ -42,6 +42,7 @@ export const UserRegister = () => {
          
           required
         />
+          <br></br>
 
         <TextField
           label="Email"
@@ -52,6 +53,7 @@ export const UserRegister = () => {
          
           required
         />
+          <br></br>
 
         <TextField
           label="Password"
@@ -63,6 +65,7 @@ export const UserRegister = () => {
           
           required
         />
+          <br></br>
 
         <TextField
           label="Age"
@@ -74,7 +77,7 @@ export const UserRegister = () => {
           
           required
         />
-        <Button type="submit">Confirm</Button>
+        <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
     </div>
   );

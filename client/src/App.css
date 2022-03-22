@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -16,11 +17,15 @@
   min-height: 100vh;
   grid-template-columns: 10% 90%;
   grid-template-rows: 10vh auto 10vh;
+  overflow: hidden;
+  position: relative;
 }
 body {
   background-attachment: fixed;
-  background-image: linear-gradient(180deg, #33ccff77, #ccffff91);
-  font-family: "Lobster Two", cursive;
+  background-image: linear-gradient(180deg, #2158fd, #a6bcfd);
+  background-color: #d29e79;
+
+  font-family: "Berkshire Swash", cursive;
 }
 .main-content {
   display: flex;
@@ -32,7 +37,9 @@ body {
   width: 100%;
 }
 .the-header {
-  background: rgba(255, 255, 255, 0.774);
+  /* background: #e6c8b3; */
+  background-image: linear-gradient(#c68353);
+
   grid-area: hd;
   display: flex;
   flex-direction: row;
@@ -45,7 +52,6 @@ body {
   display: flex;
   justify-content: flex-start;
   width: 9.9%;
-  background: rgba(255, 255, 255, 0.329);
   justify-content: space-around;
 }
 .div-for-others {
@@ -57,30 +63,43 @@ body {
 .links {
   padding: 10px;
   font-size: 2rem;
-  border: rgba(245, 245, 245, 0.356) solid 1px;
+  /* border: rgba(245, 245, 245, 0.356) solid 1px; */
   padding: 10px;
   display: flex;
-  background: rgba(245, 245, 245, 0.438);
-  border-radius: 40%;
+  /* background: rgba(245, 245, 245, 0.438); */
+  /* border-radius: 40%; */
   margin: 10px;
 }
 
 .the-footer {
   grid-area: ft;
   border: 1px solid black;
+  height: 5vh;
+  /* overflow: hidden; */
+  transition: 2s;
+  position: absolute;
+  bottom: -10vh;
 }
+.active-footer {
+  bottom: 20vh;
+}
+.footer-btn {
+  position: absolute;
+  top: -10vh;
+  left: 50%;
+}
+
 .the-sidebar {
   grid-area: sb;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  /* margin-top: 10vh; */
   position: fixed;
   top: 10vh;
-
   height: 80vh;
-  /* background: rgba(245, 245, 245, 0.774); */
 }
 .sb-links {
-  font-size: 2rem;
+  font-size: 1rem;
+  transition: 2s linear;
 }
-

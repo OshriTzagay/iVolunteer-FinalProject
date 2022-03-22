@@ -14,17 +14,17 @@ export const Header = () => {
         
       </div>
       <div className="div-for-others">
-
-            <Link className="links" to="/about">
-        About
-      </Link>
       <Link className="links" to="/register">
         Register
       </Link>
-      
       <Link className="links" to="/login">
         <LoginRoundedIcon style={{ fontSize: "50px" }} />
       </Link>
+
+            {/* <Link className="links" to="/about">
+        About
+      </Link> */}
+      
       </div>
   
     </div>
