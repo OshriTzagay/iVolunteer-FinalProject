@@ -9,9 +9,10 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    /* text-shadow: 15px 9px 20px black; */
 }
 .welcome h1{
-    text-align: center;
+    /* text-align: center; */
     font-size: 90px;
     /* margin-top: 20px; */
     font-family: 'Fruktur', cursive;
