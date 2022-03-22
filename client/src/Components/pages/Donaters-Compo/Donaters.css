@@ -1,5 +1,4 @@
-.tableCell{
-}
+
 .tableCell:hover{
 background-color: aqua;
 }
@@ -7,4 +6,8 @@ background-color: aqua;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+someTry{
+    
 }
