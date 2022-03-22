@@ -21,7 +21,7 @@ export const UserRegister = () => {
   };
   return (
     <div>
-      <h1>register compo</h1>
+      <h1 className="registerTitle" style={{margin:"10vh"}}>Register compo</h1>
       <form className="register-compo" onSubmit={AddUser}>
         <TextField
           label="First name"
@@ -31,8 +31,7 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
-        <br/>
-
+          <br></br>
         <TextField
           label="Last name"
           type="text"
@@ -41,7 +40,8 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
-  <br/>
+          <br></br>
+
         <TextField
           label="Email"
           type="text"
@@ -50,7 +50,8 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
-  <br/>
+          <br></br>
+
         <TextField
           label="Password"
           placeholder="Enter your Password"
@@ -60,7 +61,8 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
-  <br/>
+          <br></br>
+
         <TextField
           label="Age"
           type="number"
@@ -70,7 +72,7 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
-        <Button type="submit">Confirm</Button>
+        <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
     </div>
   );
