@@ -2,62 +2,79 @@ import { useContext, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { userContext } from "../../../Contexts/user-context";
 import { registerUser } from "../../../Services/user-service";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import "./Register-Compo.css";
+
 export const UserRegister = () => {
-  const [user, setUser ] = useState({});
+  const [user, setUser] = useState({});
   const changingTheValue = (e) => {
     user[e.target.name] = e.target.value;
   };
 
   const AddUser = (e) => {
     e.preventDefault();
-    setUser({...user })
-   console.log(user);
+    setUser({ ...user });
+    console.log(user);
     registerUser(user);
     alert("GOOD");
   };
   return (
-    <div className="register-compo">
-      <form onSubmit={AddUser}>
-        <label>First Name: </label>
-        <input
+    <div>
+      <h1>register compo</h1>
+      <form className="register-compo" onSubmit={AddUser}>
+        <TextField
+          label="First name"
           type="text"
           name="FirstName"
           placeholder="First Name"
           onChange={changingTheValue}
+         
           required
         />
-        <label>Last Name: </label>
-        <input
+
+        <TextField
+          label="Last name"
           type="text"
           name="LastName"
           placeholder="Last Name"
           onChange={changingTheValue}
+         
           required
         />
-        <label>Email: </label>
-        <input
+
+        <TextField
+          label="Email"
           type="text"
           name="Email"
           placeholder="Email"
           onChange={changingTheValue}
+         
+          required
         />
-        <label>Password </label>
-        <input
-          type="password"
+
+        <TextField
+          label="Password"
+          placeholder="Enter your Password"
+          type="Password"
           name="Password"
-          placeholder="Password"
+          autoComplete="current-password"
           onChange={changingTheValue}
+          
+          required
         />
-        <label>Age </label>
-        <input
+
+        <TextField
+          label="Age"
           type="number"
           name="Age"
           placeholder="Age"
           maxLength={10}
           onChange={changingTheValue}
+          
+          required
         />
-        <button type="submit">Confirm</button>
+        <Button type="submit">Confirm</Button>
       </form>
     </div>
   );
