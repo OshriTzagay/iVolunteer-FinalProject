@@ -3,13 +3,24 @@
 background-color: aqua;
 }
 .donatersContainer{
+    margin-top: 20vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-someTry{
+.AddDonaterForm{
+    margin-top: 20vh;
+    text-align: center;
 
+}
+.delete-btn{
+    font-size: large;
+    transition: 0.5s ;
+}
+.delete-btn:hover{
+    font-size: xx-large;
+    cursor: pointer;
 }
 
 
