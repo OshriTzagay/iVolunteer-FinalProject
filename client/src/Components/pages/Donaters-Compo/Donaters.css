@@ -1,0 +1,15 @@
+
+.tableCell:hover{
+background-color: aqua;
+}
+.donatersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+someTry{
+
+}
+
+
