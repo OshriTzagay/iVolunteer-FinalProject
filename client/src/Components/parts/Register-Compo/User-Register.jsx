@@ -72,6 +72,7 @@ export const UserRegister = () => {
           onChange={changingTheValue}
           required
         />
+        <br></br>
         <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
     </div>

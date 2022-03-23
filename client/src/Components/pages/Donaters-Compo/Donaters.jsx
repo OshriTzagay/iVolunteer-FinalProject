@@ -69,15 +69,15 @@ alert("DELETED Donater!");
   return (
     <div className="donatersContainer">
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <Table sx={{ minWidth: 700,minHeight:700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="right">About</StyledTableCell>
-              <StyledTableCell align="right">DonateSince</StyledTableCell>
-              <StyledTableCell align="right">WhyDonate</StyledTableCell>
-              <StyledTableCell align="right">DonateSum</StyledTableCell>
-              <StyledTableCell align="right">Delete</StyledTableCell>
+              <StyledTableCell className="table-header" align="right">About</StyledTableCell>
+              <StyledTableCell className="table-header" align="right">DonateSince</StyledTableCell>
+              <StyledTableCell className="table-header"align="right">WhyDonate</StyledTableCell>
+              <StyledTableCell className="table-header"align="right">DonateSum</StyledTableCell>
+              <StyledTableCell className="table-header"align="right">Delete</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
