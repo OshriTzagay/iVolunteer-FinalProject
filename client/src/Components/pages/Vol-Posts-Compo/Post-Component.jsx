@@ -34,41 +34,9 @@ const PostCard = ({ item }) => {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <p>{item.Description}</p>
-            <p>
-              {" "}
-              <EmailOutlinedIcon /> {item.Email}{" "}
-            </p>
-            <p>
-              {" "}
-              <LocationOnIcon /> {item.City}{" "}
-            </p>
-            <p>
-              {" "}
-              <TranslateIcon /> {item.Language}{" "}
-            </p>
-            <p>
-              <BuildIcon /> {item.Skills}{" "}
-            </p>
-            <p>{item.Age} </p>
-            <p>
-              <AlarmIcon /> {item.StartHour}:00{" "}
-            </p>
-            <p>
-              <AlarmOffIcon /> {item.FinishHour}:00{" "}
-            </p>
           </Typography>
+          <Button size="small" onClick={() => setBtnPopup(true)}> See More Details </Button>
         </CardContent>
-        <CardActions>
-          <a href="tel:+{item.Phone}">
-            <Button size="small">
-              {" "}
-              <LocalPhoneIcon /> {item.Phone}
-            </Button>
-          </a>
-          <Button size="small" onClick={() => setBtnPopup(true)}>
-            See More Details
-          </Button>
-        </CardActions>
       </Card>
       <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item} />
     </section>

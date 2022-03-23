@@ -10,12 +10,14 @@ import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 import { Login } from "./Components/parts/Login-Compo/Login";
 import Donaters from "./Components/pages/Donaters-Compo/Donaters";
+import  {AddNeedVolPost} from "./Components/parts/Add-Need-Vol-post-Compo/AddNeedVolPost";
+import { AddVolPost } from "./Components/parts/Add-Vol-Post-Compo/AddVolPost";
 import { useContext, useState, useEffect } from "react";
 import { userContext } from "./Contexts/user-context";
 export const AppRouter = () => {
   const { user } = useContext(userContext);
 
-console.log(user);
+// console.log(user);
   return (
     <div className="App">
       <BrowserRouter>
@@ -26,11 +28,14 @@ console.log(user);
           <Routes>
             <Route exact path="/" element={<Welcome />}></Route>
             <Route  exact path="/home" element={<Home />}></Route>
+            <Route exact path="/needvolPost" element={<AddVolPost />}></Route>
             <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
             <Route exact path="volposts" element={<VolPosts />}></Route>
+            <Route exact path="/volPost" element={<AddNeedVolPost />}></Route>
             <Route exact path="/register" element={<UserRegister />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/donates" element={<Donaters />}></Route>
+
           </Routes>
         </div>
 
