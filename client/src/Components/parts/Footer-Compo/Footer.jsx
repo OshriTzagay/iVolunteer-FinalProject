@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 export const Footer = () => {
   const [toggle, setToggle] = useState(false);
@@ -6,8 +7,8 @@ export const Footer = () => {
 
   return (
     <div className={`the-footer ${toggle?"active-footer":""}`}>
-      <button className="footer-btn" onClick={()=>setToggle(!toggle)}>Click</button>
-      
+      {/* <button >Click</button> */}
+      <ArrowCircleUpIcon className="footer-btn" onClick={()=>setToggle(!toggle)}/>
       <h1>Im Footer!</h1>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quis eum magni eaque officiis ullam consectetur earum ea id. Eaque magni quam voluptatibus laborum qui accusamus velit expedita iste. Itaque!
     Modi, necessitatibus distinctio eligendi soluta totam, explicabo nesciunt porro eum odit tenetur aliquid quia non ipsum laborum deleniti repellat expedita vitae ipsa? Sed vel pariatur quod dolorum ipsa molestias exercitationem.

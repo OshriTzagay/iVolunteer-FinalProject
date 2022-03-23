@@ -17,6 +17,8 @@ const NeedVolPosts = new mongoose.Schema(
     Phone: { type: String },
 
     HasTaken: { type: Boolean, default: false },
+    
+    ProfilePic: { type: String },
 
     Description: { type: String },
   },
