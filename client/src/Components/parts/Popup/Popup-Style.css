@@ -1,6 +1,5 @@
 .Popup{
     position: fixed;
-    transition: 3s;
     top: 0;
     left: 0;
     width: 100%;
@@ -18,8 +17,13 @@
     width: 100%;
     max-width: 640px;
     background-color: brown;
-    transition: 3s;
-    overflow: scroll;
+    border-radius: 5%;
+    transition: 7s;
+
+
+}
+.Popup-inner:hover{
+    background-color: rgba(165, 42, 42, 0.342);
 
 }
 
@@ -31,3 +35,6 @@
 
 }
 
+img{
+    width: 150px;
+}

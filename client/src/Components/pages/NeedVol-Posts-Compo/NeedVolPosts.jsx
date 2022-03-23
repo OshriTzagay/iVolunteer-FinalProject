@@ -1,7 +1,8 @@
 import { useEffect,useState } from "react";
 import {GetPostsData} from "../../../Services/needVolPost-service";
 import Loading from "../../parts/Loading/Loading-component";
-import PostCard from "./PostCard-component.jsx"
+import PostCard from "./PostCard-component.jsx";
+import "../Vol-Posts-Compo/VolPost-style.css";
 export const NeedVolPosts = () => {
     let [Array,setArray] = useState([]);
     let [isLoading, setIsLoading] = useState(false);
@@ -16,12 +17,14 @@ export const NeedVolPosts = () => {
     return (
         <div>
             <h1> I'm Really Need Volunteer!</h1>
+            <section className="cards">
             {
                isLoading?
                <Loading/>:
                Array.map((item)=>{
                    return <PostCard item={item}/>
                })}
+            </section>
         </div>
 
     )
