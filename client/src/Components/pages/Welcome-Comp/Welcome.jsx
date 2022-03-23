@@ -3,8 +3,8 @@ import "./Style-Welcome.css";
 
 
 function Welcome() {
-    
     return (<>
+    <img className="background" src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.jpg"/>
         <div className="welcome">
             <h1 > Welcome To iVolunteer </h1>
             <p> How we are: <br /> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta quis, reprehenderit perferendis labore optio eaque illo mollitia commodi quo omnis totam minus odio a aliquam sed nam at officia. </p>

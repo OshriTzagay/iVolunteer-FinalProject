@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import LoginRoundedIcon from "@mui/icons-material/LoginRounded";
+import "./Style-Header.css"
 export const Header = () => {
   return (
     <div className="the-header">
