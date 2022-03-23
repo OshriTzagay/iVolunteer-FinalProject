@@ -3,6 +3,7 @@ import { GetPostsData } from "../../../Services/volPosts-service";
 import Loading from "../../parts/Loading/Loading-component";
 import Post from "./Post-Component";
 import "./VolPost-style.css";
+import { Login } from "../../parts/Login-Compo/Login";
 
 export const VolPosts = () => {
   let [Array, setArray] = useState([]);
@@ -15,6 +16,11 @@ export const VolPosts = () => {
       .finally(() => setIsLoading(false)) 
 
   }, [])
+  {
+    if (!localStorage.token) {
+      return <Login />;
+    }
+  }
   return (
     <div>
       <h1> Volunteer Posts!</h1>

@@ -1,14 +1,22 @@
-
+.navigate-login{
+    width: 10vw;
+    height: 10vh;
+}
 .welcome{
+
+    height:100vh;
+
+
     height: 600px;
   
+
     display: flex;
     flex-direction: column;
     align-items: center;
     background-position: center;
     background-size: cover;
     position: relative;
-   
+
 }
 .welcome h1{
   

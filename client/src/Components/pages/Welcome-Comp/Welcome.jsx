@@ -1,12 +1,22 @@
 import React from "react";
+import { Router } from "react-router-dom";
+import { Login } from "../../parts/Login-Compo/Login";
 import "./Style-Welcome.css";
+import { useNavigate } from "react-router-dom";
 
 
 function Welcome() {
+
+    
+    const navigate = useNavigate();
+
+
     return (<>
     <img className="background" src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.jpg"/>
         <div className="welcome">
-            <h1 > Welcome To iVolunteer </h1>
+            <h1>Welcome To iVolunteer</h1>
+            {/* <h1 onClick = {() => navigate('/home')} style ={{cursor: 'pointer'}}> Welcome To iVolunteer </h1> */}
+        <button className="navigate-login" onClick={()=> navigate('/login')}>GO Login!</button>
             <p> How we are: <br /> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta quis, reprehenderit perferendis labore optio eaque illo mollitia commodi quo omnis totam minus odio a aliquam sed nam at officia. </p>
         </div>
 
@@ -33,6 +43,7 @@ function Welcome() {
                 <div className="icon">
                     <a href="https://github.com/OshriTzagay" target="_blank"><i className="fa fa-github fa-3x"></i> </a>
                     <a href="https://www.linkedin.com/in/oshri-el-tzagay-873482226/" target="_blank"><i className="fa fa-linkedin fa-3x"></i> </a>
+
                 </div>
             </section>
         </div>
