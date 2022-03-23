@@ -1,11 +1,13 @@
 import React from "react";
-import { Router } from "react-router-dom";
-import { Login } from "../../parts/Login-Compo/Login";
 import "./Style-Welcome.css";
 import { useNavigate } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+
+
 
 function Welcome() {
   const navigate = useNavigate();
+
 
   return (
     <>
@@ -72,9 +74,10 @@ function Welcome() {
         </section>
       </div>
       <div>
-        <button className="navigate-login" onClick={() => navigate("/login")}>
-          GO Login!
-        </button>
+
+        <Button className="navigate-login" variant="contained" color="primary" onClick={() => navigate("/login")}>
+        GO Login!
+      </Button>
       </div>
     </>
   );

@@ -40,8 +40,8 @@ body {
   background-attachment: fixed;
   background-image: linear-gradient(180deg, #2158fd, #a6bcfd);
   background-color: #d29e79;
-
   font-family: "Berkshire Swash", cursive;
+  /* background-image:url(../public/Media/background1.jpg) */
 }
 .main-content {
   display: flex;
@@ -110,12 +110,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* margin-top: 10vh; */
   position: fixed;
   top: 10vh;
   height: 80vh;
+  width: 10%;
 }
 .sb-links {
   font-size: 1rem;
   transition: 2s linear;
+}
+body{
+ 
 }

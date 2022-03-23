@@ -4,4 +4,11 @@ a{
 a:visited{
     color: black;
 }
- 
+.icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    align-items: center;
+    
+  }
