@@ -10,31 +10,32 @@ import Welcome from "./Components/pages/Welcome-Comp/Welcome";
 import { UserRegister } from "./Components/parts/Register-Compo/User-Register";
 import { Login } from "./Components/parts/Login-Compo/Login";
 import Donaters from "./Components/pages/Donaters-Compo/Donaters";
-
+import { useContext, useState, useEffect } from "react";
+import { userContext } from "./Contexts/user-context";
 export const AppRouter = () => {
+  const { user } = useContext(userContext);
+
+console.log(user);
   return (
     <div className="App">
-        <BrowserRouter>
-      <Header />
-      <SideBar />
-      <div className="main-content">
-        <Routes>
-          <Route exact path="/home" element={<Home />}></Route>
-          <Route exact path="/" element={<Welcome />}></Route>
-          <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
-          <Route exact path="volposts" element={<VolPosts />}></Route>
-          <Route exact path="/register" element={<UserRegister />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/donates" element={<Donaters />}></Route>
+      <BrowserRouter>
+       {
+         localStorage.token ? (<><Header/><SideBar/></>) : "" 
+       }
+        <div className="main-content">
+          <Routes>
+            <Route exact path="/" element={<Welcome />}></Route>
+            <Route  exact path="/home" element={<Home />}></Route>
+            <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
+            <Route exact path="volposts" element={<VolPosts />}></Route>
+            <Route exact path="/register" element={<UserRegister />}></Route>
+            <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/donates" element={<Donaters />}></Route>
+          </Routes>
+        </div>
 
-
-        </Routes>
-      </div>
-
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </div>
-  
   );
 };
- 

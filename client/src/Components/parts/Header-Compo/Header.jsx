@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import LoginRoundedIcon from "@mui/icons-material/LoginRounded";
+import "./Style-Header.css"
 export const Header = () => {
   return (
     <div className="the-header">
@@ -19,6 +20,9 @@ export const Header = () => {
       </Link>
       <Link className="links" to="/login">
         <LoginRoundedIcon style={{ fontSize: "50px" }} />
+      </Link>
+      <Link className="links" to="/login">
+        <h3 onClick={()=>{localStorage.clear()}}>LOG-Off</h3>
       </Link>
 
             {/* <Link className="links" to="/about">

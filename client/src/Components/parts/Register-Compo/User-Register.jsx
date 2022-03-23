@@ -29,7 +29,6 @@ export const UserRegister = () => {
           name="FirstName"
           placeholder="First Name"
           onChange={changingTheValue}
-         
           required
         />
           <br></br>
@@ -39,7 +38,6 @@ export const UserRegister = () => {
           name="LastName"
           placeholder="Last Name"
           onChange={changingTheValue}
-         
           required
         />
           <br></br>
@@ -50,7 +48,6 @@ export const UserRegister = () => {
           name="Email"
           placeholder="Email"
           onChange={changingTheValue}
-         
           required
         />
           <br></br>
@@ -62,7 +59,6 @@ export const UserRegister = () => {
           name="Password"
           autoComplete="current-password"
           onChange={changingTheValue}
-          
           required
         />
           <br></br>
@@ -74,9 +70,9 @@ export const UserRegister = () => {
           placeholder="Age"
           maxLength={10}
           onChange={changingTheValue}
-          
           required
         />
+        <br></br>
         <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
     </div>
