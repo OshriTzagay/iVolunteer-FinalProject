@@ -21,7 +21,7 @@ export const UserRegister = () => {
   };
   return (
     <div>
-      <h1 className="registerTitle" style={{margin:"10vh"}}>Register compo</h1>
+      <h1 className="registerTitle" style={{margin:"5vh"}}>Register compo</h1>
       <form className="register-compo" onSubmit={AddUser}>
         <TextField
           label="First name"
