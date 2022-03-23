@@ -1,75 +1,67 @@
-.navigate-login{
-    width: 10vw;
-    height: 10vh;
+*{
+    padding: 0;
+    margin: 0;
 }
-.welcome{
-
-    height:100vh;
-
-
-    height: 600px;
-  
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
+.navigate-login {
+  width: 10vw;
+  height: 10vh;
 }
-.welcome h1{
-  
-    font-size: 90px;
-    
-    font-family: 'Fruktur', cursive;
-    color:coral
+.welcome {
+  height: 100vh;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
-.welcome p{
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Fruktur', cursive;
-    color:coral
+.welcome h1 {
+  font-size: 90px;
+  font-family: "Fruktur", cursive;
+  color: coral;
+}
+.welcome p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Fruktur", cursive;
+  color: coral;
 }
 
-.continer{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.continer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .continer i {
-   margin: 10px;
+  margin: 10px;
 }
-.how{
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 50px;
+.Developer {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
 }
-.how img{
-    width: 300px;
-    height: 200px;
+.Developer img {
+  border-radius: 100%;
 }
 
 .icon {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  
 }
 
-.login{
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+.background {
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
-.background{
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-   
-}

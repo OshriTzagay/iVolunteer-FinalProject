@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import "../Vol-Posts-Compo/VolPost-style.css"
 import Popup from '../../parts/Popup/popup.jsx';
 import Card from '@mui/material/Card';
@@ -14,7 +14,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 
 const PostCard = ({ item }) => {
-    const [btnPopup,setBtnPopup] = useState(false)
+    const [btnPopup, setBtnPopup] = useState(false)
     return (<section className='card'>
         <Card sx={{ maxWidth: 350 }}>
             <CardMedia
@@ -28,19 +28,12 @@ const PostCard = ({ item }) => {
                     {item.FirstName} {item.LastName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {/* <p>{item.Description}</p> */}
-                    {/* <p> <EmailOutlinedIcon /> {item.Email} </p> */}
-                    {/* <p> <LocationOnIcon /> {item.City} </p> */}
-                    {/* <p> <TranslateIcon /> {item.Language} </p> */}
-                    {/* <p>{item.Age} </p> */}
-                <Button size="small" onClick={()=>setBtnPopup(true)}>See More Details</Button>
+                    <p>{item.Description}</p>
+                    <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
                 </Typography>
             </CardContent>
-            {/* <CardActions>
-                <a href="tel:+{item.Phone}"><Button size="small"> <LocalPhoneIcon /> {item.Phone}</Button></a>
-            </CardActions> */}
         </Card>
-        <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item}/>
+        <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item} />
     </section>)
 }
 export default PostCard;
