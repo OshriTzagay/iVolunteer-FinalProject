@@ -1,6 +1,9 @@
-
+.navigate-login{
+    width: 10vw;
+    height: 10vh;
+}
 .welcome{
-    height: 600px;
+    height:100vh;
     /* width: 2000px; */
     display: flex;
     flex-direction: column;
@@ -9,7 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    /* text-shadow: 15px 9px 20px black; */
+
 }
 .welcome h1{
     /* text-align: center; */

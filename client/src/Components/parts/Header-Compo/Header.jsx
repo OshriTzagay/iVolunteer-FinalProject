@@ -20,6 +20,9 @@ export const Header = () => {
       <Link className="links" to="/login">
         <LoginRoundedIcon style={{ fontSize: "50px" }} />
       </Link>
+      <Link className="links" to="/login">
+        <h3 onClick={()=>{localStorage.clear()}}>LOG-Off</h3>
+      </Link>
 
             {/* <Link className="links" to="/about">
         About
