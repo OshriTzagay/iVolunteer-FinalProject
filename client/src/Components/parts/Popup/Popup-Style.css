@@ -18,23 +18,34 @@
     max-width: 640px;
     background-color: brown;
     border-radius: 5%;
-    transition: 7s;
-
-
-}
-.Popup-inner:hover{
-    background-color: rgba(165, 42, 42, 0.342);
-
 }
 
 .Popup-inner .close-btn{
     position: absolute;
     top: 16px;
     right: 16px;
-    transition: 3s;
-
 }
 
 img{
     width: 150px;
+}
+
+.PopupTimer-inner{
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    border-radius: 5%;
+}
+.PopupTimer-inner .TimerClose-btn{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.TimerClose-btn{
+    color: white;
+} 
+
+.bbr{
+    margin-top: 10px;
 }
