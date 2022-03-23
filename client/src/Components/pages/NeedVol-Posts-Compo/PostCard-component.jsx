@@ -15,13 +15,13 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const PostCard = ({ item }) => {
     const [btnPopup,setBtnPopup] = useState(false)
-    return (<section>
+    return (<section className='card'>
         <Card sx={{ maxWidth: 350 }}>
             <CardMedia
                 component="img"
                 alt="Pic of need vol"
                 height="380"
-                image="https://starktimes.com/wp-content/webp-express/webp-images/uploads/2020/12/Neta-Alchimister-Biography.jpg.webp"
+                image="https://media.istockphoto.com/photos/young-13-year-old-boy-standing-in-front-of-white-wall-picture-id1169056343?k=20&m=1169056343&s=170667a&w=0&h=ohVg67cNTmcPCuqfvzHQU3MLD_hM_872BHgg6Icg5fo="
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -33,12 +33,12 @@ const PostCard = ({ item }) => {
                     {/* <p> <LocationOnIcon /> {item.City} </p> */}
                     {/* <p> <TranslateIcon /> {item.Language} </p> */}
                     {/* <p>{item.Age} </p> */}
+                <Button size="small" onClick={()=>setBtnPopup(true)}>See More Details</Button>
                 </Typography>
             </CardContent>
-            <CardActions>
+            {/* <CardActions>
                 <a href="tel:+{item.Phone}"><Button size="small"> <LocalPhoneIcon /> {item.Phone}</Button></a>
-                <Button size="small" onClick={()=>setBtnPopup(true)}>See More Details</Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
         <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item}/>
     </section>)

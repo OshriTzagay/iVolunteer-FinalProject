@@ -1,4 +1,13 @@
+import React, {useState,useEffect} from 'react';
+import TimerPopup from "../../parts/Popup/Time-Popup";
+
 export const Home = () => {
+  const [timePopup,setTimePopup] = useState(false)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setTimePopup(true)
+    },5000)
+  },[]);
   return (
     <div className="home-div">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, numquam! Dicta quo, enim dolores fugit, saepe magni itaque perspiciatis totam nostrum optio culpa placeat ea ab accusamus dolorum, nihil consequatur?
@@ -142,6 +151,7 @@ export const Home = () => {
     Eius mollitia a laboriosam vero laborum in voluptatum voluptate cupiditate sint ut, cum, voluptas expedita impedit. Saepe temporibus neque reiciendis quam? Minus, dolore! Qui, voluptatem rerum autem deleniti dolorum animi.
     Provident velates doloremque doloribus ut beatae dignissimos autem nostrum totam facere neque numquam consequatur inventore iure, voluptatibus explicabo? Culpa fugit beatae animi! Minima cum impedit temporibus qui assumenda magnam aut.
     Reprehenderit at exercitationem repellendus officiis aliquid, dolores nostrum officia, tempora atque, quaerat facere quis est consectetur. Incidunt, quaerat similique consequatur hic, autem fugiat esse iusto minima quod, molestias deserunt sunt?
+    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
     </div>
   );
 };
