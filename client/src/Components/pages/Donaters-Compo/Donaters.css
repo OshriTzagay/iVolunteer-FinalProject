@@ -3,24 +3,34 @@
 background-color: aqua;
 }
 .donatersContainer{
-    margin-top: 20vh;
+    margin-top: 30vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .AddDonaterForm{
-    margin-top: 20vh;
+    margin-bottom: 10vh;
     text-align: center;
+    
 
 }
 .delete-btn{
     font-size: large;
     transition: 0.5s ;
+  
 }
 .delete-btn:hover{
     font-size: xx-large;
     cursor: pointer;
 }
+.the-form{
+    background: rgba(255, 253, 253, 0.336);
+}
 
-
+.donatorsInputs{
+    width: 300px;
+    margin: 30px;
+    
+}

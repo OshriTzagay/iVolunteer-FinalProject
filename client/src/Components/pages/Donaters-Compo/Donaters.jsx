@@ -7,13 +7,15 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
 import { getDonatersData } from "../../../Services/donaters-service";
 import { AddDonater } from "../../../Services/donaters-service";
 import { DeleteDonater } from "../../../Services/donaters-service";
 import "./Donaters.css";
 import { Navigate } from "react-router-dom";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -40,8 +42,7 @@ export default function CustomizedTables() {
 
   useEffect(() => {
     getDonatersData().then((res) => setDonaters(res));
-  }, [donaters]);
-
+  }, []);
 
   const [donaterToAdd, setDonaterToAdd] = useState({});
   const [donaterToDelete, setDonaterToDelete] = useState({});
@@ -50,34 +51,44 @@ export default function CustomizedTables() {
     donaterToAdd[e.target.name] = e.target.value;
   };
 
-const AddDonaterFunc = (e)=>{
-  e.preventDefault();
-  setDonaterToAdd({...donaterToAdd});
-  console.log(donaterToAdd);
-  AddDonater(donaterToAdd);
-  alert("Added Donater");
-  Navigate('/');
-}
-const DeleteDonaterFunc = (donaterId)=>{
-DeleteDonater(donaterId)
-alert("DELETED Donater!");
-}
-
-
-
+  const AddDonaterFunc = (e) => {
+    // e.preventDefault();
+    setDonaterToAdd({ ...donaterToAdd });
+    console.log(donaterToAdd);
+    AddDonater(donaterToAdd);
+    alert("Added Donater");
+    Navigate("/");
+  };
+  const DeleteDonaterFunc = (donaterId) => {
+    DeleteDonater(donaterId);
+    alert("DELETED Donater!");
+  };
 
   return (
     <div className="donatersContainer">
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700,minHeight:700 }} aria-label="customized table">
+        <Table
+          sx={{ minWidth: 700, minHeight: 700 }}
+          aria-label="customized table"
+        >
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell className="table-header" align="right">About</StyledTableCell>
-              <StyledTableCell className="table-header" align="right">DonateSince</StyledTableCell>
-              <StyledTableCell className="table-header"align="right">WhyDonate</StyledTableCell>
-              <StyledTableCell className="table-header"align="right">DonateSum</StyledTableCell>
-              <StyledTableCell className="table-header"align="right">Delete</StyledTableCell>
+              <StyledTableCell className="table-header" align="right">
+                About
+              </StyledTableCell>
+              <StyledTableCell className="table-header" align="right">
+                DonateSince
+              </StyledTableCell>
+              <StyledTableCell className="table-header" align="right">
+                WhyDonate
+              </StyledTableCell>
+              <StyledTableCell className="table-header" align="right">
+                DonateSum
+              </StyledTableCell>
+              <StyledTableCell className="table-header" align="right">
+                Delete
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -97,7 +108,12 @@ alert("DELETED Donater!");
                   {don.DonateSum}$
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  <DeleteIcon onClick={()=>{DeleteDonaterFunc(don._id)}} className="delete-btn"></DeleteIcon>
+                  <DeleteIcon
+                    onClick={() => {
+                      DeleteDonaterFunc(don._id);
+                    }}
+                    className="delete-btn"
+                  ></DeleteIcon>
                 </StyledTableCell>
               </StyledTableRow>
             ))}
@@ -105,46 +121,68 @@ alert("DELETED Donater!");
         </Table>
       </TableContainer>
 
-
       <div className="AddDonaterForm">
-          <form
-        onSubmit={AddDonaterFunc}
-        action="AddDonaterForm"
-        style={{
-          border: "1px solid black",
-          textAlign: "center",
-          width: "400px",
-        }}
-      >
         <h1>Add Donater</h1>
-
-        <label htmlFor="DonaterName">Donater-Name</label>
-        <br />
-        <input type="text" name="Name" onChange={changingTheValue} />
-        <br />
-        <br></br>
-
-        <label htmlFor="About">About</label>
-        <br />
-        <input type="text" name="About" onChange={changingTheValue}/>
-        <br />
-        <label htmlFor="DonateSince">DonateSince</label>
-        <br></br>
-        <input type="text" name="DonateSince" onChange={changingTheValue} />
-        <br></br>
-        <label htmlFor="">Why Donate</label>
-        <br></br>
-        <input type="text" name="WhyDonate" onChange={changingTheValue} />
-        <br></br>
-
-        <label htmlFor="">How Much Would u like to Donate</label>
-        <br></br>
-        <input type="text" name="DonateSum" onChange={changingTheValue} />
-        <br></br>
-        <button type="submit">ADD</button>
-      </form>
+        <form
+          onSubmit={AddDonaterFunc}
+          action="AddDonaterForm"
+          className="the-form"
+          style={{
+            border: "1px solid black",
+            textAlign: "center",
+            width: "400px",
+            height: "auto",
+          }}
+        >
+         
+          <TextField className="donatorsInputs"
+            label="Donater Name"
+            placeholder="Enter Donater Name"
+            name="Name"
+            type="text"
+            onChange={changingTheValue}
+            required
+             
+          />
+         
+          <TextField className="donatorsInputs"
+            label="About"
+            placeholder="About"
+            name="About"
+            type="text"
+            onChange={changingTheValue}
+            required
+          />
+          <TextField className="donatorsInputs"
+            label="DonateSince"
+            placeholder="year of first donating "
+            name="DonateSince"
+            type="text"
+            onChange={changingTheValue}
+            required
+          />
+         
+          <TextField className="donatorsInputs"
+            label="Why Donate"
+            placeholder="Reason for donation "
+            name="WhyDonate"
+            type="text"
+            onChange={changingTheValue}
+            required
+          />
+        
+          <TextField className="donatorsInputs"
+            label="How Much Would u like to Donate"
+            placeholder="Reason for donation "
+            name="DonateSum"
+            type="text"
+            onChange={changingTheValue}
+            required
+          />
+          
+          <Button style={{border:"white 1px solid",width:"200px",height:"50px",boxShadow:"white 1px 2px 3px 1px"}} type="submit">ADD</Button>
+        </form>
       </div>
-    
     </div>
   );
 }
