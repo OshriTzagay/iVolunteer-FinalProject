@@ -3,21 +3,25 @@
     height: 10vh;
 }
 .welcome{
+
     height:100vh;
-    /* width: 2000px; */
+
+
+    height: 600px;
+  
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://d20umu42aunjpx.cloudfront.net/landingpages/volunteer-header.png);
     background-position: center;
     background-size: cover;
     position: relative;
 
 }
 .welcome h1{
-    /* text-align: center; */
+  
     font-size: 90px;
-    /* margin-top: 20px; */
+    
     font-family: 'Fruktur', cursive;
     color:coral
 }
@@ -61,10 +65,11 @@
     flex-direction: column;
     align-items: center;
 }
-a{
-    text-decoration: none;
-}
-a:visited{
-    color: black;
-}
 
+.background{
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+   
+}

@@ -6,9 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 
 function Welcome() {
+
     
     const navigate = useNavigate();
+
+
     return (<>
+    <img className="background" src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.jpg"/>
         <div className="welcome">
             <h1>Welcome To iVolunteer</h1>
             {/* <h1 onClick = {() => navigate('/home')} style ={{cursor: 'pointer'}}> Welcome To iVolunteer </h1> */}
