@@ -16,7 +16,8 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: brown;
+    background-color:rgba(255, 255, 255, 0.911);
+    border:solid rgb(0, 0, 0) 5px;
     border-radius: 5%;
 }
 
@@ -46,6 +47,3 @@ img{
     color: white;
 } 
 
-.bbr{
-    margin-top: 10px;
-}
