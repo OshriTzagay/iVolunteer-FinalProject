@@ -5,10 +5,10 @@ function Popup(props) {
     return (props.trigger) ? (
         <div className='Popup'>
             <div className="Popup-inner">
-                <h1> {props.item.FirstName} {props.item.LastName}</h1>
+                <h1> {props.item.FirstName} {props.item.LastName}</h1> <br/>
                  <CloseIcon className='close-btn' onClick={() => props.setTrigger(false)}/> 
-                {props.children}
                 <img src={props.item.ProfilePic} alt="Profile Picture" />
+                {props.children}
                 <p>{props.item.Description}</p>
                 <h4>Contact me:</h4>
                 <p>Email: {props.item.Email}</p>
