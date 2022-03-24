@@ -35,7 +35,7 @@ img{
     position: relative;
     padding: 32px;
     width: 100%;
-    max-width: 640px;
+    max-width: 520px;
     border-radius: 5%;
 }
 .PopupTimer-inner .TimerClose-btn{

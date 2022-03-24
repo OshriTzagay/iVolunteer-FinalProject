@@ -21,17 +21,18 @@ export const NeedVolPosts = () => {
       }
     }
     return (
-        <div>
-            <h1> I'm Really Need Volunteer!</h1>
-            <section className="cards">
-            {
-               isLoading?
-               <Loading/>:
-               Array.map((item)=>{
-                   return <PostCard item={item}/>
-               })}
-            </section>
-        </div>
+   <div className="Container">
+      <h1 className="volPost-title">Avilable Volunteers</h1>
+      {/* <section className="cards"> */}
+        {
+          isLoading ?
+            <Loading /> :
+            Array.map((item) => {
+              return <PostCard item={item} />
+            })}
+      {/* </section> */}
+      <div className="spaceDiv"></div>
+    </div>
 
     )
 }

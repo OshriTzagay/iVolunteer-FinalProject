@@ -1,57 +1,41 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
-.welcome {
-  width: 100%;
+.Welcome-Container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
-  position: relative;
 }
-.welcome h1 {
-  font-size: 90px;
-  font-family: "Fruktur", cursive;
-  color: coral;
-}
-.welcome p {
-  text-align: center;
-  font-size: 40px;
-  font-family: "Fruktur", cursive;
-  color: coral;
-}
-
-.continer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.continer i {
-  margin: 10px;
-}
-.Developer {
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 50px;
-}
-.Developer img {
-  border-radius: 100%;
-}
-
-
-
-
-
-.background {
-  z-index: -100;
-  width: 90%;
+.welcome-bg {
+  background: white;
   height: 100%;
-  position: fixed;
+  width: 40%;
+}
+.welcome-bg img {
+  width: 100%;
+}
+.welcome-p{
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items:baseline;
+} 
+
+.cards{
+  border: 1px solid black;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.288);
+  height: 50%;
+  
 }
 
+.iTitle{
+  font-size: 100px;
+}
+
+.cards img {
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+
+}
