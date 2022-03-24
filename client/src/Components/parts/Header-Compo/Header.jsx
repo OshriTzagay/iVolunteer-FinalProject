@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import LoginRoundedIcon from "@mui/icons-material/LoginRounded";
 import "./Style-Header.css"
+import { SideBar } from "../Side-Bar-Compo/SideBar";
 export const Header = () => {
   return (
     <div className="the-header">
-      
+ 
       <div className="div-for-icon">
         <Link className="icon" to="/home">
          <h1>
@@ -24,12 +25,8 @@ export const Header = () => {
       <Link className="links" to="/login">
         <h3 onClick={()=>{localStorage.clear()}}>LOG-Off</h3>
       </Link>
-
-            {/* <Link className="links" to="/about">
-        About
-      </Link> */}
-      
       </div>
+      <SideBar/>
   
     </div>
   );
