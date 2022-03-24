@@ -22,7 +22,7 @@ export const AppRouter = () => {
     <div className="App">
       <BrowserRouter>
        {
-         localStorage.token ? (<><Header/><SideBar/></>) : "" 
+         localStorage.token ? (<><Header/><Footer/></>) : "" 
        }
         <div className="main-content">
           <Routes>
@@ -39,7 +39,7 @@ export const AppRouter = () => {
           </Routes>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

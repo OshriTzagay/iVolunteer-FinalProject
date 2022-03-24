@@ -8,20 +8,21 @@
 }
 .App {
   text-align: center;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
   grid-template-areas:
     "hd hd hd"
     "sb main main"
-    "ft ft ft ";
+    "ft ft ft "; */
   width: 100%;
   min-height: 100vh;
   grid-template-columns: 10% 90%;
   grid-template-rows: 10vh auto 10vh;
   overflow: hidden;
   position: relative;
-  
 }
-
 
 /* .routesContainer{
   display: grid;
@@ -47,18 +48,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  grid-area: main;
   border: 1px solid black;
   /* overflow: auto; */
   width: 100%;
+  height: 100%;
 }
 .the-header {
   /* background: #e6c8b3; */
   background-image: linear-gradient(#c68353);
-
+  width: 100%;
+  /* height: 10vh; */
   grid-area: hd;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .home-div {
   width: 97%;
@@ -71,7 +74,7 @@ body {
   justify-content: space-around;
 }
 .div-for-others {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -108,17 +111,16 @@ body {
 .the-sidebar {
   grid-area: sb;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  /* margin-left: 90%;
+  margin-top: 10vh; */
   justify-content: space-evenly;
-  position: fixed;
-  top: 10vh;
-  height: 80vh;
-  width: 10%;
+  /* position: fixed; */
+  
+  width: 100vw;
+  
 }
 .sb-links {
   font-size: 1rem;
   transition: 2s linear;
-}
-body{
- 
 }
