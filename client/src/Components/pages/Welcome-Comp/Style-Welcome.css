@@ -2,13 +2,9 @@
     padding: 0;
     margin: 0;
 }
-.navigate-login {
-  width: 10vw;
-  height: 10vh;
-}
+
 .welcome {
-  height: 100vh;
-  height: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,19 +44,13 @@
   border-radius: 100%;
 }
 
-.icon {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: small;
-  
-}
+
 
 
 
 .background {
   z-index: -100;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: fixed;
 }
