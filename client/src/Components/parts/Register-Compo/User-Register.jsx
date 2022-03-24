@@ -21,7 +21,7 @@ export const UserRegister = () => {
   };
   return (
     <div>
-      <h1 className="registerTitle" style={{margin:"5vh"}}>Register compo</h1>
+      <h1 className="registerTitle" >Register compo</h1>
       <form className="register-compo" onSubmit={AddUser}>
         <TextField
           label="First name"
@@ -75,6 +75,10 @@ export const UserRegister = () => {
         <br></br>
         <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
+ <div className="spaceDiv">
+
+ </div>
+
     </div>
   );
 };

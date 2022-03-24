@@ -2,8 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25vh;
 }
 
 
 
 
+.spaceDiv{
+  height: 20vh;
+  width: 100%;
+}

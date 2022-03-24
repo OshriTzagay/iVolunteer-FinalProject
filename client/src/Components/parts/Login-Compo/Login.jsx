@@ -28,7 +28,7 @@ export const Login = () => {
         setUser({ ...decoded.user });
         alert(`welcome ${decoded.user.FirstName} `);
 
-        Navigate("/");
+        Navigate("/home");
       } else {
         alert("Check your password or email");
       }
