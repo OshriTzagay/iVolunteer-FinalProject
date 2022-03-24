@@ -22,16 +22,17 @@ export const VolPosts = () => {
     }
   }
   return (
-    <div>
-      <h1> Volunteer Posts!</h1>
-      <section className="cards">
+    <div className="Container">
+      <h1 className="volPost-title">Avilable Volunteers</h1>
+      {/* <section className="cards"> */}
         {
           isLoading ?
             <Loading /> :
             Array.map((item) => {
               return <Post item={item} />
             })}
-      </section>
+      {/* </section> */}
+      <div className="spaceDiv"></div>
     </div>
   );
 };
