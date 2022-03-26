@@ -1,0 +1,56 @@
+.Cards{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ThanksCards{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ThanksCards img{
+    border-radius: 100%;
+}
+.span{
+    border-radius: 4px;
+    width: 350px;
+    border-bottom: solid black 3px;
+}
+.headline{
+    height: 3vh;
+    display: flex;
+}
+.headline h1{
+    margin:4px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+
+.How-we-are{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Explication{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.Explication span{
+    font-size: 23px;
+}
+.Explication p{
+    text-align: left;
+}
