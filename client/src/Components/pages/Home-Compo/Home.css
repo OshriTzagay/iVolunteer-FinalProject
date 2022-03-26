@@ -50,7 +50,51 @@
 
 .Explication span{
     font-size: 23px;
+    color: aliceblue;
 }
 .Explication p{
     text-align: left;
+}
+
+@media only screen and (max-device-width:440px) {
+    .Explication{
+        width: 75%;
+    }
+    .headline{
+        height: 4vh;
+    }
+    .headline h1{
+        font-size: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .span{
+        width: 100px;
+        border-bottom: solid black 3px;
+    }
+    .ThanksCards{
+        width: 55%;
+    }
+}
+
+@media only screen and (max-device-width:700px) {
+    .Explication{
+        width: 90%;
+    }
+    .headline{
+        height: 4vh;
+    }
+    .headline h1{
+        font-size: 25px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .span{
+        width: 150px;
+        border-bottom: solid black 3px;
+    }
+    .ThanksCards{
+        width: 50%;
+    }
+    
 }

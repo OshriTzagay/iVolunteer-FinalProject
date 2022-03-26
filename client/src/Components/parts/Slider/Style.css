@@ -1,0 +1,48 @@
+.Slider{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.VolunteerImage{
+    width: 78vw;
+    height: 70vh;
+    border-radius: 5px;
+}
+
+.left{
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.right{
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slider{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slider.active{
+    opacity: 3;
+    transition-duration: 2s;
+    transform: scale(1.08);
+}
+
+@media only screen and (max-device-width:440px) {
+    .VolunteerImage{
+    height: 50vh;
+    }
+}
