@@ -90,23 +90,7 @@ body {
   margin: 10px;
 }
 
-.the-footer {
-  grid-area: ft;
-  border: 1px solid black;
-  height: 5vh;
-  /* overflow: hidden; */
-  transition: 2s;
-  position: absolute;
-  bottom: -10vh;
-}
-.active-footer {
-  bottom: 20vh;
-}
-.footer-btn {
-  position: absolute;
-  top: -10vh;
-  left: 50%;
-}
+
 
 .the-sidebar {
   grid-area: sb;

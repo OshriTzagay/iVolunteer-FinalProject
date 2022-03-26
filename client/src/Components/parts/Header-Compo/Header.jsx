@@ -47,15 +47,15 @@ import { Link } from "react-router-dom";
 import "./Style-Header.css"
 import { useNavigate } from "react-router-dom";
 import { height } from "@mui/system";
+import { userContext } from "../../../Contexts/user-context";
 
 const pages = ["register","home","Provide assistance","Seeking assistance","volunteers","need volunteers"]
 
 const navigations = ['/register','/home','/addVolPost',"/addNeedVolPost","/volPosts","/needVol"]
 
-
-const settings = ["Profile", "Account", "Dashboard", "Logout"]; 
-
 const ResponsiveAppBar = () => {
+const {user,setUser}=React.useContext(userContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -73,10 +73,18 @@ const ResponsiveAppBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const  navigate=useNavigate();
+
   const navBarNavigator = (index) => {
     navigate(navigations[index])
+  };
+  const Log_out =()=>{
+  localStorage.clear();
+  setUser({});
+  navigate('/');
+
   }
-const  navigate=useNavigate();
+
   return (
     <AppBar style={{ backgroundColor: "black"}} position="static">
       <Container maxWidth="xl">
@@ -149,7 +157,7 @@ const  navigate=useNavigate();
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={user.ProfilePic}/>
               </IconButton>
             </Tooltip>
             <Menu
@@ -168,11 +176,11 @@ const  navigate=useNavigate();
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              
+                <MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography onClick={Log_out} textAlign="center">log out</Typography>
                 </MenuItem>
-              ))}
+              
             </Menu>
           </Box>
         </Toolbar>
