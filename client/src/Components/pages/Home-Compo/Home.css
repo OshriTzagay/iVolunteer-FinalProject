@@ -1,4 +1,5 @@
 .Cards{
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +11,7 @@
   flex-wrap: wrap;
 }
 .ThanksCards{
-    width: 25%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,4 +33,24 @@
     margin-right: 40px;
     margin-left: 40px;
 
+}
+
+.How-we-are{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Explication{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.Explication span{
+    font-size: 23px;
+}
+.Explication p{
+    text-align: left;
 }
