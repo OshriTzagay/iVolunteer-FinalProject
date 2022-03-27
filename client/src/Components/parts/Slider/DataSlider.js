@@ -1,0 +1,20 @@
+export const DataSlider = [
+    {
+        image:'https://cdn.pixabay.com/photo/2021/11/06/00/32/volunteer-6772196_1280.jpg'
+    },
+    {
+        image:'https://cdn.pixabay.com/photo/2021/11/06/00/38/volunteer-service-6772198__480.jpg'
+    },
+    {
+        image:'https://cdn.pixabay.com/photo/2019/07/08/11/50/fire-fighter-4324587__480.jpg'
+    },
+    {
+        image:'https://cdn.pixabay.com/photo/2017/02/07/04/12/african-2044961__480.jpg'
+    },
+    {
+        image:'https://cdn.pixabay.com/photo/2021/11/06/00/32/volunteer-6772196_1280.jpg'
+    },
+    {
+        image:'https://cdn.pixabay.com/photo/2016/07/06/23/23/career-1501615__480.jpg'
+    },
+];
