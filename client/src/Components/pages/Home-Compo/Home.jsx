@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TimerPopup from "../../parts/Popup/Time-Popup";
+import { DataSlider } from '../../parts/Slider/DataSlider';
+import { ImagesSlider } from '../../parts/Slider/ImagesSlider';
 import './Home.css';
 
 export const Home = () => {
@@ -7,12 +9,12 @@ export const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setTimePopup(true)
-    }, 5000)
+    }, 1000)
   }, []);
   return (<>
     <div className='How-we-are'>
       <h1> How we are</h1>
-      <p>iVolunteer is the leading organization in the field of volunteering in Israel, specializing in matching volunteers with organizations</p>
+      <p>iVolunteer is the leading organization in the field of volunteering in Israel, specializing in matching volunteers between people</p>
       <section className='Explication'>
         <p> <span>Our Background</span>  sit amet consectetur adipisicing elit. Laborum voluptatibus
           facere voluptates enim magnam debitis qui! Totam itaque perferendis animi modi
@@ -29,6 +31,8 @@ export const Home = () => {
           iVolunteer is the intermediate between you, and  the volunteer. </p>
       </section>
     </div>
+  <ImagesSlider slider={DataSlider}/>
+
 
     <div className='headline'>
       <span className='span'></span>
@@ -66,6 +70,6 @@ export const Home = () => {
         </section>
       </div>
     </div>
-
+    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
   </>);
 };
