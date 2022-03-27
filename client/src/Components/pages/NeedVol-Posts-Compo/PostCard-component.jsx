@@ -16,12 +16,12 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const PostCard = ({ item }) => {
     const [btnPopup, setBtnPopup] = useState(false)
     return (<section className='card'>
-        <Card sx={{ maxWidth: 350 }}>
+        <Card sx={{ maxWidth: 450 }}>
             <CardMedia
                 component="img"
                 alt="Pic of need vol"
                 height="380"
-                image="https://media.istockphoto.com/photos/young-13-year-old-boy-standing-in-front-of-white-wall-picture-id1169056343?k=20&m=1169056343&s=170667a&w=0&h=ohVg67cNTmcPCuqfvzHQU3MLD_hM_872BHgg6Icg5fo="
+                image= {item.ProfilePic ||"/Media/profile.jpg"}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

@@ -21,6 +21,7 @@ const PostCard = ({ item }) => {
   
   return (
     <section className="card">
+      
       <Card sx={{ maxWidth: 350 }}>
         <CardMedia
           component="img"

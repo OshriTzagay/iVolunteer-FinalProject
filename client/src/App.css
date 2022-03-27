@@ -8,20 +8,21 @@
 }
 .App {
   text-align: center;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
   grid-template-areas:
     "hd hd hd"
     "sb main main"
-    "ft ft ft ";
+    "ft ft ft "; */
   width: 100%;
   min-height: 100vh;
   grid-template-columns: 10% 90%;
   grid-template-rows: 10vh auto 10vh;
   overflow: hidden;
   position: relative;
-  
 }
-
 
 /* .routesContainer{
   display: grid;
@@ -40,25 +41,27 @@ body {
   background-attachment: fixed;
   background-image: linear-gradient(180deg, #2158fd, #a6bcfd);
   background-color: #d29e79;
-
   font-family: "Berkshire Swash", cursive;
+  /* background-image:url(../public/Media/background1.jpg) */
 }
 .main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  grid-area: main;
   border: 1px solid black;
   /* overflow: auto; */
   width: 100%;
+  height: 100%;
 }
 .the-header {
   /* background: #e6c8b3; */
   background-image: linear-gradient(#c68353);
-
+  width: 100%;
+  /* height: 10vh; */
   grid-area: hd;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .home-div {
   width: 97%;
@@ -71,7 +74,7 @@ body {
   justify-content: space-around;
 }
 .div-for-others {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -87,33 +90,19 @@ body {
   margin: 10px;
 }
 
-.the-footer {
-  grid-area: ft;
-  border: 1px solid black;
-  height: 5vh;
-  /* overflow: hidden; */
-  transition: 2s;
-  position: absolute;
-  bottom: -10vh;
-}
-.active-footer {
-  bottom: 20vh;
-}
-.footer-btn {
-  position: absolute;
-  top: -10vh;
-  left: 50%;
-}
+
 
 .the-sidebar {
   grid-area: sb;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  /* margin-left: 90%;
+  margin-top: 10vh; */
   justify-content: space-evenly;
-  /* margin-top: 10vh; */
-  position: fixed;
-  top: 10vh;
-  height: 80vh;
+  /* position: fixed; */
+  
+  width: 100vw;
+  
 }
 .sb-links {
   font-size: 1rem;

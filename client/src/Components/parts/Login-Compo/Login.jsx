@@ -28,16 +28,15 @@ export const Login = () => {
         setUser({ ...decoded.user });
         alert(`welcome ${decoded.user.FirstName} `);
 
-        Navigate("/");
+        Navigate("/home");
       } else {
         alert("Check your password or email");
       }
     });
   };
   return (
-    <div>
+    <div className="pageContinuer">
       <h1>LOGIN</h1>
-
       <form>
         <div className="continerUser">
           <div className="login">

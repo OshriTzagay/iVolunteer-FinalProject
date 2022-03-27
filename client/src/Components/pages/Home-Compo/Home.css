@@ -1,0 +1,105 @@
+.Cards{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ThanksCards{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ThanksCards img{
+    border-radius: 100%;
+}
+.span{
+    border-radius: 4px;
+    width: 350px;
+    border-bottom: solid black 3px;
+}
+.headline{
+    height: 3vh;
+    display: flex;
+}
+.headline h1{
+    margin:4px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+
+.How-we-are{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Explication{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.Explication span{
+    font-size: 23px;
+    color: aliceblue;
+}
+.Explication p{
+    text-align: left;
+}
+
+@media only screen and (max-device-width:440px) {
+    .Explication{
+        width: 75%;
+    }
+    .headline{
+        height: 4vh;
+    }
+    .headline h1{
+        font-size: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .span{
+        width: 100px;
+        border-bottom: solid black 3px;
+    }
+    .ThanksCards{
+        width: 90%;
+    }
+    .ThanksCards img{
+        width: 110px;
+    }
+    
+}
+
+@media only screen and (min-device-width:700px) and (max-device-width:1024px) {
+    .Explication{
+        width: 90%;
+    }
+    .headline{
+        height: 4vh;
+    }
+    .headline h1{
+        font-size: 25px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .span{
+        width: 170px;
+        border-bottom: solid black 3px;
+    }
+    .ThanksCards{
+        width: 30%;
+        margin-right: 20px;
+    }
+    
+}

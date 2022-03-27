@@ -14,6 +14,7 @@ import  {AddNeedVolPost} from "./Components/parts/Add-Need-Vol-post-Compo/AddNee
 import { AddVolPost } from "./Components/parts/Add-Vol-Post-Compo/AddVolPost";
 import { useContext, useState, useEffect } from "react";
 import { userContext } from "./Contexts/user-context";
+import ResponsiveAppBar from "./Components/parts/Header-Compo/Header";
 export const AppRouter = () => {
   const { user } = useContext(userContext);
 
@@ -22,16 +23,16 @@ export const AppRouter = () => {
     <div className="App">
       <BrowserRouter>
        {
-         localStorage.token ? (<><Header/><SideBar/></>) : "" 
+         localStorage.token ? (<><ResponsiveAppBar/><Footer/></>) : "" 
        }
         <div className="main-content">
           <Routes>
             <Route exact path="/" element={<Welcome />}></Route>
             <Route  exact path="/home" element={<Home />}></Route>
-            <Route exact path="/needvolPost" element={<AddVolPost />}></Route>
-            <Route exact path="/needvol" element={<NeedVolPosts />}></Route>
-            <Route exact path="volposts" element={<VolPosts />}></Route>
-            <Route exact path="/volPost" element={<AddNeedVolPost />}></Route>
+            <Route exact path="/addVolPost" element={<AddVolPost />}></Route>
+            <Route exact path="/needVol" element={<NeedVolPosts />}></Route>
+            <Route exact path="volPosts" element={<VolPosts />}></Route>
+            <Route exact path="/addNeedVolPost" element={<AddNeedVolPost />}></Route>
             <Route exact path="/register" element={<UserRegister />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/donates" element={<Donaters />}></Route>
@@ -39,7 +40,7 @@ export const AppRouter = () => {
           </Routes>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
