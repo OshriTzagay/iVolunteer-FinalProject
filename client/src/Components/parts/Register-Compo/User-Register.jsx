@@ -20,8 +20,8 @@ export const UserRegister = () => {
     alert("GOOD");
   };
   return (
-    <div>
-      <h1 className="registerTitle" >Register compo</h1>
+    <div className="pageContainer">
+      <h1 className="registerTitle" >Register</h1>
       <form className="register-compo" onSubmit={AddUser}>
         <TextField
           label="First name"
