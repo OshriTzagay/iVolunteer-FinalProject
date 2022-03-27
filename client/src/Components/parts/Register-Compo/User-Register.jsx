@@ -73,6 +73,16 @@ export const UserRegister = () => {
           required
         />
         <br></br>
+        <TextField
+          label="Profile image"
+          type="text"
+          name="ProfilePic"
+          placeholder="Enter url only"
+          maxLength={1000}
+          onChange={changingTheValue}
+          required
+        />
+        <br></br>
         <Button style={{backgroundColor:'#809fff',color:'white'}} type="submit">Confirm</Button>
       </form>
  <div className="spaceDiv">
