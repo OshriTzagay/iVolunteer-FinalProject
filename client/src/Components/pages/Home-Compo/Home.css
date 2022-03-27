@@ -73,11 +73,15 @@
         border-bottom: solid black 3px;
     }
     .ThanksCards{
-        width: 55%;
+        width: 90%;
     }
+    .ThanksCards img{
+        width: 110px;
+    }
+    
 }
 
-@media only screen and (max-device-width:700px) {
+@media only screen and (min-device-width:700px) and (max-device-width:1024px) {
     .Explication{
         width: 90%;
     }
@@ -90,11 +94,12 @@
         margin-left: 10px;
     }
     .span{
-        width: 150px;
+        width: 170px;
         border-bottom: solid black 3px;
     }
     .ThanksCards{
-        width: 50%;
+        width: 30%;
+        margin-right: 20px;
     }
     
 }
