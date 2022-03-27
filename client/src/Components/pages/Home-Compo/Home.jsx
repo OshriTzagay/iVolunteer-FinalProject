@@ -12,7 +12,6 @@ export const Home = () => {
     }, 1000)
   }, []);
   return (<>
-  <ImagesSlider slider={DataSlider}/>
     <div className='How-we-are'>
       <h1> How we are</h1>
       <p>iVolunteer is the leading organization in the field of volunteering in Israel, specializing in matching volunteers between people</p>
@@ -32,6 +31,8 @@ export const Home = () => {
           iVolunteer is the intermediate between you, and  the volunteer. </p>
       </section>
     </div>
+  <ImagesSlider slider={DataSlider}/>
+
 
     <div className='headline'>
       <span className='span'></span>
