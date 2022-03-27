@@ -18,7 +18,7 @@ export const AddNeedVolPost = () => {
   };
 
   return (
-    <div>
+    <div className="pageContainer">
       <h1>add need vol post</h1>
       <form className="form" onSubmit={SendThePost}>
         <TextField
@@ -95,6 +95,15 @@ export const AddNeedVolPost = () => {
           placeholder="enter a phone number"
           name="Phone"
           type="tel"
+          onChange={ChangingTheValue}
+          multiline
+        />
+        <br />
+        <TextField
+          label="Image for post"
+          placeholder="enter image url  "
+          name="ProfilePic"
+          type="text"
           onChange={ChangingTheValue}
           multiline
         />

@@ -35,9 +35,8 @@ export const Login = () => {
     });
   };
   return (
-    <div>
+    <div className="pageContinuer">
       <h1>LOGIN</h1>
-
       <form>
         <div className="continerUser">
           <div className="login">
