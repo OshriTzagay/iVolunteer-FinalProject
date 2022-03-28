@@ -4,8 +4,13 @@ const BASIC_API =
     : "http://localhost:8000";
 
 export const getDonatersData = async () => {
+  const options = {
+    method: "GET",
+    headers: { "Content-Type": "application/json",
+    Authorization:`Bearer ${localStorage.getItem('token')}`},
+  };
   try {
-    return await fetch(`${BASIC_API}/donates`).then((res) => res.json());
+    return await fetch(`${BASIC_API}/donates`,options).then((res) => res.json());
   } catch (er) {
     console.error(er);
   }

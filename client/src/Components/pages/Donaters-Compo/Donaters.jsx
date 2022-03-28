@@ -66,6 +66,7 @@ export default function CustomizedTables() {
 
   return (
     <div className="donatersContainer">
+      <h1>admin donaters mange page </h1>
       <TableContainer component={Paper}>
         <Table className="donatorTable"
           sx={{ minWidth: 700, minHeight: 700 }}
@@ -127,14 +128,8 @@ export default function CustomizedTables() {
           onSubmit={AddDonaterFunc}
           action="AddDonaterForm"
           className="the-form"
-          style={{
-            border: "1px solid black",
-            textAlign: "center",
-            width: "400px",
-            height: "auto",
-          }}
         >
-         
+        
           <TextField className="donatorsInputs"
             label="Donater Name"
             placeholder="Enter Donater Name"
@@ -142,9 +137,8 @@ export default function CustomizedTables() {
             type="text"
             onChange={changingTheValue}
             required
-             
           />
-         
+         <br/>
           <TextField className="donatorsInputs"
             label="About"
             placeholder="About"
@@ -153,6 +147,7 @@ export default function CustomizedTables() {
             onChange={changingTheValue}
             required
           />
+          <br/>
           <TextField className="donatorsInputs"
             label="DonateSince"
             placeholder="year of first donating "
@@ -161,7 +156,7 @@ export default function CustomizedTables() {
             onChange={changingTheValue}
             required
           />
-         
+          <br/>
           <TextField className="donatorsInputs"
             label="Why Donate"
             placeholder="Reason for donation "
@@ -170,7 +165,7 @@ export default function CustomizedTables() {
             onChange={changingTheValue}
             required
           />
-        
+         <br/>
           <TextField className="donatorsInputs"
             label="How Much Would u like to Donate"
             placeholder="Reason for donation "
@@ -179,8 +174,8 @@ export default function CustomizedTables() {
             onChange={changingTheValue}
             required
           />
-          
-          <Button style={{border:"white 1px solid",width:"200px",height:"50px",boxShadow:"white 1px 2px 3px 1px"}} type="submit">ADD</Button>
+           <br/>
+          <Button  type="submit">ADD</Button>
         </form>
       </div>
     </div>
