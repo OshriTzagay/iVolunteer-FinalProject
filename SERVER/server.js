@@ -31,7 +31,7 @@ const port = process.env.PORT || 8000;
 app.use(passport.initialize());
 app.use('/users',userRouter);
 app.use('/posts',passport.authenticate('jwt',{session:false}),VolPostsRouter);
-app.use('/donates',DonatersRouter);
+app.use('/donates',passport.authenticate('jwt',{session:false}),DonatersRouter);
 app.use('/volneed',passport.authenticate('jwt',{session:false}),NeedVolPostsRouter);
 ///!----------USES-------------->
 
