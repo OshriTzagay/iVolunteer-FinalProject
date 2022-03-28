@@ -1,4 +1,4 @@
-.continerUser{
+/* .continerUser{
     display: flex;
     justify-content: space-evenly;
 }
@@ -17,30 +17,56 @@
     align-items: center;
   }
   .pageContinuer{
-      height: 85vh;
+      height: 100%;
       margin-top: 7vh;
-  }
 
-@media only screen and (max-device-width:440px) {
-    .continerUser{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .newUser{
-        margin-top: 20px;
-    }
-    h1{
-        font-size: 35px;
-        margin-bottom: 15px;
-    }
+  } */
+
+.login-regi-container {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+
+}
+.login-title {
+  color: rgb(75, 75, 160);
+  font-size: 50px;
+  z-index: 1000;
+  /* margin-bottom: 50vh; */
+}
+.login-div {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-top-div{
+    width: 70vw;
+    height: 70vh;
+    background: white;
 }
 
-@media only screen and (min-device-width:700px) and (max-device-width:1024px) {
-    .continerUser{
-        width: 600px;
-    }
-    .newUser{
-        width: 300px;
-    }
+.regi-div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:rgb(75, 75, 160);
+}
+.regi-content{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login-img{
+width:65vw;
+
+height: 65vh;
+}
+.login-btn{
+  background:rgb(75, 75, 160)!important;
+
 }
