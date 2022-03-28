@@ -20,3 +20,27 @@
       height: 85vh;
       margin-top: 7vh;
   }
+
+@media only screen and (max-device-width:440px) {
+    .continerUser{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .newUser{
+        margin-top: 20px;
+    }
+    h1{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-device-width:700px) and (max-device-width:1024px) {
+    .continerUser{
+        width: 600px;
+    }
+    .newUser{
+        width: 300px;
+    }
+}
