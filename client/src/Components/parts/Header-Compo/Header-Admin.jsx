@@ -17,12 +17,12 @@ import { useNavigate } from "react-router-dom";
 import { height } from "@mui/system";
 import { userContext } from "../../../Contexts/user-context";
 
-const pages = [<i className="bi bi-house-door"></i>,"Provide assistance","Seeking assistance","volunteers","need volunteers","donates"]
+const pages = [<i className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers", "donates"]
 
-const navigations = ['/home','/addVolPost',"/addNeedVolPost","/volPosts","/needVol","/donates"]
+const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol", "/donates"]
 
 const Header_admin = () => {
-const {user,setUser}=React.useContext(userContext);
+  const { user, setUser } = React.useContext(userContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -41,20 +41,20 @@ const {user,setUser}=React.useContext(userContext);
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const  navigate=useNavigate();
+  const navigate = useNavigate();
 
   const navBarNavigator = (index) => {
     navigate(navigations[index])
   };
-  const Log_out =()=>{
-  localStorage.clear();
-  setUser({});
-  navigate('/');
+  const Log_out = () => {
+    localStorage.clear();
+    setUser({});
+    navigate('/');
 
   }
 
   return (
-    <AppBar style={{ backgroundColor: "black"}} position="static">
+    <AppBar style={{ backgroundColor: "black" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -63,7 +63,8 @@ const {user,setUser}=React.useContext(userContext);
             component="div"
             sx={{ mr: 30, display: { xs: "none", md: "flex" } }}
           >
-            LOGO
+            <img src="Media/iVolunteer.png" alt="" />
+
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -95,7 +96,7 @@ const {user,setUser}=React.useContext(userContext);
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page,index) => (
+              {pages.map((page, index) => (
                 <MenuItem key={page} onClick={() => navBarNavigator(index)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -108,13 +109,14 @@ const {user,setUser}=React.useContext(userContext);
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
+            <img src="Media/iVolunteer.png" alt="" />
+
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          {pages.map((page, index) => (
-            <Button className='links'
-              key={page}
-              onClick={() => navBarNavigator(index)}
+            {pages.map((page, index) => (
+              <Button className='links'
+                key={page}
+                onClick={() => navBarNavigator(index)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
@@ -125,7 +127,7 @@ const {user,setUser}=React.useContext(userContext);
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={user.ProfilePic}/>
+                <Avatar alt="Remy Sharp" src={user.ProfilePic} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -144,11 +146,11 @@ const {user,setUser}=React.useContext(userContext);
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              
-                <MenuItem  onClick={handleCloseUserMenu}>
-                  <Typography onClick={Log_out} textAlign="center">log out</Typography>
-                </MenuItem>
-              
+
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography onClick={Log_out} textAlign="center">log out</Typography>
+              </MenuItem>
+
             </Menu>
           </Box>
         </Toolbar>
