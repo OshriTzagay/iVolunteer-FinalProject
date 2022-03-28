@@ -19,6 +19,7 @@
   .pageContinuer{
       height: 100%;
       margin-top: 7vh;
+
   } */
 
 .login-regi-container {
@@ -67,4 +68,5 @@ height: 65vh;
 }
 .login-btn{
   background:rgb(75, 75, 160)!important;
+
 }

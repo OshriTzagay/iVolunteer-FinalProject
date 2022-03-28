@@ -78,6 +78,7 @@ export const Login = () => {
         </Button>
       </div>
 
+
       <div className="regi-div">
         <div className="regi-content">
           <h1>New Here?</h1>
@@ -85,6 +86,9 @@ export const Login = () => {
           <Button variant="contained" component="span" type="submit" className="login-btn">
             Send
           </Button>
+
+    
+
         </div>
       </div>
     </div>

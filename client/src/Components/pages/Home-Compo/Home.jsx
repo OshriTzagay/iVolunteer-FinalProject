@@ -13,8 +13,7 @@ export const Home = () => {
   }, []);
   return (<>
     <div className='How-we-are'>
-    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
-      <h1> How we are</h1>
+      <h1> Who we are</h1>
       <p>iVolunteer is the leading organization in the field of volunteering in Israel, specializing in matching volunteers between people</p>
       <section className='Explication'>
         <p> <span>Our Background</span>  sit amet consectetur adipisicing elit. Laborum voluptatibus

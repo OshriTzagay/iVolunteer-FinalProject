@@ -8,8 +8,10 @@ export const Footer = () => {
 
   return (
     <div className={`the-footer ${toggle?"active-footer":""}`}>
-      {/* <button >Click</button> */}
-      <ArrowCircleUpIcon className="footer-btn" onClick={()=>setToggle(!toggle)}/>
+      <button className="footer-btn" onClick={()=>setToggle(!toggle)}>
+      <ArrowCircleUpIcon className="footer-btn-icon"/>
+
+      </button>
     <div className="footer-basic">
         <footer>
             <div className="social"><a href="#"><i className="bi bi-instagram"></i></a><a href="#"><i className="bi bi-linkedin"></i></a><a href="#"><i className="bi bi-twitter"></i></a><a href="#"><i className="bi bi-facebook"></i></a></div>
