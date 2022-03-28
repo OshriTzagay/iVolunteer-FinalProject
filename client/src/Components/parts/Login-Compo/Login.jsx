@@ -43,7 +43,7 @@ export const Login = () => {
           alt=""
         />
         <div className="login-title">
-          <h1>Login</h1>
+          <h1>Log<span>in</span></h1>
         </div>
         <br />
 
@@ -81,9 +81,11 @@ export const Login = () => {
 
       <div className="regi-div">
         <div className="regi-content">
-          <h1>New Here?</h1>
-          <p>Sign up and discover the iVolunteer world</p>
-          <Button variant="contained" component="span" type="submit" className="login-btn" onClick={ ()=> Navigate("/register")}>
+          <h1>New <span>Here?</span></h1>
+          <p>Sing up an<span>d discover the </span>iVolunt<span>eer world</span></p>
+          <Button variant="contained" component="span" type="submit" className="login-btn">
+
+
             Send
           </Button>
 
