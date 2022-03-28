@@ -1,8 +1,10 @@
 import React from "react";
 import "./Style-Welcome.css";
 import { useNavigate } from "react-router-dom";
-import Button from '@material-ui/core/Button';
-import { Login } from "../../parts/Login-Compo/Login";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import ContactMailRoundedIcon from '@mui/icons-material/ContactMailRounded';
+import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
 
 
 
@@ -12,33 +14,65 @@ function Welcome() {
   return (
     <>
   <div className="Welcome-Container">
-  <div className="welcome-p">
-    <br /><br /><br />
+  <div className="meet-us">
     <div className="cards">
 
-    </div>
-    <div className="cards"></div>
+      <img src="https://cdn-icons-png.flaticon.com/512/1759/1759366.png" alt="" />
+    
+      <h2>Lior Yosef</h2>
+      <div className="contact-icons">
+      <p><GitHubIcon className="icon"/></p>
+     <p><FacebookRoundedIcon className="icon"/></p> 
+    <p><AlternateEmailRoundedIcon className="icon"/></p> 
 
+      </div>
+
+      
+    </div>
+    <div className="cards">
+
+      <img src="https://cdn-icons-png.flaticon.com/512/1759/1759366.png" alt="" />
+    
+      <h2>Oshri-el Tzagay</h2>
+      <div className="contact-icons">
+      <p><GitHubIcon className="icon"/></p>
+     <p><FacebookRoundedIcon className="icon"/></p> 
+    <p><AlternateEmailRoundedIcon className="icon"/></p> 
+
+      </div>
+
+      
+    </div>
+    <div className="cards">
+
+<img src="https://cdn-icons-png.flaticon.com/512/1759/1759366.png" alt="" />
+
+<h2>Matan Asayas</h2>
+<div className="contact-icons">
+<GitHubIcon className="icon"/>
+<FacebookRoundedIcon className="icon"/>
+<AlternateEmailRoundedIcon className="icon"/>
+
+</div>
+
+
+</div>
+
+
+  {/* <div class="heart-shape"></div> */}
 
   </div>
   <div className="welcome-bg">
     <img src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.jpg" alt="" />
 
     <h1 className="iTitle">iVolunteer</h1>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-    <button onClick={()=>{navigate('/login')}}>sadsa</button>
+
+    <button className="siteBtn" onClick={()=>{navigate('/login')}}>Land -A- Hand</button>
   </div>
 
 
-
+	
 
 
 
