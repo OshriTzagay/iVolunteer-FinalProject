@@ -75,7 +75,7 @@ export const Login = () => {
               <h1>New Here?</h1>
               <p>Sing up and discover the iVolunteer world</p>
               <Button variant="contained" component="span" type="submit">
-                Send
+                click
               </Button>
             </div>
           </section>
