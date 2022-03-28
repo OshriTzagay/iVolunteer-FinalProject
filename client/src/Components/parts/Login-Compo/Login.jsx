@@ -35,52 +35,58 @@ export const Login = () => {
     });
   };
   return (
-    <div className="pageContinuer">
-      <h1>LOGIN</h1>
-      <form>
-        <div className="continerUser">
-          <div className="login">
-            <h1>Login to Your Account</h1>
-            <TextField
-              label="Email"
-              type="text"
-              name="Email"
-              placeholder="Enter your Email"
-              onChange={changingTheValue}
-              required
-            />{" "}
-            <br />
-            <TextField
-              label="Password"
-              placeholder="Enter your Password"
-              type="Password"
-              name="Password"
-              autoComplete="current-password"
-              onChange={changingTheValue}
-              required
-            />
-            <br />
-            <Button
-              variant="contained"
-              component="span"
-              type="submit"
-              onClick={SendTheLoginUser}
-            >
-              Send
-            </Button>
-          </div>
-
-          <section className="Register">
-            <div className="newUser">
-              <h1>New Here?</h1>
-              <p>Sing up and discover the iVolunteer world</p>
-              <Button variant="contained" component="span" type="submit">
-                Send
-              </Button>
-            </div>
-          </section>
+    <div className="login-regi-container">
+      <div className="login-div">
+        <img
+          className="login-img"
+          src="https://rhslegend.com/wp-content/uploads/2022/02/volunteers-768x558-1.png"
+          alt=""
+        />
+        <div className="login-title">
+          <h1>Login</h1>
         </div>
-      </form>
+        <br />
+
+        <TextField
+          style={{ width: "200px", marginLeft: "43%" }}
+          label="Email"
+          type="text"
+          name="Email"
+          placeholder="Enter your Email"
+          onChange={changingTheValue}
+          required
+        />{" "}
+        <TextField
+          style={{ width: "200px", marginLeft: "43%" }}
+          label="Password"
+          placeholder="Enter your Password"
+          type="Password"
+          name="Password"
+          autoComplete="current-password"
+          onChange={changingTheValue}
+          required
+        />
+        <Button
+        className="login-btn"
+          style={{ width: "200px", marginLeft: "43%" }}
+          variant="contained"
+          component="span"
+          type="submit"
+          onClick={SendTheLoginUser}
+        >
+          Send
+        </Button>
+      </div>
+
+      <div className="regi-div">
+        <div className="regi-content">
+          <h1>New Here?</h1>
+          <p>Sing up and discover the iVolunteer world</p>
+          <Button variant="contained" component="span" type="submit" className="login-btn">
+            Send
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
