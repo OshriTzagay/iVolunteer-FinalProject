@@ -68,7 +68,7 @@ function Welcome() {
     <h1 className="iTitle">iVolunteer</h1>
 
 
-    <button className="siteBtn" onClick={()=>{navigate('/login')}}>Land -A- Hand</button>
+    <button className="siteBtn" onClick={()=>{navigate('/login')}}>Go-Volunteer!</button>
   </div>
 
 

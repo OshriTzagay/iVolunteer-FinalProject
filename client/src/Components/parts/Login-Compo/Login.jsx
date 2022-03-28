@@ -82,8 +82,8 @@ export const Login = () => {
       <div className="regi-div">
         <div className="regi-content">
           <h1>New Here?</h1>
-          <p>Sing up and discover the iVolunteer world</p>
-          <Button variant="contained" component="span" type="submit" className="login-btn">
+          <p>Sign up and discover the iVolunteer world</p>
+          <Button variant="contained" component="span" type="submit" className="login-btn" onClick={ ()=> Navigate("/register")}>
             Send
           </Button>
 
