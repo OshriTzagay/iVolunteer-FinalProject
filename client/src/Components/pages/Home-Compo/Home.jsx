@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TimerPopup from "../../parts/Popup/Time-Popup";
 import { DataSlider } from '../../parts/Slider/DataSlider';
 import { ImagesSlider } from '../../parts/Slider/ImagesSlider';
+import Welcome from '../Welcome-Comp/Welcome';
 import './Home.css';
 
 export const Home = () => {
@@ -11,6 +12,11 @@ export const Home = () => {
       setTimePopup(true)
     }, 1000)
   }, []);
+  {
+    if (!localStorage.token) {
+      return <Welcome />;
+    }
+  }
   return (<>
     <div className='How-we-are'>
       <h1> Who we are</h1>
@@ -70,6 +76,6 @@ export const Home = () => {
         </section>
       </div>
     </div>
-    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
+    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
   </>);
 };

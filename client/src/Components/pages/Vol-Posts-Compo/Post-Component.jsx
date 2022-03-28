@@ -7,7 +7,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TranslateIcon from "@mui/icons-material/Translate";
@@ -15,10 +14,10 @@ import BuildIcon from "@mui/icons-material/Build";
 import AlarmIcon from "@mui/icons-material/Alarm";
 import AlarmOffIcon from "@mui/icons-material/AlarmOff";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-
+import Welcome from "../Welcome-Comp/Welcome";
 const PostCard = ({ item }) => {
   const [btnPopup, setBtnPopup] = useState(false);
-  
+
   return (
     <section className="card">
       
@@ -34,7 +33,7 @@ const PostCard = ({ item }) => {
             {item.FirstName} {item.LastName}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            <p>{item.Description}</p>
+            {item.Description}
           </Typography>
           <Button size="small" onClick={() => setBtnPopup(true)}> See More Details </Button>
         </CardContent>

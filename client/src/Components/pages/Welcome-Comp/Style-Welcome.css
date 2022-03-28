@@ -41,7 +41,7 @@
   border-end-end-radius:15%;
   border-bottom-left-radius:15%;
 
-  transform: translateY(20px)
+  transform: translateY(120px)
 }
 @keyframes bounce-1 {
   0% {

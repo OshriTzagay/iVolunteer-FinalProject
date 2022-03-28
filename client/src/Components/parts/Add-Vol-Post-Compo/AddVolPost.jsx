@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import "./Add-style.css";
+import Welcome from "../../pages/Welcome-Comp/Welcome";
 
 export const AddVolPost = () => {
   const [post, setPost] = useState({});
@@ -18,6 +19,12 @@ export const AddVolPost = () => {
     console.log(post);
     AddPost(post);
   };
+  {
+    if (!localStorage.token) {
+      return <Welcome />;
+    }
+  }
+  
 
   return (
     <div>
@@ -112,7 +119,7 @@ export const AddVolPost = () => {
           <TextField
             label="ProfilePic"
             placeholder="add image url"
-            name="Profile Pic"
+            name="ProfilePic"
             type="text"
             onChange={ChangingTheValue}
             multiline
