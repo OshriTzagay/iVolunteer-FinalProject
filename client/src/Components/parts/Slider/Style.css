@@ -1,14 +1,14 @@
 .Slider{
     position: relative;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .VolunteerImage{
-    width: 78vw;
-    height: 70vh;
+    width: 58vw;
+    height: 50vh;
     border-radius: 5px;
 }
 
@@ -19,6 +19,7 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
+    font-size: 50px !important;
 }
 
 .right{
@@ -28,6 +29,7 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
+    font-size: 50px !important;
 }
 
 .slider{
@@ -46,7 +48,13 @@
         height:40vh
     }
     .VolunteerImage{
-    height: 25vh;
+        height: 25vh;
+    }
+    .right{ 
+        font-size: 30px !important;
+    }
+    .left{ 
+        font-size: 30px !important;
     }
 }
 
@@ -56,5 +64,6 @@
     }
     .VolunteerImage{
         height: 40vh;
-        }
+    }
+    
 }

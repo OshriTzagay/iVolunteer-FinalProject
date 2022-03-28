@@ -99,52 +99,10 @@
  border-radius: 10ch;
  font-size: larger;
  transition:1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 .siteBtn:hover{
 width: 15vw;
 cursor: pointer;
-}
-
-.heart-shape{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: rgb(253, 251, 250);
-  background: rgb(255, 102, 0);
-  transition: 3s cubic-bezier(0.39, 0.575, 0.565, 1);
-
-}
-.heart-shape:before,
-.heart-shape:after{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  content: '';
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background-color: rgb(246, 246, 246);
-  background: rgb(255, 102, 0);
-
-
-  transition: 3s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-.heart-shape:before{
-  bottom: 0px;
-  left: -100px;
-  transition: 3s cubic-bezier(0.39, 0.575, 0.565, 1);
-
-}
-.heart-shape:after{
-  top: -100px;
-  right: 0px;
-  transition: 3s cubic-bezier(0.39, 0.575, 0.565, 1);
-
 }
