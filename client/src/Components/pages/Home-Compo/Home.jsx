@@ -70,6 +70,6 @@ export const Home = () => {
         </section>
       </div>
     </div>
-    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
+    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
   </>);
 };
