@@ -28,7 +28,7 @@ const PostCard = ({ item }) => {
                     {item.FirstName} {item.LastName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    <p>{item.Description}</p>
+                    {item.Description}
                     <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
                 </Typography>
             </CardContent>

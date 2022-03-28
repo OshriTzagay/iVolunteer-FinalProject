@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TimerPopup from "../../parts/Popup/Time-Popup";
 import { DataSlider } from '../../parts/Slider/DataSlider';
 import { ImagesSlider } from '../../parts/Slider/ImagesSlider';
+import Welcome from '../Welcome-Comp/Welcome';
 import './Home.css';
 
 export const Home = () => {
@@ -11,6 +12,11 @@ export const Home = () => {
       setTimePopup(true)
     }, 1000)
   }, []);
+  {
+    if (!localStorage.token) {
+      return <Welcome />;
+    }
+  }
   return (<>
     <div className='How-we-are'>
       <h1> Who we are</h1>
@@ -31,7 +37,7 @@ export const Home = () => {
           iVolunteer is the intermediate between you, and  the volunteer. </p>
       </section>
     </div>
-  <ImagesSlider slider={DataSlider}/>
+    <ImagesSlider slider={DataSlider} />
 
 
     <div className='headline'>
@@ -39,37 +45,37 @@ export const Home = () => {
       <h1> Success Story </h1>
       <span className='span'></span>
     </div>
-    
+
     <div className='Cards'>
       <div className='container'>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouB.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>I would like to express my gratitude to Daniel Dahan, who donated food baskets for Passover for the needy. He also provided a regional distribution.</p>
         </section>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouW2.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>We would like to express our appreciation to Lisa Megan and her staff for assisting with agricultural work and tree planting in the Carmel Forest.</p>
         </section>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouB3.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>We would like to express our appreciation to The lovely Anat gave a two-hour lecture on finance and managed to pass on her vast knowledge to tech career students.</p>
         </section>
       </div>
       <div className='container'>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouW.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>Thanks to Adar Avraham and Eyal Levy who donated a buffet, a coffee table, a kitchen stand, and a wall mirror for a young woman who was at risk. You helped her a lot! Thank you very much!</p>
         </section>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouB2.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>Many thanks to the Astrenzka workers and their children, who volunteered to help establish seating areas and upgrade the yard at the Beit Tef boarding school in honor of Hanukkah. Lovely!</p>
         </section>
         <section className='ThanksCards'>
           <img src="Media/LogoThankYouW3.png" alt="Thank You" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum, ipsam dolore iure sapiente harum sed vitae quibusdam soluta, eveniet animi</p>
+          <p>There are no words to thank Omri for the above and beyond he did in recruiting computers, you brought him to Gedera and installed it together with his friend, you took care of all the requests in Gedera and we are thrilled by your work. Thanks!</p>
         </section>
       </div>
     </div>
-    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
+    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
   </>);
 };

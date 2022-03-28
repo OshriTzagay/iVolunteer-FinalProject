@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AddPost } from "../../../Services/needVolPost-service";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Welcome from "../../pages/Welcome-Comp/Welcome";
 
 export const AddNeedVolPost = () => {
   const [post, setPost] = useState({});
@@ -16,6 +17,12 @@ export const AddNeedVolPost = () => {
     console.log(post);
     AddPost(post);
   };
+  {
+    if (!localStorage.token) {
+      return <Welcome />;
+    }
+  }
+  
 
   return (
     <div className="pageContainer">
