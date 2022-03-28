@@ -1,36 +1,39 @@
-
-.tableCell:hover{
-background-color: aqua;
+.tableCell:hover {
+  background-color: aqua;
 }
-.donatersContainer{
-    margin-top: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+.donatersContainer {
+  margin-top: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x:auto
 }
 
-.AddDonaterForm{
-    margin-bottom: 10vh;
-    text-align: center;
-    
-
+.AddDonaterForm {
+  margin-bottom: 10vh;
+  text-align: center;
 }
-.delete-btn{
-    font-size: large;
-    transition: 0.5s ;
+.delete-btn {
+  font-size: large;
+  transition: 0.5s;
+}
+.delete-btn:hover {
+  font-size: xx-large;
+  cursor: pointer;
+}
+.the-form {
   
-}
-.delete-btn:hover{
-    font-size: xx-large;
-    cursor: pointer;
-}
-.the-form{
-    background: rgba(255, 253, 253, 0.336);
+  border: "1px solid black";
+  text-align: "center";
+  width: "400px";
+  height: "auto";
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.donatorsInputs{
-    width: 300px;
-    margin: 30px;
-    
+.donatorsInputs {
+  width: 300px;
+  margin: 30px;
+
 }
