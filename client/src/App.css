@@ -24,19 +24,7 @@
   position: relative;
 }
 
-/* .routesContainer{
-  display: grid;
-  grid-template-areas:
-    "hd hd hd"
-    "sb main main"
-    "ft ft ft ";
-  width: 100%;
-  min-height: 100vh;
-  grid-template-columns: 10% 90%;
-  grid-template-rows: 10vh auto 10vh;
-  overflow: hidden;
-  position: relative;
-} */
+
 body {
   background-attachment: fixed;
   background-image: linear-gradient(180deg,rgb(75, 75, 160));
@@ -48,15 +36,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid black;
   /* overflow: auto; */
   width: 100%;
   height: 100%;
-  margin-bottom: 5vh;
+  /* margin-bottom: 5vh; */
 }
 .the-header {
   /* background: #e6c8b3; */
-  background-image: linear-gradient(#c68353);
   width: 100%;
   /* height: 10vh; */
   grid-area: hd;
