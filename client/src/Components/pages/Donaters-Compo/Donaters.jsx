@@ -66,9 +66,9 @@ export default function CustomizedTables() {
 
   return (
     <div className="donatersContainer">
-      <h1>admin donaters mange page </h1>
-      <TableContainer component={Paper}>
-        <Table className="donatorTable"
+     <h1>admin donaters mange page </h1>
+      <TableContainer className="donatorTable" component={Paper}> 
+        <Table 
           sx={{ minWidth: 700, minHeight: 700 }}
           aria-label="customized table"
         >
