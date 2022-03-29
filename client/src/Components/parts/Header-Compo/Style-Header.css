@@ -1,14 +1,20 @@
-a{
-    text-decoration: none;
-}
-a:visited{
-    color: black;
-}
-.icon {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: small;
-    align-items: center;
-    
+  .header-nav div button{
+      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important; */
+      font-stretch: expanded;
+      transition: 0.8s;
+      color: black;
+
   }
+
+
+.header-nav div{
+    background: white;
+    height: 10vh;
+}
+.header-nav {
+    background: white!important;
+}
+
+
+/* 
+ */

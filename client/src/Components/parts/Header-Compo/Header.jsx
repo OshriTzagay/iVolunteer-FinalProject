@@ -92,7 +92,7 @@ const ResponsiveAppBar = () => {
 
 
   return (
-    <AppBar style={{ backgroundColor: "black" }} position="static">
+    <AppBar className="header-nav" style={{ backgroundColor: "black" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -146,7 +146,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img src="Media/iVolunteer.png" alt="" />
+            <img className="icon" src="Media/iVolunteer.png" alt="" />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
@@ -163,7 +163,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={user.ProfilePic} />
+                <Avatar style={{width:'70px',height:'70px'}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
               </IconButton>
             </Tooltip>
             <Menu
