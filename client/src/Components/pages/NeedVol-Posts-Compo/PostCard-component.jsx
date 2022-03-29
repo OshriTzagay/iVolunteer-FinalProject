@@ -16,7 +16,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const PostCard = ({ item }) => {
     const [btnPopup, setBtnPopup] = useState(false)
     return (<section className='card'>
-        <Card sx={{ maxWidth: 450 }}>
+        <Card sx={{ maxWidth: 350 }}>
             <CardMedia
                 component="img"
                 alt="Pic of need vol"
@@ -28,7 +28,7 @@ const PostCard = ({ item }) => {
                     {item.FirstName} {item.LastName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {item.Description}
+                    {item.Description} <br />
                     <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
                 </Typography>
             </CardContent>
