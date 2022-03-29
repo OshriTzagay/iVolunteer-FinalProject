@@ -94,9 +94,6 @@ height: 65vh;
   .login-title h1{
     margin-left: 90px;
   }
-  span{
-    color: aliceblue;
-  }
   .regi-content{ 
     position: relative;
     right: 45%;
@@ -104,10 +101,18 @@ height: 65vh;
   }
   .regi-content p{
     font-size: 20px;
+    font-weight: 900;
     
   }
   .login-img{
     display: none;
+  }
+  .login-title h1{
+    color: black;
+    font-size: 55px;
+  }
+  .Inputs-LogIn{
+    margin-right: 10px !important;
   }
 
 }
@@ -119,5 +124,7 @@ height: 65vh;
   .login-img{
     height: 45vh
   }
+  
+  
   
 }

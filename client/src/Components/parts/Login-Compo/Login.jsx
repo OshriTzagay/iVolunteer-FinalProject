@@ -43,7 +43,7 @@ export const Login = () => {
           alt=""
         />
         <div className="login-title">
-          <h1>Log<span>in</span></h1>
+          <h1>Login</h1>
         </div>
         <br />
 
@@ -54,6 +54,7 @@ export const Login = () => {
           name="Email"
           placeholder="Enter your Email"
           onChange={changingTheValue}
+          className="Inputs-LogIn"
           required
         />{" "}
         <TextField
@@ -64,6 +65,7 @@ export const Login = () => {
           name="Password"
           autoComplete="current-password"
           onChange={changingTheValue}
+          className="Inputs-LogIn"
           required
         />
         <Button
