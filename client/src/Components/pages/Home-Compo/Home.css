@@ -48,10 +48,12 @@
     display: flex;
     justify-content: flex-start;
     width: 35%;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .Explication span{
-    font-size: 23px;
+    font-size: 30px;
     color: aliceblue;
 }
 .Explication p{
