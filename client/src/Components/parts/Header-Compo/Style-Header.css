@@ -15,6 +15,6 @@
     background: black!important;
 }
 
-
-/* 
- */
+.header-nav div img{
+    width: auto;
+}

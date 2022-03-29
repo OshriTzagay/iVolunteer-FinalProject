@@ -1,35 +1,3 @@
-// import { Link } from "react-router-dom";
-// import LoginRoundedIcon from "@mui/icons-material/LoginRounded";
-// import "./Style-Header.css"
-// import { SideBar } from "../Side-Bar-Compo/SideBar";
-// export const Header = () => {
-//   return (
-//     <div className="the-header">
-
-//       <div className="div-for-icon">
-//         <Link className="icon" to="/home">
-//          <h1>
-//            Some ICON
-//          </h1>
-//         </Link>
-
-//       </div>
-//       <div className="div-for-others">
-//       <Link className="links" to="/register">
-//         Register
-//       </Link>
-//       <Link className="links" to="/login">
-//         <LoginRoundedIcon style={{ fontSize: "50px" }} />
-//       </Link>
-//       <Link className="links" to="/login">
-//         <h3 onClick={()=>{localStorage.clear()}}>LOG-Off</h3>
-//       </Link>
-//       </div>
-//       <SideBar/>
-
-//     </div>
-//   );
-// };
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -144,9 +112,9 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow:1, display: { xs: "flex", md: "none" } }}
           >
-            <img className="icon" src="Media/iVolunteer.png" alt="" />
+            <img className="our-logo" src="Media/iVolunteer.png" alt="" style={{width:'auto'}} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
