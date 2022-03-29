@@ -54,7 +54,6 @@ export const Login = () => {
           name="Email"
           placeholder="Enter your Email"
           onChange={changingTheValue}
-          className="Inputs-LogIn"
           required
         />{" "}
         <TextField
@@ -65,7 +64,6 @@ export const Login = () => {
           name="Password"
           autoComplete="current-password"
           onChange={changingTheValue}
-          className="Inputs-LogIn"
           required
         />
         <Button
@@ -83,15 +81,13 @@ export const Login = () => {
 
       <div className="regi-div">
         <div className="regi-content">
-          <h1>New <span>Here?</span></h1>
-          <p>Sing up an<span>d discover the </span>iVolunt<span>eer world</span></p>
-          <Button variant="contained" component="span" type="submit" className="login-btn">
-
-
+          <h1>New Here?</h1>
+          <p>Sign up and discover the iVolunteer world</p>
+          <Button variant="contained" component="span" type="submit" className="login-btn" onClick={ ()=> Navigate("/register")}>
             Send
           </Button>
 
-    
+      
 
         </div>
       </div>
