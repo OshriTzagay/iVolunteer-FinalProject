@@ -33,13 +33,13 @@ export const AddDonater = async (donater) => {
 export const DeleteDonater = async (donaterId) => {
   const options = {
     method: "DELETE",
-    // body: JSON.stringify({ ...donater }),
+    body: JSON.stringify({ ...donaterId }),
     headers: {
       "Content-Type": "application/json",
-      // Authorization: `Bearer ${localStorage.getItem("token")}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   };
-  return await fetch(`${BASIC_API}/donates/${donaterId}`, options)
+  return await fetch(`${BASIC_API}/donates/${donaterId}`,options)
     .then((res) => res.json())
     .catch((err) => console.log(err));
 };
