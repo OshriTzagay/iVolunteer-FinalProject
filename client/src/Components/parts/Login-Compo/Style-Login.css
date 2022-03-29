@@ -73,6 +73,7 @@ height: 65vh;
 @media only screen and (max-device-width:440px) {
   .login-div {
     width: 50vw;
+    height: 100vh;
     background-image: url(https://i.pinimg.com/564x/c7/b5/bb/c7b5bbfd7d7cd049789a725c8df48604.jpg); 
     background-attachment: fixed;
     background-position: center;
