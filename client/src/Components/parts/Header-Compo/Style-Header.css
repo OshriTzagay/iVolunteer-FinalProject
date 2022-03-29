@@ -2,17 +2,17 @@
       /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important; */
       font-stretch: expanded;
       transition: 0.8s;
-      color: black;
+      color: white;
 
   }
 
 
 .header-nav div{
-    background: white;
+    background: black;
     height: 10vh;
 }
 .header-nav {
-    background: white!important;
+    background: black!important;
 }
 
 

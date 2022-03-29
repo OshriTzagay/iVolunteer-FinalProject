@@ -92,7 +92,7 @@ const ResponsiveAppBar = () => {
 
 
   return (
-    <AppBar className="header-nav" style={{ backgroundColor: "black" }} position="static">
+    <AppBar className="header-nav" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

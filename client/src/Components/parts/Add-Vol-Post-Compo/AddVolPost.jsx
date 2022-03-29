@@ -29,11 +29,12 @@ export const AddVolPost = () => {
     <div className="add-container">
       <div className="add-title">
         <h1 className="title">Want To Volunteer?</h1>
+        {/* <div><h2 style={{color:'white'}}>Add your own post...</h2></div> */}
         
       </div>
 
 
-      <form className="form" onSubmit={SendThePost}>
+      <form className="add-form" onSubmit={SendThePost}>
         <div className="divA">
           {" "}
           <TextField
@@ -157,8 +158,9 @@ export const AddVolPost = () => {
             multiline
           />
 
-            <Button type="submit" className="the-btn">click</Button>
+            <Button type="submit" className="the-btn">Send</Button>
           </div>
+
       </form>
     </div>
   );

@@ -68,7 +68,7 @@
     background-color: black;
     border-top-right-radius: 20%;
     border-top-left-radius: 20%;
-    
+    z-index: 100
    
   }
   .active-footer {
@@ -85,5 +85,5 @@
 
   }
   .footer-btn-icon{
-    font-size: xx-large !important;
+    font-size: 4rem !important;
   }
