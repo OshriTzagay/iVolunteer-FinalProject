@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "../Vol-Posts-Compo/VolPost-style.css"
 import Popup from '../../parts/Popup/popup.jsx';
 import Card from '@mui/material/Card';
@@ -15,25 +15,31 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const PostCard = ({ item }) => {
     const [btnPopup, setBtnPopup] = useState(false)
-    return (<section className='card'>
-        <Card sx={{ maxWidth: 350 }}>
-            <CardMedia
-                component="img"
-                alt="Pic of need vol"
-                height="380"
-                image= {item.ProfilePic ||"/Media/profile.jpg"}
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    {item.FirstName} {item.LastName}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {item.Description} <br />
-                    <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
-                </Typography>
-            </CardContent>
-        </Card>
-        <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item} />
-    </section>)
+    return (
+        <section className='card'>
+            <Card sx={{ maxWidth: 350 }}>
+                <CardMedia
+                    component="img"
+                    alt="Pic of need vol"
+                    height="380"
+                    image={item.ProfilePic || "/Media/profile.jpg"}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {item.FirstName} {item.LastName}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        <h5>Contact me:</h5> <br/>
+                      <EmailOutlinedIcon /> {item.Email} <br/>
+                       <LocationOnIcon/> {item.City} <br/>
+                       <TranslateIcon/> {item.Language} <br/>
+
+                        <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
+                    </Typography>
+                </CardContent>
+            </Card>
+            <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item} />
+        </section>
+    )
 }
 export default PostCard;
