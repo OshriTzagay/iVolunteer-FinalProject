@@ -16,12 +16,34 @@ import "./Style-Header.css"
 import { useNavigate } from "react-router-dom";
 import { height } from "@mui/system";
 import { userContext } from "../../../Contexts/user-context";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
-const pages = [<i style={{fontSize:'2rem'}} className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers", "donates"]
+const pages = [<i style={{fontSize:'1.5rem'}} className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers", "donates"]
 
 const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol", "/donates"]
 
 const Header_admin = () =>{
+
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    localStorage.clear();
+    setUser({});
+    navigate("/");
+  };  
+
   const { user, setUser } = React.useContext(userContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -53,7 +75,7 @@ const Header_admin = () =>{
   }
 
   return (
-    <AppBar className="header-nav" position="static">
+   <AppBar className="header-nav" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -105,13 +127,19 @@ const Header_admin = () =>{
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow:1, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img className="our-logo" src="Media/iVolunteer.png" alt="" style={{width:'auto'}} />
+            <img
+              className="our-logo"
+              src="Media/iVolunteer.png"
+              alt=""
+              style={{ width: "auto" }}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
-              <Button className='links'
+              <Button
+                className="links"
                 key={page}
                 onClick={() => navBarNavigator(index)}
                 sx={{ my: 2, color: "white", display: "block" }}
@@ -123,8 +151,13 @@ const Header_admin = () =>{
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar style={{width:'70px',height:'70px',position:''}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
+                <Avatar
+                  style={{ width: "60px", height: "60px" }}
+                  className="avatar"
+                  alt="Remy Sharp"
+                  src={user.ProfilePic}
+                />
               </IconButton>
             </Tooltip>
             <Menu
@@ -143,11 +176,36 @@ const Header_admin = () =>{
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography onClick={Log_out} textAlign="center">Log-Out</Typography>
+                {open ? (
+                  <Dialog
+                    fullScreen={fullScreen}
+                    open={open}
+                    // onClose={handleClose}
+                    aria-labelledby="responsive-dialog-title"
+                  >
+                    <DialogTitle id="responsive-dialog-title">
+                      {"Logg-Off From iVolunteer"}
+                    </DialogTitle>
+                    <DialogContent>
+                      <DialogContentText>
+                    Hey {user.Email} !
+                    We Hope to see you soon again
+                      </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                     
+                      <Button onClick={handleClose} autoFocus>
+                        Agree
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
+                ) : (
+                  <Typography onClick={handleClickOpen} textAlign="center" style={{fontFamily:'Montserrat Alternates", sans-serif'}}>
+                    Log-Out
+                  </Typography>
+                )}
               </MenuItem>
-
             </Menu>
           </Box>
         </Toolbar>

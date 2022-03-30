@@ -52,15 +52,17 @@ export default function CustomizedTables() {
   };
 
   const AddDonaterFunc = (e) => {
+
     setDonaterToAdd({ ...donaterToAdd });
     console.log(donaterToAdd);
     AddDonater(donaterToAdd);
     alert("Added Donater");
-    Navigate("/");
+    Navigate("/donates");
   };
   const DeleteDonaterFunc = (donaterId) => {
     DeleteDonater(donaterId);
     alert("DELETED Donater!");
+    
   };
 
   return (
