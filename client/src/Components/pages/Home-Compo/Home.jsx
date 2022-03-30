@@ -41,7 +41,7 @@ export const Home = () => {
           iVolunteer is the intermediate between you, and  the volunteer. </p>
       </section>
     </div>
-    <ImagesSlider slider={DataSlider} />
+    <ImagesSlider className="slider"slider={DataSlider} />
 
 
     <div className='headline'>
@@ -88,7 +88,7 @@ export const Home = () => {
           <h1> has never been easier</h1>
           <h4>Volunteer as a team:</h4>
           <p>Connect to your mission by embracing social responsibility.</p>
-          <Button  variant="contained" onClick={()=>navigate('/addVolPost')} color="success">Click down to volunteer</Button>
+          <Button  variant="contained" onClick={()=>navigate('/addVolPost')} color="success">Click to Volunteer</Button>
         </section>
       </div>
       <div className='Pic_box'>
@@ -97,7 +97,7 @@ export const Home = () => {
           <h1>hands</h1>
           <p>Contribute to the missions you love. Make a difference</p>
           <p>with your team or on your own, remotely or on-site.</p>
-          <a href="https://form.jotform.com/220872919622461" target="blank"><Button  variant="contained" color="success">Click down to volunteer</Button></a> 
+          <a href="https://form.jotform.com/220872919622461" target="blank"><Button  variant="contained" color="success">Click to DONATE</Button></a> 
         </section>
         <img src="Media/iVolunteer_IPhone.png" alt="IPhone" className='IPhonePic'/>
       </div>

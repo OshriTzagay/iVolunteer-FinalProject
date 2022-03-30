@@ -27,10 +27,13 @@ export const AddNeedVolPost = () => {
   
   return (
     <div className="add-container">
-      <div className="intro"></div>
-      <div className="add-title">
+      <div className="intro">
+        <video src="Media/bg_video_Volunteer.mp4" type="video/mp4" autoPlay loop muted></video>
       </div>
       <form className="add-needvol-form" onSubmit={SendThePost}>
+      <div className="add-title">
+        <h1 className="the-title">Land a Hand</h1>
+      </div>
         <div className="A-input-group">
 
         <TextField

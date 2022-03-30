@@ -17,9 +17,12 @@
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
 }
 .ThanksCards img{
     border-radius: 100%;
+    margin-bottom: 3vh;
 }
 .span{
     border-radius: 4px;
@@ -44,7 +47,15 @@
 }
 .How-we-are p{ 
     font-weight: bold;
-    font-size: 25px;
+    font-size: 18px;
+    font-family: "Montserrat Alternates", sans-serif;
+
+}
+.How-we-are span{
+    font-family: "Berkshire Swash", cursive;
+    font-weight: 400;
+    border-bottom: 2px solid white;
+
 }
 .How-we-are h1{
     color: white;
@@ -85,7 +96,13 @@
 .Pic_Section h1{
     color: white;
 }
+.Pic_Section p{
+    font-family: "Montserrat Alternates", sans-serif;
 
+}
+.slider {
+    box-shadow:2px 2px 2px 2px black!important;
+}
 .laptopPic{
     width:700px;
 }

@@ -20,7 +20,6 @@ const PostCard = ({ item }) => {
 
   return (
     <section className="card">
-      
       <Card sx={{ maxWidth: 350 }}>
         <CardMedia
           component="img"
@@ -33,9 +32,15 @@ const PostCard = ({ item }) => {
             {item.FirstName} {item.LastName}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.Description}
+            <h5>Contact me:</h5> <br />
+            <EmailOutlinedIcon /> {item.Email} <br />
+            <LocationOnIcon /> {item.City} <br />
+            <TranslateIcon /> {item.Language} <br />
           </Typography>
-          <Button size="small" onClick={() => setBtnPopup(true)}> See More Details </Button>
+          <Button size="small" onClick={() => setBtnPopup(true)}>
+            {" "}
+            See More Details{" "}
+          </Button>
         </CardContent>
       </Card>
       <Popup trigger={btnPopup} setTrigger={setBtnPopup} item={item} />
