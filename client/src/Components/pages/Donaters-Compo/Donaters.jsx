@@ -54,20 +54,20 @@ export default function CustomizedTables() {
   const AddDonaterFunc = (e) => {
 
     setDonaterToAdd({ ...donaterToAdd });
-    console.log(donaterToAdd);
     AddDonater(donaterToAdd);
-    alert("Added Donater");
-    Navigate("/donates");
+    window.location.reload()
+    
   };
   const DeleteDonaterFunc = (donaterId) => {
     DeleteDonater(donaterId);
     alert("DELETED Donater!");
+    window.location.reload()
     
   };
 
   return (
     <div className="donatersContainer">
-     <h1>admin donaters mange page </h1>
+     <h1 className="donation-header">Donations Table</h1>
       <TableContainer className="donatorTable" component={Paper}> 
         <Table 
           sx={{ minWidth: 700, minHeight: 700 }}
@@ -124,9 +124,9 @@ export default function CustomizedTables() {
       </TableContainer>
 
       <div className="AddDonaterForm">
-        <h1>Add Donater</h1>
+        <h1 className="donation-form-header">Add Donater</h1>
         <form
-          onSubmit={AddDonaterFunc}
+          
           action="AddDonaterForm"
           className="the-form"
         >
@@ -178,9 +178,10 @@ export default function CustomizedTables() {
 
           />
            <br/>
-          <Button  type="submit">Add Donater!</Button>
+          <Button type="button" onClick={AddDonaterFunc}>Add Donater!</Button>
         </form>
       </div>
+      <div className="spaceDiv"></div>
     </div>
   );
 }

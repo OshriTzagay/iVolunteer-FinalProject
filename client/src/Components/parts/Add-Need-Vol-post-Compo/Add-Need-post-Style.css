@@ -1,15 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat+Alternates&display=swap");
+.add-title{
+display: flex;
+/* justify-content: center; */
+align-items: center;
+}
+.the-title{
+  font-size: 100px;
+  font-weight: bolder;
+  font-family: "Berkshire Swash", cursive;
+  text-shadow: white 20px 20px 20px;
+  
+  
 
+}
 .add-needvol-form {
   width: 100vw;
   text-align: center;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 background: white;
+background-image: url(../../../../public/Media/Regi-BG.jpg);
+background-position: center;
 }
 .A-input-group{
   /* width: 50%; */
@@ -21,8 +36,11 @@ background: white;
 
 }
 .C-input-group{
-  width: 100%;
-
+  width: 100vw;
+  margin-bottom: 50vh;
+  position:absolute;
+  left: 25vw;
+  margin-top: 100vh;
 
 }
 
@@ -39,12 +57,11 @@ background: white;
 }
 .intro{
   width: 100vw;
-  height: 40vh;
-  background: pink;
+  height: 60vh;
+  background: white;
 }
 .send-btn{
   font-family: "Montserrat Alternates", sans-serif !important;
-  font-weight: 600!important;
   
 
 }
@@ -52,4 +69,13 @@ background: white;
 .space-div{
   height: 20vh;
   width: 100%;
+  background-image: url(../../../../public/Media/Regi-BG.jpg);
+background-position: right;
+background: white;
+background-size: cover;
+filter: opacity(0.9);
+}
+video{
+height: 150;
+width: 100vw;
 }

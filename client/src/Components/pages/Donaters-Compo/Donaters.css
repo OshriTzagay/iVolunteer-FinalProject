@@ -1,3 +1,16 @@
+.donation-header{
+  font-size: 90px;
+  color: rgba(255, 192, 203, 0.74);
+  text-shadow: black 20px 20px 20px ;
+  height: 30vh;
+}
+.donation-form-header{
+  margin-top: 15vh;
+  font-size: 70px;
+  color: rgba(255, 192, 203, 0.74);
+
+  text-shadow: black 20px 20px 20px ;
+}
 .tableCell:hover {
   background-color: rgba(137, 43, 226, 0.472);
   cursor: pointer;
@@ -10,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-x:auto
+  overflow-x:auto;
 }
 
 .AddDonaterForm {
@@ -25,17 +38,21 @@
   font-size: xx-large;
   cursor: pointer;
 }
+
+
 .the-form {
   
   border: "1px solid black";
   text-align: "center";
   width: 600px;
-  height: 500px;
+  height: 600px;
   display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5vh ;
-    background: rgba(255, 255, 255, 0.432);
+    background-image: url(../../../../public/Media/Regi-BG.jpg);
+    background-position: center;
+    border-radius: 7ch;
 }
 
 .donatorsInputs {
@@ -56,3 +73,4 @@ font-weight: 800;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
+
