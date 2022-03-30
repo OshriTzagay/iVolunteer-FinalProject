@@ -69,3 +69,15 @@
   background-color: rgb(75, 75, 160)!important;
   color: pink;
 }
+
+.add-vol-picDiv{
+  width: 40vw;
+  height: 50vh;
+  position: absolute;
+  top: 40vh;
+  left: 5vw;
+  margin-top: 8vh;
+  background-size: cover;
+  background: white;
+  /* background-image: url(https://library.kissclipart.com/20180917/orq/kissclipart-transparent-volunteer-png-clipart-volunteering-vol-8433362df1f02b30.jpg); */
+}

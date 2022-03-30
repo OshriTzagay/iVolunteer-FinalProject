@@ -164,6 +164,7 @@ export default function CustomizedTables() {
             type="text"
             onChange={changingTheValue}
             required
+
           />
          <br/>
           <TextField className="donatorsInputs"
@@ -173,9 +174,10 @@ export default function CustomizedTables() {
             type="text"
             onChange={changingTheValue}
             required
+
           />
            <br/>
-          <Button  type="submit">ADD</Button>
+          <Button  type="submit">Add Donater!</Button>
         </form>
       </div>
     </div>
