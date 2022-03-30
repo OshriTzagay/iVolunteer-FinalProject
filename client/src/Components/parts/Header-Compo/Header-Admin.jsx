@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { height } from "@mui/system";
 import { userContext } from "../../../Contexts/user-context";
 
-const pages = [<i className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers", "donates"]
+const pages = [<i style={{fontSize:'2rem'}} className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers", "donates"]
 
 const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol", "/donates"]
 
@@ -124,7 +124,7 @@ const Header_admin = () =>{
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar style={{width:'70px',height:'70px'}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
+                <Avatar style={{width:'70px',height:'70px',position:''}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -145,7 +145,7 @@ const Header_admin = () =>{
             >
 
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography onClick={Log_out} textAlign="center">log out</Typography>
+                <Typography onClick={Log_out} textAlign="center">Log-Out</Typography>
               </MenuItem>
 
             </Menu>

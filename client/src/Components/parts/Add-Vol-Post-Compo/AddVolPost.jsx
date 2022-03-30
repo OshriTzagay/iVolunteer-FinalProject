@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import "./Add-style.css";
+
 import Welcome from "../../pages/Welcome-Comp/Welcome";
 
 export const AddVolPost = () => {
@@ -163,6 +164,9 @@ export const AddVolPost = () => {
           />
 
             <Button type="submit" className="the-btn">Send</Button>
+      <div className="add-vol-picDiv">
+      </div>
+
           </div>
 
       </form>
