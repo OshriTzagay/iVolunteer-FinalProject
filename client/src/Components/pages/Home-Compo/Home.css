@@ -46,6 +46,9 @@
     font-weight: bold;
     font-size: 25px;
 }
+.How-we-are h1{
+    color: white;
+} 
 
 .Explication{
     margin-top: 10px;
@@ -110,6 +113,23 @@
     .ThanksCards img{
         width: 110px;
     }
+    .Pic_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Pic_Section{
+        align-items: center;
+    }
+    .laptopPic{
+        width:300px;
+    }
+    .IPhonePic{
+        width: 230px;
+        height: 430px;
+        margin-top: 20px;
+        margin-right: 1px;
+    }
     
 }
 
@@ -133,5 +153,22 @@
         width: 30%;
         margin-right: 20px;
     }
-    
+    .ThanksCards img{
+        width: 150px;
+    }
+    .laptopPic{
+        width:350px;
+    }
+    .Pic_Section h1{
+        font-size: 30px;
+    }
+    .IPhonePic{
+        width: 230px;
+        height: 430px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .Pic_box{
+        justify-content: space-evenly;
+    }
 }
