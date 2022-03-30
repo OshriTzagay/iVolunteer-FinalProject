@@ -12,18 +12,48 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import "./Style-Header.css"
+import "./Style-Header.css";
 import { useNavigate } from "react-router-dom";
 import { height } from "@mui/system";
 import { userContext } from "../../../Contexts/user-context";
 import Header_admin from "./Header-Admin";
+// import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
+const pages = [
+  <i style={{ fontSize: "2rem" }} className="bi bi-house-door"></i>,
+  "Provide assistance",
+  "Seeking assistance",
+  "volunteers",
+  "need volunteers",
+];
 
-const pages = [<i  style={{fontSize:'2rem'}} className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers"]
-
-const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol"]
+const navigations = [
+  "/home",
+  "/addVolPost",
+  "/addNeedVolPost",
+  "/volPosts",
+  "/needVol",
+];
 
 const ResponsiveAppBar = () => {
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  
   const { user, setUser } = React.useContext(userContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,18 +76,16 @@ const ResponsiveAppBar = () => {
   const navigate = useNavigate();
 
   const navBarNavigator = (index) => {
-    navigate(navigations[index])
+    navigate(navigations[index]);
   };
   const Log_out = () => {
     localStorage.clear();
     setUser({});
-    navigate('/');
-
-  }
+    navigate("/");
+  };
   if (user.isAdmin == true) {
     return <Header_admin />;
   }
-
 
   return (
     <AppBar className="header-nav" position="static">
@@ -112,13 +140,19 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow:1, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img className="our-logo" src="Media/iVolunteer.png" alt="" style={{width:'auto'}} />
+            <img
+              className="our-logo"
+              src="Media/iVolunteer.png"
+              alt=""
+              style={{ width: "auto" }}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
-              <Button className='links'
+              <Button
+                className="links"
                 key={page}
                 onClick={() => navBarNavigator(index)}
                 sx={{ my: 2, color: "white", display: "block" }}
@@ -131,7 +165,12 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar style={{width:'70px',height:'70px'}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
+                <Avatar
+                  style={{ width: "70px", height: "70px" }}
+                  className="avatar"
+                  alt="Remy Sharp"
+                  src={user.ProfilePic}
+                />
               </IconButton>
             </Tooltip>
             <Menu
@@ -150,11 +189,38 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography onClick={Log_out} textAlign="center">Log-Out</Typography>
+                {open ? (
+                  <Dialog
+                    fullScreen={fullScreen}
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="responsive-dialog-title"
+                  >
+                    <DialogTitle id="responsive-dialog-title">
+                      {"Logg-Off From iVolunteer"}
+                    </DialogTitle>
+                    <DialogContent>
+                      <DialogContentText>
+                    Hey {user.Email} !
+                    Are you sure you want to Logg-Off ?
+                      </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button autoFocus onClick={handleClose}>
+                        Disagree
+                      </Button>
+                      <Button onClick={handleClose} autoFocus>
+                        Agree
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
+                ) : (
+                  <Typography onClick={handleClickOpen} textAlign="center">
+                    Log-Out
+                  </Typography>
+                )}
               </MenuItem>
-
             </Menu>
           </Box>
         </Toolbar>

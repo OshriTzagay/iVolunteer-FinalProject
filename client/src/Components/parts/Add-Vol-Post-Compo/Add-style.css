@@ -69,7 +69,9 @@
   background-color: rgb(75, 75, 160)!important;
   color: pink;
 }
-
+.spaceDiv{
+  height: 20vh;
+}
 .add-vol-picDiv{
   width: 40vw;
   height: 50vh;
