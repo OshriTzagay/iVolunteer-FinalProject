@@ -45,8 +45,6 @@ export const Login = () => {
         <div className="login-title">
           <h1>Login</h1>
         </div>
-        <br />
-
         <TextField
           style={{ width: "200px", marginLeft: "43%" }}
           label="Email"

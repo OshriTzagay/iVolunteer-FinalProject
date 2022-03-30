@@ -52,7 +52,7 @@ export default function CustomizedTables() {
   };
 
   const AddDonaterFunc = (e) => {
-    e.preventDefault();
+
     setDonaterToAdd({ ...donaterToAdd });
     console.log(donaterToAdd);
     AddDonater(donaterToAdd);
