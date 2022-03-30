@@ -10,10 +10,6 @@ function Popup(props) {
                 <img src={props.item.ProfilePic} alt="Profile Picture" />
                 {props.children}
                 <p>{props.item.Description}</p>
-                <h4>Contact me:</h4>
-                <p>Email: {props.item.Email}</p>
-                <p>City: {props.item.City}</p>
-                <p>Language: {props.item.Language}</p>
                 <a href="tel:+{props.item.Phone}">Call me here</a>
             </div>
         </div>
