@@ -43,10 +43,10 @@
   
 }
 .cards:hover {
-  box-shadow: rgba(255, 255, 255, 0.63) 2px 2px 2px 2px;
+  /* box-shadow: rgba(255, 255, 255, 0.63) 2px 2px 2px 2px; */
   cursor: pointer;
-  border-end-end-radius:15%;
-  border-bottom-left-radius:15%;
+  /* border-end-end-radius:15%;
+  border-bottom-left-radius:15%; */
 
   transform: translateY(-150px)
 }
@@ -115,7 +115,6 @@
 width: 15vw;
 cursor: pointer;
 }
-
 
  @media only screen and (max-width:1024px) {
   .cards img{
