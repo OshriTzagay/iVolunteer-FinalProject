@@ -34,7 +34,7 @@ const PostCard = ({ item }) => {
                        <LocationOnIcon/> {item.City} <br/>
                        <TranslateIcon/> {item.Language} <br/>
 
-                        <Button size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
+                        <Button className='details-btn' size="small" onClick={() => setBtnPopup(true)}>See More Details</Button>
                     </Typography>
                 </CardContent>
             </Card>

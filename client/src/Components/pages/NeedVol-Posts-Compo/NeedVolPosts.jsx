@@ -22,7 +22,7 @@ export const NeedVolPosts = () => {
     }
     return (
    <div className="Container">
-      <h1 className="volPost-title"> need volunteers</h1>
+      <h1 className="volPost-title"> Need volunteers</h1>
       {/* <section className="cards"> */}
         {
           isLoading ?
@@ -30,11 +30,7 @@ export const NeedVolPosts = () => {
             Array.map((item) => {
               return <PostCard item={item} />
             })}
-      {/* </section> */}
 
-
-      
-      {/* <div className="spaceDiv"></div> */}
     </div>
 
     )

@@ -1,20 +1,26 @@
-  .header-nav div button{
-      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important; */
-      font-stretch: expanded;
-      transition: 0.8s;
-      color: white;
+.header-nav div button {
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important; */
+  /* font-stretch: expanded; */
+  transition: 5s !important;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600 !important;
+  /* height: 5vh; */
+}
+.header-nav div button:hover {
+  /* border-bottom: 2px solid white; */
+  /* box-shadow: 1px 1px 1px 1px white!important; */
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
 
-  }
-
-
-.header-nav div{
-    background: black;
-    height: 10vh;
+.header-nav div {
+  background: black;
+  height: 10vh;
 }
 .header-nav {
-    background: black!important;
+  background: black !important;
 }
 
-.header-nav div img{
-    width: auto;
+.header-nav div img {
+  width: auto;
 }
