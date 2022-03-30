@@ -27,7 +27,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 const pages = [
-  <i style={{ fontSize: "2rem" }} className="bi bi-house-door"></i>,
+  <i style={{ fontSize: "1.5rem" }} className="bi bi-house-door"></i>,
   "Provide assistance",
   "Seeking assistance",
   "volunteers",
@@ -52,6 +52,9 @@ const ResponsiveAppBar = () => {
 
   const handleClose = () => {
     setOpen(false);
+    localStorage.clear();
+    setUser({});
+    navigate("/");
   };
   
   const { user, setUser } = React.useContext(userContext);
@@ -78,11 +81,11 @@ const ResponsiveAppBar = () => {
   const navBarNavigator = (index) => {
     navigate(navigations[index]);
   };
-  const Log_out = () => {
-    localStorage.clear();
-    setUser({});
-    navigate("/");
-  };
+  // const Log_out = () => {
+  //   localStorage.clear();
+  //   setUser({});
+  //   navigate("/");
+  // };
   if (user.isAdmin == true) {
     return <Header_admin />;
   }
@@ -194,7 +197,7 @@ const ResponsiveAppBar = () => {
                   <Dialog
                     fullScreen={fullScreen}
                     open={open}
-                    onClose={handleClose}
+                    // onClose={handleClose}
                     aria-labelledby="responsive-dialog-title"
                   >
                     <DialogTitle id="responsive-dialog-title">
@@ -203,20 +206,18 @@ const ResponsiveAppBar = () => {
                     <DialogContent>
                       <DialogContentText>
                     Hey {user.Email} !
-                    Are you sure you want to Logg-Off ?
+                    We Hope to see you soon again
                       </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                      <Button autoFocus onClick={handleClose}>
-                        Disagree
-                      </Button>
+                     
                       <Button onClick={handleClose} autoFocus>
                         Agree
                       </Button>
                     </DialogActions>
                   </Dialog>
                 ) : (
-                  <Typography onClick={handleClickOpen} textAlign="center">
+                  <Typography onClick={handleClickOpen} textAlign="center" style={{fontFamily:'Montserrat Alternates", sans-serif'}}>
                     Log-Out
                   </Typography>
                 )}
