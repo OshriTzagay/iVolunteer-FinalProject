@@ -102,6 +102,6 @@ export const Home = () => {
         <img src="Media/iVolunteer_IPhone.png" alt="IPhone" className='IPhonePic'/>
       </div>
     </div>
-    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
+    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
   </>);
 };
