@@ -19,7 +19,7 @@ import { userContext } from "../../../Contexts/user-context";
 import Header_admin from "./Header-Admin";
 
 
-const pages = [<i className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers"]
+const pages = [<i  style={{fontSize:'2rem'}} className="bi bi-house-door"></i>, "Provide assistance", "Seeking assistance", "volunteers", "need volunteers"]
 
 const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol"]
 

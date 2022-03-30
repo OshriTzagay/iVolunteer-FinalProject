@@ -28,11 +28,13 @@ export const AddNeedVolPost = () => {
 
   return (
     <div className="add-container">
+      <div className="intro"></div>
       <div className="add-title">
       </div>
-      <h1>add need vol post</h1>
-      <form className="add-form" onSubmit={SendThePost}>
-        <div className="divA">
+
+
+      <form className="add-needvol-form" onSubmit={SendThePost}>
+        <div className="A-input-group">
 
         <TextField
           label=" First name"
@@ -76,7 +78,7 @@ export const AddNeedVolPost = () => {
         <br />
 
 
-        <div className="divB">
+        <div className="B-input-group">
 
            <TextField
           label="Age"
@@ -127,9 +129,7 @@ export const AddNeedVolPost = () => {
         />
         <br />
         </div>
-       <div className="btn-div">
-         
-       </div>
+       <div className="C-input-group">
         <TextField
           label="Description"
           placeholder="write about yourself and your Skills"
@@ -138,9 +138,12 @@ export const AddNeedVolPost = () => {
           onChange={ChangingTheValue}
           multiline
         />
-        <br />
-        <Button type="submit">click</Button>
+        <br /><br /><br />
+        <Button type="submit" className="send-btn">click</Button>
+         
+       </div>
       </form>
+      <div className="space-div"></div>
     </div>
   );
 };
