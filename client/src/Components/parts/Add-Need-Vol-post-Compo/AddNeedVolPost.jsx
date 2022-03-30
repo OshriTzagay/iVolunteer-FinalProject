@@ -1,8 +1,10 @@
+import "./Add-Need-post-Style.css"
 import { useState } from "react";
 import { AddPost } from "../../../Services/needVolPost-service";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Welcome from "../../pages/Welcome-Comp/Welcome";
+
 
 export const AddNeedVolPost = () => {
   const [post, setPost] = useState({});
@@ -25,9 +27,13 @@ export const AddNeedVolPost = () => {
   
 
   return (
-    <div className="pageContainer">
+    <div className="add-container">
+      <div className="add-title">
+      </div>
       <h1>add need vol post</h1>
-      <form className="form" onSubmit={SendThePost}>
+      <form className="add-form" onSubmit={SendThePost}>
+        <div className="divA">
+
         <TextField
           label=" First name"
           placeholder="Enter your first name"
@@ -66,8 +72,13 @@ export const AddNeedVolPost = () => {
           onChange={ChangingTheValue}
           multiline
         />
+        </div>
         <br />
-        <TextField
+
+
+        <div className="divB">
+
+           <TextField
           label="Age"
           placeholder="Enter your Age"
           name="Age"
@@ -115,6 +126,10 @@ export const AddNeedVolPost = () => {
           multiline
         />
         <br />
+        </div>
+       <div className="btn-div">
+         
+       </div>
         <TextField
           label="Description"
           placeholder="write about yourself and your Skills"
