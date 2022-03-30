@@ -34,9 +34,9 @@ function Welcome() {
 <img src="/Media/matan.jpeg" alt="" />
 
 
- <i style={{color:'white'}} class="fas fa-code"></i>
 
 <h2>Matan ysayas</h2>
+ <i style={{color:'white'}} class="fas fa-code"></i>
 
 <div className="contact-icons">
 <a target={"_blank"} href="https://github.com/matan-ysayas"><i className="fab fa-github"></i></a>
@@ -47,7 +47,7 @@ function Welcome() {
 
   </div>
   <div className="welcome-bg">
-    <img src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.png" alt="" />
+    <img src="Media/welcome_img.png" alt="" />
 
     <h1 className="iTitle">iVolunteer</h1>
 
