@@ -4,13 +4,16 @@ import { DataSlider } from '../../parts/Slider/DataSlider';
 import { ImagesSlider } from '../../parts/Slider/ImagesSlider';
 import Welcome from '../Welcome-Comp/Welcome';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 export const Home = () => {
+  const navigate = useNavigate()
   const [timePopup, setTimePopup] = useState(false)
   useEffect(() => {
     setTimeout(() => {
       setTimePopup(true)
-    }, 1000)
+    }, 10000)
   }, []);
   {
     if (!localStorage.token) {
@@ -76,6 +79,28 @@ export const Home = () => {
         </section>
       </div>
     </div>
-    <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/>
+    <div className='bottom_page'>
+      <div className='Pic_box'>
+        <img src="Media/iVolunteer_laptop.png" alt="laptop" className='laptopPic'/>
+        <section className='Pic_Section'>
+          <h1>Doing good</h1>
+          <h1> has never been easier</h1>
+          <h4>Volunteer as a team:</h4>
+          <p>Connect to your mission by embracing social responsibility.</p>
+          <Button  variant="contained" onClick={()=>navigate('/addVolPost')} color="success">Click down to volunteer</Button>
+        </section>
+      </div>
+      <div className='Pic_box'>
+        <section className='Pic_Section'>
+          <h1>The change is in your</h1>
+          <h1>hands</h1>
+          <p>Contribute to the missions you love. Make a difference</p>
+          <p>with your team or on your own, remotely or on-site.</p>
+          <a href="https://form.jotform.com/220872919622461" target="blank"><Button  variant="contained" color="success">Click down to volunteer</Button></a> 
+        </section>
+        <img src="Media/iVolunteer_IPhone.png" alt="IPhone" className='IPhonePic'/>
+      </div>
+    </div>
+    {/* <TimerPopup trigger={timePopup} setTrigger={setTimePopup}/> */}
   </>);
 };

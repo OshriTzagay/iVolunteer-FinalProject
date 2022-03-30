@@ -18,7 +18,6 @@ import ResponsiveAppBar from "./Components/parts/Header-Compo/Header";
 export const AppRouter = () => {
   const { user } = useContext(userContext);
 
-// console.log(user);
   return (
     <div className="App">
       <BrowserRouter>
