@@ -1,7 +1,6 @@
 .footer-basic {
-    padding:40px;
+    padding:30px;
     background-color:black;
-    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     font-size:larger;
     border-radius: 15%;
   
@@ -32,7 +31,6 @@
   
   .footer-basic .social {
     text-align:center;
-    padding-bottom:25px;
   }
   
   .footer-basic .social > a {
@@ -61,7 +59,6 @@
     grid-area: ft;
     border: 1px solid black;
     height: 20vh;
-    /* overflow: hidden; */
     transition: 2s;
     position: absolute;
     bottom: -20vh;
@@ -88,4 +85,12 @@
   }
   .footer-btn-icon{
     font-size: 4rem !important;
+  }
+  
+  @media only screen and (max-width:510px) {
+    .footer-basic{
+      padding: 10px;
+      font-size: smaller;
+    }
+    
   }
