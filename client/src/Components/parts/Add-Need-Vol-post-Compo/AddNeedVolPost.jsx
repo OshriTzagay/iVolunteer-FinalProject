@@ -25,14 +25,11 @@ export const AddNeedVolPost = () => {
     }
   }
   
-
   return (
     <div className="add-container">
       <div className="intro"></div>
       <div className="add-title">
       </div>
-
-
       <form className="add-needvol-form" onSubmit={SendThePost}>
         <div className="A-input-group">
 
@@ -76,8 +73,6 @@ export const AddNeedVolPost = () => {
         />
         </div>
         <br />
-
-
         <div className="B-input-group">
 
            <TextField
@@ -109,7 +104,6 @@ export const AddNeedVolPost = () => {
           <option value={"Beer Sheva"}>Beer Sheva</option>
         </select>
         <br />
-
         <TextField
           label="Phone"
           placeholder="enter a phone number"
@@ -140,7 +134,6 @@ export const AddNeedVolPost = () => {
         />
         <br /><br /><br />
         <Button type="submit" className="send-btn">click</Button>
-         
        </div>
       </form>
       <div className="space-div"></div>
