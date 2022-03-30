@@ -21,7 +21,7 @@ const pages = [<i className="bi bi-house-door"></i>, "Provide assistance", "Seek
 
 const navigations = ['/home', '/addVolPost', "/addNeedVolPost", "/volPosts", "/needVol", "/donates"]
 
-const Header_admin = () => {
+const Header_admin = () =>{
   const { user, setUser } = React.useContext(userContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -50,11 +50,10 @@ const Header_admin = () => {
     localStorage.clear();
     setUser({});
     navigate('/');
-
   }
 
   return (
-    <AppBar style={{ backgroundColor: "black" }} position="static">
+    <AppBar className="header-nav" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -64,7 +63,6 @@ const Header_admin = () => {
             sx={{ mr: 30, display: { xs: "none", md: "flex" } }}
           >
             <img src="Media/iVolunteer.png" alt="" />
-
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -107,10 +105,9 @@ const Header_admin = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow:1, display: { xs: "flex", md: "none" } }}
           >
-            <img src="Media/iVolunteer.png" alt="" />
-
+            <img className="our-logo" src="Media/iVolunteer.png" alt="" style={{width:'auto'}} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
@@ -127,7 +124,7 @@ const Header_admin = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={user.ProfilePic} />
+                <Avatar style={{width:'70px',height:'70px'}} className="avatar" alt="Remy Sharp" src={user.ProfilePic} />
               </IconButton>
             </Tooltip>
             <Menu

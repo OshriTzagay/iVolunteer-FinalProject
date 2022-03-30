@@ -1,7 +1,71 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat+Alternates&display=swap");
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.add-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url();
+}
+.add-title {
+  width: 50vw;
+  height: 100%;
+}
+.add-form {
+  border-radius: 10ch;
+  width: 35vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(../../../../public/Media/Regi-BG.jpg);
+  background-position: center;
+  flex-wrap: wrap;
+  box-shadow: white 2px 2px 2px 2px;
+}
 
+.divA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.divB {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.btn-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.the-btn {
+  height: 7vh;
+  width: 10vw;
+  border: 1px white solid !important;
+  border-radius: 10ch !important;
+  font-size: larger!important;
+  font-family: "Montserrat Alternates", sans-serif;
+  transition: 2s;
+}
+.title {
+  font-size: 70px;
+  text-shadow: white 8px 8px 8px;
+}
+.the-btn:hover {
+  background: white;
+  background-color: rgb(75, 75, 160)!important;
+  color: pink;
+}

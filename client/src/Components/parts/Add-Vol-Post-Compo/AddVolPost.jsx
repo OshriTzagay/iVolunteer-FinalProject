@@ -24,14 +24,23 @@ export const AddVolPost = () => {
       return <Welcome />;
     }
   }
-  
 
   return (
-    <div>
-      <h1>Add post</h1>
+    <div className="add-container">
+      <div className="add-title">
+        <h1 className="title">Want</h1>
+        <h1 className="title">To</h1>
+        <h1 className="title">Volunteer..?</h1>
 
-      <form className="form" onSubmit={SendThePost}>
+        
+        {/* <div><h2 style={{color:'white'}}>Add your own post...</h2></div> */}
+        
+      </div>
 
+
+      <form className="add-form" onSubmit={SendThePost}>
+        <div className="divA">
+          {" "}
           <TextField
             label=" First name"
             placeholder="Enter your first name"
@@ -41,7 +50,6 @@ export const AddVolPost = () => {
             multiline
             required
           />
-          <br />
           <TextField
             label="Last name"
             placeholder="Enter your Last name"
@@ -51,8 +59,8 @@ export const AddVolPost = () => {
             multiline
             required
           />
-          <br />
-          <TextField
+          <TextField 
+          className="inputs"
             label="Email"
             placeholder="Enter your Email"
             name="Email"
@@ -61,7 +69,6 @@ export const AddVolPost = () => {
             multiline
             required
           />
-          <br />
           <TextField
             label="Age"
             placeholder="Enter your Age"
@@ -70,7 +77,6 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
           <TextField
             label="Skills"
             placeholder="Enter any spacial skills"
@@ -79,16 +85,10 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
-          <TextField
-            label="Language"
-            placeholder="Enter your Language"
-            name="Language"
-            type="text"
-            onChange={ChangingTheValue}
-            multiline
-          />
-          <br />
+       
+        </div>
+
+        <div className="divB">
           <TextField
             label="StartHour"
             placeholder="example: 1500"
@@ -97,7 +97,6 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
           <TextField
             label="FinishHour"
             placeholder="example: 1900 "
@@ -106,7 +105,6 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
           <TextField
             label="Phone"
             placeholder="enter a phone number"
@@ -115,7 +113,6 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
           <TextField
             label="ProfilePic"
             placeholder="add image url"
@@ -124,8 +121,7 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
-       
+
           <select
             style={{
               width: "207px",
@@ -144,8 +140,19 @@ export const AddVolPost = () => {
             <option value={"Eilat"}>Eilat</option>
             <option value={"Kiryat Shmona"}>Kiryat Shmona</option>
             <option value={"Beer Sheva"}>Beer Sheva</option>
-          </select><br/>
-       
+          </select>
+          <br />
+
+        </div>
+          <div className="btn-div">
+          <TextField
+            label="Language"
+            placeholder="Enter your Language"
+            name="Language"
+            type="text"
+            onChange={ChangingTheValue}
+            multiline
+          />
           <TextField
             label="Description"
             placeholder="write about yourself and your Skills"
@@ -154,11 +161,10 @@ export const AddVolPost = () => {
             onChange={ChangingTheValue}
             multiline
           />
-          <br />
-        
-    
 
-        <Button type="submit">click</Button>
+            <Button type="submit" className="the-btn">Send</Button>
+          </div>
+
       </form>
     </div>
   );
