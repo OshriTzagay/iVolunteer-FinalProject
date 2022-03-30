@@ -22,10 +22,10 @@
   width: 35vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   align-items: center;
-  justify-content: space-evenly;
-  background-image: url(../../../../public/Media/Regi-BG.jpg);
+  justify-content: space-evenly; 
+  background-image: linear-gradient(135deg, #d34c7481  0%,  #fafbff65 100%);
   background-position: center;
   flex-wrap: wrap;
   box-shadow: white 2px 2px 2px 2px;
@@ -79,7 +79,10 @@
   top: 40vh;
   left: 5vw;
   margin-top: 8vh;
-  background-size: cover;
   background: white;
-  /* background-image: url(https://library.kissclipart.com/20180917/orq/kissclipart-transparent-volunteer-png-clipart-volunteering-vol-8433362df1f02b30.jpg); */
+  background-image: url(../../../../public/Media/volImg2.jpg);
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10ch;
 }

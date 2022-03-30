@@ -27,7 +27,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 const pages = [
-  <i style={{ fontSize: "1.5rem" }} className="bi bi-house-door"></i>,
+  <i style={{ fontSize: "1.5rem",marginBottom:'3vh' }} className="bi bi-house-door"></i>,
   "Provide assistance",
   "Seeking assistance",
   "volunteers",
@@ -167,9 +167,9 @@ const ResponsiveAppBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
                 <Avatar
-                  style={{ width: "70px", height: "70px" }}
+                  style={{ width: "60px", height: "60px" }}
                   className="avatar"
                   alt="Remy Sharp"
                   src={user.ProfilePic}

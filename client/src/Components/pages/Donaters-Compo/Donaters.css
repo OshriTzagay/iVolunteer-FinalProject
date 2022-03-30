@@ -1,5 +1,9 @@
 .tableCell:hover {
-  background-color: aqua;
+  background-color: rgba(137, 43, 226, 0.472);
+  cursor: pointer;
+}
+.tableCell{
+  font-size: xx-large;
 }
 .donatersContainer {
   margin-top: 5vh;
