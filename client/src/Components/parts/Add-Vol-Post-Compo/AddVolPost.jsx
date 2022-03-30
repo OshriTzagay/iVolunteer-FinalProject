@@ -28,7 +28,11 @@ export const AddVolPost = () => {
   return (
     <div className="add-container">
       <div className="add-title">
-        <h1 className="title">Want To Volunteer?</h1>
+        <h1 className="title">Want</h1>
+        <h1 className="title">To</h1>
+        <h1 className="title">Volunteer..?</h1>
+
+        
         {/* <div><h2 style={{color:'white'}}>Add your own post...</h2></div> */}
         
       </div>
