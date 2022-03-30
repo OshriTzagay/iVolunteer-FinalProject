@@ -12,7 +12,6 @@ function Welcome() {
   const navigate = useNavigate();
 
   return (
-    <>
   <div className="Welcome-Container">
   <div className="meet-us">
     <div className="cards">
@@ -48,20 +47,14 @@ function Welcome() {
   <div className="welcome-bg">
     <img src="Media/vecteezy_activism_volunteering_illustration-2_hk1220.png" alt="" />
 
-    <h1 className="iTitle">iVolunteer</h1>
+    <h1 className="iTitle">i Volunteer</h1>
 
 
     <button className="siteBtn" onClick={()=>{navigate('/login')}}>Go-Volunteer!</button>
   </div>
 
-
-	
-
-
-
-
   </div>
-    </>
+    
   );
 }
 export default Welcome;
