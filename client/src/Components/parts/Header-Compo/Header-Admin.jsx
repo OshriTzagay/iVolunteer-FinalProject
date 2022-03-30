@@ -145,7 +145,7 @@ const Header_admin = () =>{
             >
 
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography onClick={Log_out} textAlign="center">log out</Typography>
+                <Typography onClick={Log_out} textAlign="center">Log-Out</Typography>
               </MenuItem>
 
             </Menu>

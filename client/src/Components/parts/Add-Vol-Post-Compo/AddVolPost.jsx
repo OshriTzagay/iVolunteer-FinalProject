@@ -163,6 +163,8 @@ export const AddVolPost = () => {
           />
 
             <Button type="submit" className="the-btn">Send</Button>
+      <div className="add-vol-picDiv">
+      </div>
           </div>
 
       </form>

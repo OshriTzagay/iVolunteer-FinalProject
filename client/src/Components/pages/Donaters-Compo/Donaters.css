@@ -25,18 +25,27 @@
   
   border: "1px solid black";
   text-align: "center";
-  width: "400px";
-  height: "auto";
+  width: 600px;
+  height: 500px;
   display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5vh ;
+    background: rgba(255, 255, 255, 0.432);
 }
 
 .donatorsInputs {
-  width: 300px;
-  margin: 30px;
+font-size: xx-large!important;
 
+}
+
+.the-form button{
+background:white;
+border-radius: 10ch;
+font-family: "Montserrat Alternates", sans-serif!important;
+width: 9vw;
+
+font-weight: 800;
 }
 
 .donatorTable{
