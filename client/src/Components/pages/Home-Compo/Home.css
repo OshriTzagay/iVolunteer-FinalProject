@@ -42,6 +42,10 @@
     flex-direction: column;
     align-items: center;
 }
+.How-we-are p{ 
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .Explication{
     margin-top: 10px;
@@ -59,7 +63,30 @@
 .Explication p{
     text-align: left;
 }
+.bottom_page{
+    display: flex;
+    flex-direction: column;
+}
+.Pic_box{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.Pic_Section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.laptopPic{
+    width:700px;
+}
+.IPhonePic{
+    height: 460px;
+    margin-right: 10%;
+}
 
 @media only screen and (max-device-width:440px) {
     .Explication{
