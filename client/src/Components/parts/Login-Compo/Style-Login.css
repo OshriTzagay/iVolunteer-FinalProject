@@ -1,26 +1,3 @@
-/* .continerUser{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.newUser{
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.login {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .pageContinuer{
-      height: 100%;
-      margin-top: 7vh;
-
-  } */
 
 .login-regi-container {
   width: 100vw;
@@ -33,7 +10,7 @@
   color: rgb(75, 75, 160);
   font-size: 50px;
   z-index: 1000;
-  /* margin-bottom: 50vh; */
+ 
 }
 .login-div {
   width: 70vw;
@@ -43,9 +20,7 @@
   justify-content: center;
   flex-direction: column;
 }
-    /* width: 70vw;
-    height: 70vh;
-    background: white; */
+
 
 .regi-div{
     width: 100%;
